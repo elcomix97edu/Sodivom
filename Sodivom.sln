@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sodivom", "Sodivom\Sodivom.vbproj", "{CA80F2CD-D2CD-404A-ABA9-22A430233C23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA80F2CD-D2CD-404A-ABA9-22A430233C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA80F2CD-D2CD-404A-ABA9-22A430233C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA80F2CD-D2CD-404A-ABA9-22A430233C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA80F2CD-D2CD-404A-ABA9-22A430233C23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

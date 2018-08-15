@@ -1,0 +1,2 @@
+C:\Users\tecnologico\AppData\Local\Temporary Projects\Sodivom\bin\Debug\Sodivom.exe.config
+C:\Users\tecnologico\Documents\Visual Studio 2012\Projects\Sodivom\Sodivom\bin\Debug\Sodivom.exe.config
