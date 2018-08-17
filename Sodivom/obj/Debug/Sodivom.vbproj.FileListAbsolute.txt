@@ -16,3 +16,4 @@ C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.exe
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.xml
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.pdb
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmPrincipal.resources
