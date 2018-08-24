@@ -1,0 +1,10 @@
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.dll
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.xml
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.Resources.resources
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.dll
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.xml
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.pdb

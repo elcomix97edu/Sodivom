@@ -48,10 +48,10 @@ Partial Class frmPrincipal
         Me.ModificarToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RealizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RepartoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RealizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,25 +74,25 @@ Partial Class frmPrincipal
         'AgregarToolStripMenuItem
         '
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
-        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
         'QuitarToolStripMenuItem
         '
         Me.QuitarToolStripMenuItem.Name = "QuitarToolStripMenuItem"
-        Me.QuitarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.QuitarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.QuitarToolStripMenuItem.Text = "Quitar"
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'ListarToolStripMenuItem
         '
         Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'EmpleadoToolStripMenuItem
@@ -220,30 +220,30 @@ Partial Class frmPrincipal
         Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
+        'RealizarToolStripMenuItem
+        '
+        Me.RealizarToolStripMenuItem.Name = "RealizarToolStripMenuItem"
+        Me.RealizarToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.RealizarToolStripMenuItem.Text = "Realizar"
+        '
         'ListarToolStripMenuItem4
         '
         Me.ListarToolStripMenuItem4.Name = "ListarToolStripMenuItem4"
-        Me.ListarToolStripMenuItem4.Size = New System.Drawing.Size(180, 22)
+        Me.ListarToolStripMenuItem4.Size = New System.Drawing.Size(115, 22)
         Me.ListarToolStripMenuItem4.Text = "Listar"
         '
         'RepartoToolStripMenuItem
         '
         Me.RepartoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListarToolStripMenuItem5})
         Me.RepartoToolStripMenuItem.Name = "RepartoToolStripMenuItem"
-        Me.RepartoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RepartoToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.RepartoToolStripMenuItem.Text = "Reparto"
         '
         'ListarToolStripMenuItem5
         '
         Me.ListarToolStripMenuItem5.Name = "ListarToolStripMenuItem5"
-        Me.ListarToolStripMenuItem5.Size = New System.Drawing.Size(180, 22)
+        Me.ListarToolStripMenuItem5.Size = New System.Drawing.Size(102, 22)
         Me.ListarToolStripMenuItem5.Text = "Listar"
-        '
-        'RealizarToolStripMenuItem
-        '
-        Me.RealizarToolStripMenuItem.Name = "RealizarToolStripMenuItem"
-        Me.RealizarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RealizarToolStripMenuItem.Text = "Realizar"
         '
         'frmPrincipal
         '
