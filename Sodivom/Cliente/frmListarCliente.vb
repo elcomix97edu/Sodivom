@@ -1,3 +1,3 @@
-﻿Public Class frmModificarCliente
+﻿Public Class frmListarCliente
 
 End Class
