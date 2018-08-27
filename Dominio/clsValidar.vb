@@ -1,4 +1,6 @@
-﻿Public Class clsValidar
+﻿Imports Persistencia
+
+Public Class clsValidar
 
     Public Function Valido(obj As String) As Boolean
         If obj = "" Then
@@ -27,6 +29,12 @@
         Else
             Return False
         End If
+
+    End Function
+
+    Public Function ExisteCliente(ci As Integer) As Boolean
+        Dim per As New clsPCliente
+        Return per.existe(ci)
 
     End Function
 

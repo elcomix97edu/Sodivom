@@ -123,42 +123,42 @@ Partial Class frmAltaCliente
         Me.txtCedula.Mask = "00000000"
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.Size = New System.Drawing.Size(100, 20)
-        Me.txtCedula.TabIndex = 8
+        Me.txtCedula.TabIndex = 0
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(202, 148)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 8
+        Me.txtNombre.TabIndex = 1
         '
         'txtApellido
         '
         Me.txtApellido.Location = New System.Drawing.Point(202, 190)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(100, 20)
-        Me.txtApellido.TabIndex = 8
+        Me.txtApellido.TabIndex = 2
         '
         'txtDireccion
         '
         Me.txtDireccion.Location = New System.Drawing.Point(202, 235)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(100, 20)
-        Me.txtDireccion.TabIndex = 8
+        Me.txtDireccion.TabIndex = 3
         '
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(202, 282)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
-        Me.txtTelefono.TabIndex = 8
+        Me.txtTelefono.TabIndex = 4
         '
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(202, 326)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(100, 20)
-        Me.txtEmail.TabIndex = 8
+        Me.txtEmail.TabIndex = 5
         '
         'frmAltaCliente
         '
