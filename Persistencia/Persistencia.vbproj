@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsPCliente.vb" />
     <Compile Include="clsPEmpleado.vb" />
     <Compile Include="clsPersistencia.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

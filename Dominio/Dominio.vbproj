@@ -63,7 +63,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsDEmpleado.vb" />
+    <Compile Include="Cliente\clsDCliente.vb" />
+    <Compile Include="clsValidar.vb" />
+    <Compile Include="Empleado\clsDEmpleado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

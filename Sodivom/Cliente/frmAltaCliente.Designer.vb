@@ -120,6 +120,7 @@ Partial Class frmAltaCliente
         'txtCedula
         '
         Me.txtCedula.Location = New System.Drawing.Point(202, 104)
+        Me.txtCedula.Mask = "00000000"
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.Size = New System.Drawing.Size(100, 20)
         Me.txtCedula.TabIndex = 8
