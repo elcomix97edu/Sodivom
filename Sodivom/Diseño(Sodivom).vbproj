@@ -96,6 +96,42 @@
     <Compile Include="Cliente\frmModificarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Empleado\frmAltaEmpleado.Designer.vb">
+      <DependentUpon>frmAltaEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\frmAltaEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\frmAltaTipoEmpleado.Designer.vb">
+      <DependentUpon>frmAltaTipoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\frmAltaTipoEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleado.Designer.vb">
+      <DependentUpon>frmEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOfertaWeb.Designer.vb">
+      <DependentUpon>frmOfertaWeb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOfertaWeb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPedidoDistribuidor.Designer.vb">
+      <DependentUpon>frmPedidoDistribuidor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPedidoDistribuidor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +143,30 @@
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducto.Designer.vb">
+      <DependentUpon>frmProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedor.Designer.vb">
+      <DependentUpon>frmProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStock.Designer.vb">
+      <DependentUpon>frmStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVenta.Designer.vb">
+      <DependentUpon>frmVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -137,6 +197,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\frmModificarCliente.resx">
       <DependentUpon>frmModificarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\frmAltaEmpleado.resx">
+      <DependentUpon>frmAltaEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\frmAltaTipoEmpleado.resx">
+      <DependentUpon>frmAltaTipoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleado.resx">
+      <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -173,6 +245,7 @@
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

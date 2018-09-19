@@ -14,9 +14,15 @@ Public Class frmPrincipal
         unfrmaltacliente.Show()
     End Sub
 
-    Private Sub ModificarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarToolStripMenuItem.Click
+    Private Sub ModificarToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim unfrmmodcliente As New frmModificarCliente
         unfrmmodcliente.MdiParent = Me
         unfrmmodcliente.Show()
+    End Sub
+
+    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+        Dim unfrmCli As New frmCliente
+        unfrmCli.MdiParent = Me
+        unfrmCli.Show()
     End Sub
 End Class

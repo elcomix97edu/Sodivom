@@ -1,4 +1,6 @@
-﻿Imports Persistencia
+﻿Imports System.Drawing
+Imports System.Windows.Forms
+Imports Persistencia
 
 Public Class clsValidar
 
@@ -36,6 +38,27 @@ Public Class clsValidar
         Dim per As New clsPCliente
         Return per.existe(ci)
 
+    End Function
+
+    Public Function VerificarCampos(ByVal frm As Form) As Boolean
+        Dim completos As Boolean = True
+        For Each unControl In frm.Controls
+            If TypeOf unControl Is TextBox Then
+                unControl.backcolor = Color.White
+                If unControl.Text = "" Then
+                    unControl.backcolor = Color.Red
+                    completos = False
+                End If
+            End If
+            If TypeOf unControl Is MaskedTextBox Then
+                unControl.backcolor = Color.White
+                If unControl.MaskFull = False Then
+                    unControl.backcolor = Color.Red
+                    completos = False
+                End If
+            End If
+        Next
+        Return completos
     End Function
 
 End Class
