@@ -12,7 +12,7 @@ Public Class frmLogin
             If unValidar.Valido(txtpass.Text) Then
 
                 'cabra
-                Dim unDE As New clsDEmpleado
+                Dim unDE As New clsControladora
                 Dim ok = unDE.login(txtuser.Text, txtpass.Text)
                 If ok Then
                     'MsgBox("Despliego formulario principal")

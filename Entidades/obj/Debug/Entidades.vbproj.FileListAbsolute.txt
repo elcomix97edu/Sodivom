@@ -8,3 +8,13 @@ C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entida
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.dll
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.xml
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.pdb
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\bin\Debug\Entidades.dll
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\bin\Debug\Entidades.pdb
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\bin\Debug\Entidades.xml
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\obj\Debug\Entidades.Resources.resources
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\obj\Debug\Entidades.dll
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\obj\Debug\Entidades.xml
+C:\Users\jerem\Desktop\Sodivom-master\Entidades\obj\Debug\Entidades.pdb

@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente\clsDCliente.vb" />
+    <Compile Include="clsControladora.vb" />
     <Compile Include="clsValidar.vb" />
     <Compile Include="Empleado\clsDEmpleado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

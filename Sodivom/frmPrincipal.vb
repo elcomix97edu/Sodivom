@@ -8,7 +8,7 @@ Public Class frmPrincipal
 
     End Sub
 
-    Private Sub AgregarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarToolStripMenuItem.Click
+    Private Sub AgregarToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim unfrmaltacliente As New frmAltaCliente
         unfrmaltacliente.MdiParent = Me
         unfrmaltacliente.Show()
