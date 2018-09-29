@@ -2,14 +2,18 @@
 Imports Dominio
 
 Public Class frmCliente
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Dim unacon As New clsControladora
+
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Dim val As New clsValidar
+
+
 
         'validaciones
         If val.VerificarCampos(Me) Then
 
             If val.VerificarCI(CInt(mskCi.Text)) Then
-                If val.ExisteCliente(CInt(mskCi.Text)) = False Then
+                If unacon.ExisteCliente(CInt(mskCi.Text)) = False Then
 
                     'Lo que realmente estas buscando
                     Dim cli As New clsECliente(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtEmail.Text)
@@ -33,66 +37,11 @@ Public Class frmCliente
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        If Not (RadioButton1.Checked Or RadioButton2.Checked) Then
-            MsgBox("Seleccione un Parámetro de Búsqueda")
-        Else
-            Dim unacon As New clsControladora
-            Dim res As String
-
-            If RadioButton1.Checked Then
-                res = mskCi.Text
-            Else
-                res = txtNombre.Text
-            End If
-            Dim lista = unacon.ListarCliente(res, RadioButton1.Checked)
-            dgvCliente.Rows.Clear()
-
-            Dim Row As DataGridViewRow
-            Dim Cell As DataGridViewCell
-            Dim a As Integer = 0
-
-            For Each unCliente In lista
-                Row = New DataGridViewRow
-
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = unCliente.ci.ToString
-                Row.Cells.Add(Cell)
-
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = unCliente.nombre.ToString
-                Row.Cells.Add(Cell)
-
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = unCliente.apellido.ToString
-                Row.Cells.Add(Cell)
-
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = unCliente.direccion.ToString
-                Row.Cells.Add(Cell)
-
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = unCliente.telefono.ToString
-                Row.Cells.Add(Cell)
-
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = unCliente.email.ToString
-                Row.Cells.Add(Cell)
-
-
-
-                dgvCliente.Rows.Add(Row)
-                a = a + 1
-
-            Next
-            If a = 0 Then
-                MsgBox("No se encontró ningun resultado", MsgBoxStyle.Exclamation)
-
-            End If
-        End If
+    Private Sub btnListar_Click(sender As Object, e As EventArgs) Handles btnListar.Click
+        Listar()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         'If dgvCliente.CurrentRow.Equals(Nothing) Then
         '    MsgBox("Seleccione un cliente para borrar en la tabla")
         'Else
@@ -111,6 +60,7 @@ Public Class frmCliente
                 Dim unaC As New clsControladora
                 If unaC.EliminarCliente(ci) Then
                     MsgBox("Cliente Eliminado Correctamente")
+                    Listar()
                 Else
                     MsgBox("Ocurrio un error al eliminar el Cliente")
                 End If
@@ -119,7 +69,7 @@ Public Class frmCliente
         End Select
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
         Dim ci As Integer
         Dim nombre, apellido As String
@@ -134,6 +84,7 @@ Public Class frmCliente
                 Dim unaC As New clsControladora
                 If unaC.ModificarCliente(uncli) Then
                     MsgBox("Cliente Actualizado Correctamente")
+                    Listar()
                 Else
                     MsgBox("Ocurrio un error al actualizar el Cliente")
                 End If
@@ -154,5 +105,95 @@ Public Class frmCliente
             txtEmail.Text = dgvCliente.CurrentRow.Cells(5).Value.ToString
         End If
 
+    End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        Dim unLimpiar As New clsLimpiar
+        unLimpiar.Limpiar(Me)
+    End Sub
+
+    Private Sub chkRUT_CheckedChanged(sender As Object, e As EventArgs) Handles chkRUT.CheckedChanged
+        If chkRUT.Checked Then
+            lblCi.Text = "RUT"
+            mskCi.Mask = "000000000000"
+        Else
+            lblCi.Text = "Ci"
+            mskCi.Mask = "00000000"
+        End If
+    End Sub
+
+    Public Sub Listar()
+        If Not (rdbCi.Checked Or rdbApellido.Checked) Then
+            MsgBox("Seleccione un Parámetro de Búsqueda")
+        Else
+
+            Dim res As String
+            Dim realiza As Boolean = False
+
+            If rdbCi.Checked Then
+                If mskCi.Text = "" Then
+                    MsgBox("El campo Ci está vacio")
+                Else
+                    res = mskCi.Text
+                    realiza = True
+                End If
+
+            Else
+                If txtApellido.Text = "" Then
+                    MsgBox("El campo Apellido está vacio")
+                Else
+                    res = txtApellido.Text
+                    realiza = True
+                End If
+
+            End If
+            If realiza Then
+                Dim lista = unacon.ListarCliente(res, rdbCi.Checked)
+                dgvCliente.Rows.Clear()
+
+                Dim Row As DataGridViewRow
+                Dim Cell As DataGridViewCell
+                Dim a As Integer = 0
+
+                For Each unCliente In lista
+                    Row = New DataGridViewRow
+
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unCliente.ci.ToString
+                    Row.Cells.Add(Cell)
+
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unCliente.nombre.ToString
+                    Row.Cells.Add(Cell)
+
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unCliente.apellido.ToString
+                    Row.Cells.Add(Cell)
+
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unCliente.direccion.ToString
+                    Row.Cells.Add(Cell)
+
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unCliente.telefono.ToString
+                    Row.Cells.Add(Cell)
+
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unCliente.email.ToString
+                    Row.Cells.Add(Cell)
+
+
+
+                    dgvCliente.Rows.Add(Row)
+                    a = a + 1
+
+                Next
+                If a = 0 Then
+                    MsgBox("No se encontró ningun resultado", MsgBoxStyle.Exclamation)
+
+                End If
+            End If
+
+        End If
     End Sub
 End Class

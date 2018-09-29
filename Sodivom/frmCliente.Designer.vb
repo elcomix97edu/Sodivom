@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmCliente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,24 @@ Partial Class frmCliente
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCi = New System.Windows.Forms.Label()
         Me.mskCi = New System.Windows.Forms.MaskedTextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.lblDir = New System.Windows.Forms.Label()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.lblTel = New System.Windows.Forms.Label()
+        Me.lblEmail = New System.Windows.Forms.Label()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnListar = New System.Windows.Forms.Button()
         Me.dgvCliente = New System.Windows.Forms.DataGridView()
         Me.Ci = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,21 +46,23 @@ Partial Class frmCliente
         Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.rdbCi = New System.Windows.Forms.RadioButton()
+        Me.rdbApellido = New System.Windows.Forms.RadioButton()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.chkRUT = New System.Windows.Forms.CheckBox()
         CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblCi
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 47)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(23, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Ci"
+        Me.lblCi.AutoSize = True
+        Me.lblCi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCi.Location = New System.Drawing.Point(18, 47)
+        Me.lblCi.Name = "lblCi"
+        Me.lblCi.Size = New System.Drawing.Size(23, 20)
+        Me.lblCi.TabIndex = 0
+        Me.lblCi.Text = "Ci"
         '
         'mskCi
         '
@@ -77,55 +79,55 @@ Partial Class frmCliente
         Me.txtNombre.Size = New System.Drawing.Size(149, 20)
         Me.txtNombre.TabIndex = 2
         '
-        'Label2
+        'lblNombre
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 80)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 20)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Nombre"
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(18, 80)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(65, 20)
+        Me.lblNombre.TabIndex = 0
+        Me.lblNombre.Text = "Nombre"
         '
-        'Label3
+        'lblDir
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(18, 141)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 20)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Dirección"
+        Me.lblDir.AutoSize = True
+        Me.lblDir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDir.Location = New System.Drawing.Point(18, 141)
+        Me.lblDir.Name = "lblDir"
+        Me.lblDir.Size = New System.Drawing.Size(75, 20)
+        Me.lblDir.TabIndex = 0
+        Me.lblDir.Text = "Dirección"
         '
-        'Label4
+        'lblApellido
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(18, 107)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 20)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Apellido"
+        Me.lblApellido.AutoSize = True
+        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellido.Location = New System.Drawing.Point(18, 107)
+        Me.lblApellido.Name = "lblApellido"
+        Me.lblApellido.Size = New System.Drawing.Size(65, 20)
+        Me.lblApellido.TabIndex = 0
+        Me.lblApellido.Text = "Apellido"
         '
-        'Label5
+        'lblTel
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(18, 175)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(71, 20)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Teléfono"
+        Me.lblTel.AutoSize = True
+        Me.lblTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTel.Location = New System.Drawing.Point(18, 175)
+        Me.lblTel.Name = "lblTel"
+        Me.lblTel.Size = New System.Drawing.Size(71, 20)
+        Me.lblTel.TabIndex = 0
+        Me.lblTel.Text = "Teléfono"
         '
-        'Label6
+        'lblEmail
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(18, 208)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(53, 20)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "E-mail"
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(18, 208)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(53, 20)
+        Me.lblEmail.TabIndex = 0
+        Me.lblEmail.Text = "E-mail"
         '
         'txtApellido
         '
@@ -155,41 +157,41 @@ Partial Class frmCliente
         Me.txtEmail.Size = New System.Drawing.Size(149, 20)
         Me.txtEmail.TabIndex = 6
         '
-        'Button1
+        'btnIngresar
         '
-        Me.Button1.Location = New System.Drawing.Point(14, 254)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnIngresar.Location = New System.Drawing.Point(14, 254)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnIngresar.TabIndex = 7
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEliminar
         '
-        Me.Button2.Location = New System.Drawing.Point(114, 254)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Eliminar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(114, 254)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 8
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnModificar
         '
-        Me.Button3.Location = New System.Drawing.Point(14, 293)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 9
-        Me.Button3.Text = "Modificar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnModificar.Location = New System.Drawing.Point(14, 293)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.TabIndex = 9
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnListar
         '
-        Me.Button4.Location = New System.Drawing.Point(114, 293)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 10
-        Me.Button4.Text = "Listar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnListar.Location = New System.Drawing.Point(114, 293)
+        Me.btnListar.Name = "btnListar"
+        Me.btnListar.Size = New System.Drawing.Size(75, 23)
+        Me.btnListar.TabIndex = 10
+        Me.btnListar.Text = "Listar"
+        Me.btnListar.UseVisualStyleBackColor = True
         '
         'dgvCliente
         '
@@ -249,27 +251,27 @@ Partial Class frmCliente
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Listar por:"
         '
-        'RadioButton1
+        'rdbCi
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(216, 288)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(34, 17)
-        Me.RadioButton1.TabIndex = 13
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Ci"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rdbCi.AutoSize = True
+        Me.rdbCi.Location = New System.Drawing.Point(216, 288)
+        Me.rdbCi.Name = "rdbCi"
+        Me.rdbCi.Size = New System.Drawing.Size(34, 17)
+        Me.rdbCi.TabIndex = 13
+        Me.rdbCi.TabStop = True
+        Me.rdbCi.Text = "Ci"
+        Me.rdbCi.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rdbApellido
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(257, 288)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(62, 17)
-        Me.RadioButton2.TabIndex = 13
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Nombre"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rdbApellido.AutoSize = True
+        Me.rdbApellido.Location = New System.Drawing.Point(257, 288)
+        Me.rdbApellido.Name = "rdbApellido"
+        Me.rdbApellido.Size = New System.Drawing.Size(62, 17)
+        Me.rdbApellido.TabIndex = 13
+        Me.rdbApellido.TabStop = True
+        Me.rdbApellido.Text = "Apellido"
+        Me.rdbApellido.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -281,32 +283,53 @@ Partial Class frmCliente
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Cliente"
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(704, 13)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(75, 23)
+        Me.btnLimpiar.TabIndex = 15
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'chkRUT
+        '
+        Me.chkRUT.AutoSize = True
+        Me.chkRUT.Location = New System.Drawing.Point(272, 49)
+        Me.chkRUT.Name = "chkRUT"
+        Me.chkRUT.Size = New System.Drawing.Size(49, 17)
+        Me.chkRUT.TabIndex = 16
+        Me.chkRUT.Text = "RUT"
+        Me.chkRUT.UseVisualStyleBackColor = True
+        '
         'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 339)
+        Me.Controls.Add(Me.chkRUT)
+        Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.rdbApellido)
+        Me.Controls.Add(Me.rdbCi)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.dgvCliente)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnListar)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.txtApellido)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.mskCi)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblApellido)
+        Me.Controls.Add(Me.lblEmail)
+        Me.Controls.Add(Me.lblTel)
+        Me.Controls.Add(Me.lblDir)
+        Me.Controls.Add(Me.lblNombre)
+        Me.Controls.Add(Me.lblCi)
         Me.Name = "frmCliente"
         Me.Text = "frmCliente"
         CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
@@ -315,22 +338,22 @@ Partial Class frmCliente
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblCi As Label
     Friend WithEvents mskCi As MaskedTextBox
     Friend WithEvents txtNombre As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents lblDir As Label
+    Friend WithEvents lblApellido As Label
+    Friend WithEvents lblTel As Label
+    Friend WithEvents lblEmail As Label
     Friend WithEvents txtApellido As TextBox
     Friend WithEvents txtDireccion As TextBox
     Friend WithEvents txtTelefono As TextBox
     Friend WithEvents txtEmail As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnIngresar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnListar As Button
     Friend WithEvents dgvCliente As DataGridView
     Friend WithEvents Ci As DataGridViewTextBoxColumn
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
@@ -339,7 +362,9 @@ Partial Class frmCliente
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents Email As DataGridViewTextBoxColumn
     Friend WithEvents Label7 As Label
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents rdbCi As RadioButton
+    Friend WithEvents rdbApellido As RadioButton
     Friend WithEvents Label8 As Label
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents chkRUT As CheckBox
 End Class

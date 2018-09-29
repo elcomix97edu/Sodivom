@@ -25,14 +25,7 @@ Partial Class frmPrincipal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuitarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TipoEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuitarToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuitarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,6 +41,7 @@ Partial Class frmPrincipal
         Me.ListarToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RepartoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblBienvenida = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,59 +62,17 @@ Partial Class frmPrincipal
         '
         'EmpleadoToolStripMenuItem
         '
-        Me.EmpleadoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem1, Me.QuitarToolStripMenuItem1, Me.ModificarToolStripMenuItem1, Me.ListarToolStripMenuItem1, Me.TipoEmpleadoToolStripMenuItem})
+        Me.EmpleadoToolStripMenuItem.DoubleClickEnabled = True
+        Me.EmpleadoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipoEmpleadoToolStripMenuItem})
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
         Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.EmpleadoToolStripMenuItem.Text = "Empleado"
         '
-        'AgregarToolStripMenuItem1
-        '
-        Me.AgregarToolStripMenuItem1.Name = "AgregarToolStripMenuItem1"
-        Me.AgregarToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
-        Me.AgregarToolStripMenuItem1.Text = "Agregar"
-        '
-        'QuitarToolStripMenuItem1
-        '
-        Me.QuitarToolStripMenuItem1.Name = "QuitarToolStripMenuItem1"
-        Me.QuitarToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
-        Me.QuitarToolStripMenuItem1.Text = "Quitar"
-        '
-        'ModificarToolStripMenuItem1
-        '
-        Me.ModificarToolStripMenuItem1.Name = "ModificarToolStripMenuItem1"
-        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
-        Me.ModificarToolStripMenuItem1.Text = "Modificar"
-        '
-        'ListarToolStripMenuItem1
-        '
-        Me.ListarToolStripMenuItem1.Name = "ListarToolStripMenuItem1"
-        Me.ListarToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
-        Me.ListarToolStripMenuItem1.Text = "Listar"
-        '
         'TipoEmpleadoToolStripMenuItem
         '
-        Me.TipoEmpleadoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem4, Me.QuitarToolStripMenuItem4, Me.ListarToolStripMenuItem6})
         Me.TipoEmpleadoToolStripMenuItem.Name = "TipoEmpleadoToolStripMenuItem"
         Me.TipoEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.TipoEmpleadoToolStripMenuItem.Text = "TipoEmpleado"
-        '
-        'AgregarToolStripMenuItem4
-        '
-        Me.AgregarToolStripMenuItem4.Name = "AgregarToolStripMenuItem4"
-        Me.AgregarToolStripMenuItem4.Size = New System.Drawing.Size(116, 22)
-        Me.AgregarToolStripMenuItem4.Text = "Agregar"
-        '
-        'QuitarToolStripMenuItem4
-        '
-        Me.QuitarToolStripMenuItem4.Name = "QuitarToolStripMenuItem4"
-        Me.QuitarToolStripMenuItem4.Size = New System.Drawing.Size(116, 22)
-        Me.QuitarToolStripMenuItem4.Text = "Quitar"
-        '
-        'ListarToolStripMenuItem6
-        '
-        Me.ListarToolStripMenuItem6.Name = "ListarToolStripMenuItem6"
-        Me.ListarToolStripMenuItem6.Size = New System.Drawing.Size(116, 22)
-        Me.ListarToolStripMenuItem6.Text = "Listar"
         '
         'ProductoToolStripMenuItem
         '
@@ -216,11 +168,23 @@ Partial Class frmPrincipal
         Me.ListarToolStripMenuItem5.Size = New System.Drawing.Size(102, 22)
         Me.ListarToolStripMenuItem5.Text = "Listar"
         '
+        'lblBienvenida
+        '
+        Me.lblBienvenida.AutoSize = True
+        Me.lblBienvenida.BackColor = System.Drawing.Color.Transparent
+        Me.lblBienvenida.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBienvenida.Location = New System.Drawing.Point(267, 448)
+        Me.lblBienvenida.Name = "lblBienvenida"
+        Me.lblBienvenida.Size = New System.Drawing.Size(148, 31)
+        Me.lblBienvenida.TabIndex = 3
+        Me.lblBienvenida.Text = "Bienvenido"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(882, 520)
+        Me.Controls.Add(Me.lblBienvenida)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -236,14 +200,7 @@ Partial Class frmPrincipal
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ClienteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmpleadoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents QuitarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ListarToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents TipoEmpleadoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarToolStripMenuItem4 As ToolStripMenuItem
-    Friend WithEvents QuitarToolStripMenuItem4 As ToolStripMenuItem
-    Friend WithEvents ListarToolStripMenuItem6 As ToolStripMenuItem
     Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents QuitarToolStripMenuItem2 As ToolStripMenuItem
@@ -259,4 +216,5 @@ Partial Class frmPrincipal
     Friend WithEvents RepartoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListarToolStripMenuItem5 As ToolStripMenuItem
     Friend WithEvents RealizarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblBienvenida As Label
 End Class

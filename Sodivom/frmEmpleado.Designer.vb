@@ -23,26 +23,26 @@ Partial Class frmEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.rdbApellido = New System.Windows.Forms.RadioButton()
+        Me.rdbCi = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvDatos = New System.Windows.Forms.DataGridView()
         Me.Ci = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.btnListar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtTel = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.mskCi = New System.Windows.Forms.MaskedTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -50,13 +50,14 @@ Partial Class frmEmpleado
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtSueldo = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.comboCargo = New System.Windows.Forms.ComboBox()
+        Me.rdbCargo = New System.Windows.Forms.RadioButton()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -69,27 +70,27 @@ Partial Class frmEmpleado
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "Empleado"
         '
-        'RadioButton2
+        'rdbApellido
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(252, 399)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(62, 17)
-        Me.RadioButton2.TabIndex = 34
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Nombre"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rdbApellido.AutoSize = True
+        Me.rdbApellido.Location = New System.Drawing.Point(252, 399)
+        Me.rdbApellido.Name = "rdbApellido"
+        Me.rdbApellido.Size = New System.Drawing.Size(62, 17)
+        Me.rdbApellido.TabIndex = 34
+        Me.rdbApellido.TabStop = True
+        Me.rdbApellido.Text = "Apellido"
+        Me.rdbApellido.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rdbCi
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(211, 399)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(34, 17)
-        Me.RadioButton1.TabIndex = 33
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Ci"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rdbCi.AutoSize = True
+        Me.rdbCi.Location = New System.Drawing.Point(211, 399)
+        Me.rdbCi.Name = "rdbCi"
+        Me.rdbCi.Size = New System.Drawing.Size(34, 17)
+        Me.rdbCi.TabIndex = 33
+        Me.rdbCi.TabStop = True
+        Me.rdbCi.Text = "Ci"
+        Me.rdbCi.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -101,17 +102,17 @@ Partial Class frmEmpleado
         Me.Label7.TabIndex = 32
         Me.Label7.Text = "Listar por:"
         '
-        'DataGridView1
+        'dgvDatos
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Ci, Me.Nombre, Me.Apellido, Me.Direccion, Me.Telefono, Me.Email})
-        Me.DataGridView1.Location = New System.Drawing.Point(327, 45)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(447, 267)
-        Me.DataGridView1.TabIndex = 31
+        Me.dgvDatos.AllowUserToAddRows = False
+        Me.dgvDatos.AllowUserToDeleteRows = False
+        Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Ci, Me.Nombre, Me.Apellido, Me.Direccion, Me.Telefono, Me.Email})
+        Me.dgvDatos.Location = New System.Drawing.Point(327, 45)
+        Me.dgvDatos.Name = "dgvDatos"
+        Me.dgvDatos.ReadOnly = True
+        Me.dgvDatos.Size = New System.Drawing.Size(447, 267)
+        Me.dgvDatos.TabIndex = 31
         '
         'Ci
         '
@@ -149,83 +150,83 @@ Partial Class frmEmpleado
         Me.Email.Name = "Email"
         Me.Email.ReadOnly = True
         '
-        'Button4
+        'btnListar
         '
-        Me.Button4.Location = New System.Drawing.Point(109, 404)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "Listar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnListar.Location = New System.Drawing.Point(109, 404)
+        Me.btnListar.Name = "btnListar"
+        Me.btnListar.Size = New System.Drawing.Size(75, 23)
+        Me.btnListar.TabIndex = 30
+        Me.btnListar.Text = "Listar"
+        Me.btnListar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnModificar
         '
-        Me.Button3.Location = New System.Drawing.Point(9, 404)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 29
-        Me.Button3.Text = "Modificar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnModificar.Location = New System.Drawing.Point(9, 404)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.TabIndex = 29
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEliminar
         '
-        Me.Button2.Location = New System.Drawing.Point(109, 365)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 28
-        Me.Button2.Text = "Eliminar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(109, 365)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 28
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnIngresar
         '
-        Me.Button1.Location = New System.Drawing.Point(9, 365)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnIngresar.Location = New System.Drawing.Point(9, 365)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnIngresar.TabIndex = 27
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'txtEmail
         '
-        Me.TextBox5.Location = New System.Drawing.Point(111, 206)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox5.TabIndex = 26
+        Me.txtEmail.Location = New System.Drawing.Point(111, 206)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(149, 20)
+        Me.txtEmail.TabIndex = 26
         '
-        'TextBox4
+        'txtTel
         '
-        Me.TextBox4.Location = New System.Drawing.Point(111, 173)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox4.TabIndex = 25
+        Me.txtTel.Location = New System.Drawing.Point(111, 173)
+        Me.txtTel.Name = "txtTel"
+        Me.txtTel.Size = New System.Drawing.Size(149, 20)
+        Me.txtTel.TabIndex = 25
         '
-        'TextBox3
+        'txtDireccion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(111, 139)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox3.TabIndex = 24
+        Me.txtDireccion.Location = New System.Drawing.Point(111, 139)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(149, 20)
+        Me.txtDireccion.TabIndex = 24
         '
-        'TextBox2
+        'txtApellido
         '
-        Me.TextBox2.Location = New System.Drawing.Point(111, 105)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox2.TabIndex = 23
+        Me.txtApellido.Location = New System.Drawing.Point(111, 105)
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(149, 20)
+        Me.txtApellido.TabIndex = 23
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(111, 76)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox1.TabIndex = 22
+        Me.txtNombre.Location = New System.Drawing.Point(111, 76)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(149, 20)
+        Me.txtNombre.TabIndex = 22
         '
-        'MaskedTextBox1
+        'mskCi
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(111, 45)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.MaskedTextBox1.TabIndex = 21
+        Me.mskCi.Location = New System.Drawing.Point(111, 45)
+        Me.mskCi.Name = "mskCi"
+        Me.mskCi.Size = New System.Drawing.Size(149, 20)
+        Me.mskCi.TabIndex = 21
         '
         'Label4
         '
@@ -297,12 +298,12 @@ Partial Class frmEmpleado
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Contraseña"
         '
-        'TextBox6
+        'txtContraseña
         '
-        Me.TextBox6.Location = New System.Drawing.Point(111, 241)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox6.TabIndex = 26
+        Me.txtContraseña.Location = New System.Drawing.Point(111, 241)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.Size = New System.Drawing.Size(149, 20)
+        Me.txtContraseña.TabIndex = 26
         '
         'Label10
         '
@@ -314,12 +315,12 @@ Partial Class frmEmpleado
         Me.Label10.TabIndex = 18
         Me.Label10.Text = "Sueldo"
         '
-        'TextBox7
+        'txtSueldo
         '
-        Me.TextBox7.Location = New System.Drawing.Point(111, 276)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox7.TabIndex = 26
+        Me.txtSueldo.Location = New System.Drawing.Point(111, 276)
+        Me.txtSueldo.Name = "txtSueldo"
+        Me.txtSueldo.Size = New System.Drawing.Size(149, 20)
+        Me.txtSueldo.TabIndex = 26
         '
         'Label11
         '
@@ -331,51 +332,61 @@ Partial Class frmEmpleado
         Me.Label11.TabIndex = 18
         Me.Label11.Text = "Cargo"
         '
-        'ComboBox1
+        'comboCargo
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(111, 306)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(149, 21)
-        Me.ComboBox1.TabIndex = 36
+        Me.comboCargo.FormattingEnabled = True
+        Me.comboCargo.Location = New System.Drawing.Point(111, 306)
+        Me.comboCargo.Name = "comboCargo"
+        Me.comboCargo.Size = New System.Drawing.Size(149, 21)
+        Me.comboCargo.TabIndex = 36
         '
-        'RadioButton3
+        'rdbCargo
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(320, 399)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(53, 17)
-        Me.RadioButton3.TabIndex = 34
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Cargo"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.rdbCargo.AutoSize = True
+        Me.rdbCargo.Location = New System.Drawing.Point(320, 399)
+        Me.rdbCargo.Name = "rdbCargo"
+        Me.rdbCargo.Size = New System.Drawing.Size(53, 17)
+        Me.rdbCargo.TabIndex = 34
+        Me.rdbCargo.TabStop = True
+        Me.rdbCargo.Text = "Cargo"
+        Me.rdbCargo.UseVisualStyleBackColor = True
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(701, 13)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(75, 23)
+        Me.btnLimpiar.TabIndex = 37
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'frmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnLimpiar)
+        Me.Controls.Add(Me.comboCargo)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.RadioButton3)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.rdbCargo)
+        Me.Controls.Add(Me.rdbApellido)
+        Me.Controls.Add(Me.rdbCi)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.dgvDatos)
+        Me.Controls.Add(Me.btnListar)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnIngresar)
+        Me.Controls.Add(Me.txtSueldo)
+        Me.Controls.Add(Me.txtContraseña)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.txtTel)
+        Me.Controls.Add(Me.txtDireccion)
+        Me.Controls.Add(Me.txtApellido)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.mskCi)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label6)
@@ -385,33 +396,33 @@ Partial Class frmEmpleado
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmEmpleado"
         Me.Text = "frmEmpleado"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label8 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents rdbApellido As RadioButton
+    Friend WithEvents rdbCi As RadioButton
     Friend WithEvents Label7 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvDatos As DataGridView
     Friend WithEvents Ci As DataGridViewTextBoxColumn
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
     Friend WithEvents Apellido As DataGridViewTextBoxColumn
     Friend WithEvents Direccion As DataGridViewTextBoxColumn
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents Email As DataGridViewTextBoxColumn
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents btnListar As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnIngresar As Button
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtTel As TextBox
+    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents txtApellido As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents mskCi As MaskedTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -419,10 +430,11 @@ Partial Class frmEmpleado
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtContraseña As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtSueldo As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents comboCargo As ComboBox
+    Friend WithEvents rdbCargo As RadioButton
+    Friend WithEvents btnLimpiar As Button
 End Class

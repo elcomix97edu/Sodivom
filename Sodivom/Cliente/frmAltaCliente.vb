@@ -9,12 +9,13 @@ Public Class frmAltaCliente
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim val As New clsValidar
+        Dim unacon As New clsControladora
 
         'validaciones
         If val.Valido(txtCedula.Text) Then
 
             If val.VerificarCI(CInt(txtCedula.Text)) Then
-                If val.ExisteCliente(CInt(txtCedula.Text)) = False Then
+                If unacon.ExisteCliente(CInt(txtCedula.Text)) = False Then
 
                     If val.Valido(txtNombre.Text) Then
 

@@ -64,7 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsECliente.vb" />
+    <Compile Include="clsEEmpleado.vb" />
     <Compile Include="clsEPersona.vb" />
+    <Compile Include="clsETipoEmpleado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -22,4 +22,9 @@ Public Class clsDCliente
         Return unPC.modificarCliente(cliente)
     End Function
 
+    Public Function ExisteCliente(ci As Integer) As Boolean
+        Dim per As New clsPCliente
+        Return per.existe(ci)
+    End Function
+
 End Class

@@ -34,11 +34,7 @@ Public Class clsValidar
 
     End Function
 
-    Public Function ExisteCliente(ci As Integer) As Boolean
-        Dim per As New clsPCliente
-        Return per.existe(ci)
 
-    End Function
 
     Public Function VerificarCampos(ByVal frm As Form) As Boolean
         Dim completos As Boolean = True

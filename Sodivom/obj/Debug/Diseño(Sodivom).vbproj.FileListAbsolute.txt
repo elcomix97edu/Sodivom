@@ -28,8 +28,6 @@ C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmBajaCliente.resources
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmModificarCliente.resources
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmListarCliente.resources
-C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmAltaEmpleado.resources
-C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmAltaTipoEmpleado.resources
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmCliente.resources
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmEmpleado.resources
 C:\Users\jerem\Desktop\Sodivom-master\Sodivom\bin\Debug\Sodivom.exe.config
@@ -66,3 +64,4 @@ C:\Users\jerem\Desktop\Sodivom-master\Sodivom\obj\Debug\Diseño(Sodivom).vbproj.
 C:\Users\jerem\Desktop\Sodivom-master\Sodivom\obj\Debug\Sodivom.exe
 C:\Users\jerem\Desktop\Sodivom-master\Sodivom\obj\Debug\Sodivom.xml
 C:\Users\jerem\Desktop\Sodivom-master\Sodivom\obj\Debug\Sodivom.pdb
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmTipoEmpleado.resources
