@@ -12,6 +12,7 @@ Public Class clsLimpiar
             If TypeOf unControl Is MaskedTextBox Then
                 unControl.Text = ""
                 unControl.BackColor = Drawing.Color.White
+                unControl.Enabled = True
             End If
 
             If TypeOf unControl Is RadioButton Then

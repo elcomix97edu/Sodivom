@@ -22,37 +22,31 @@ Partial Class frmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TipoEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuitarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DistribuidorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuitarToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RealizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RepartoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListarToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExtraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MODODIABLOSKEREToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblBienvenida = New System.Windows.Forms.Label()
+        Me.StockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OfertaWebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ClienteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TipoEmpleadoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DistribuidorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StockToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OfertaWebToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExtraToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SKEREMODODIABLOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.YABASTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem, Me.EmpleadoToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.DistribuidorToolStripMenuItem, Me.VentaToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(882, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ClienteToolStripMenuItem
         '
@@ -76,97 +70,34 @@ Partial Class frmPrincipal
         '
         'ProductoToolStripMenuItem
         '
-        Me.ProductoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem2, Me.QuitarToolStripMenuItem2, Me.ModificarToolStripMenuItem2, Me.ListarToolStripMenuItem2})
         Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
         Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.ProductoToolStripMenuItem.Text = "Producto"
         '
-        'AgregarToolStripMenuItem2
-        '
-        Me.AgregarToolStripMenuItem2.Name = "AgregarToolStripMenuItem2"
-        Me.AgregarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
-        Me.AgregarToolStripMenuItem2.Text = "Agregar"
-        '
-        'QuitarToolStripMenuItem2
-        '
-        Me.QuitarToolStripMenuItem2.Name = "QuitarToolStripMenuItem2"
-        Me.QuitarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
-        Me.QuitarToolStripMenuItem2.Text = "Quitar"
-        '
-        'ModificarToolStripMenuItem2
-        '
-        Me.ModificarToolStripMenuItem2.Name = "ModificarToolStripMenuItem2"
-        Me.ModificarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
-        Me.ModificarToolStripMenuItem2.Text = "Modificar"
-        '
-        'ListarToolStripMenuItem2
-        '
-        Me.ListarToolStripMenuItem2.Name = "ListarToolStripMenuItem2"
-        Me.ListarToolStripMenuItem2.Size = New System.Drawing.Size(125, 22)
-        Me.ListarToolStripMenuItem2.Text = "Listar"
-        '
         'DistribuidorToolStripMenuItem
         '
-        Me.DistribuidorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem3, Me.QuitarToolStripMenuItem3, Me.ModificarToolStripMenuItem3, Me.ListarToolStripMenuItem3})
         Me.DistribuidorToolStripMenuItem.Name = "DistribuidorToolStripMenuItem"
         Me.DistribuidorToolStripMenuItem.Size = New System.Drawing.Size(81, 20)
         Me.DistribuidorToolStripMenuItem.Text = "Distribuidor"
         '
-        'AgregarToolStripMenuItem3
-        '
-        Me.AgregarToolStripMenuItem3.Name = "AgregarToolStripMenuItem3"
-        Me.AgregarToolStripMenuItem3.Size = New System.Drawing.Size(125, 22)
-        Me.AgregarToolStripMenuItem3.Text = "Agregar"
-        '
-        'QuitarToolStripMenuItem3
-        '
-        Me.QuitarToolStripMenuItem3.Name = "QuitarToolStripMenuItem3"
-        Me.QuitarToolStripMenuItem3.Size = New System.Drawing.Size(125, 22)
-        Me.QuitarToolStripMenuItem3.Text = "Quitar"
-        '
-        'ModificarToolStripMenuItem3
-        '
-        Me.ModificarToolStripMenuItem3.Name = "ModificarToolStripMenuItem3"
-        Me.ModificarToolStripMenuItem3.Size = New System.Drawing.Size(125, 22)
-        Me.ModificarToolStripMenuItem3.Text = "Modificar"
-        '
-        'ListarToolStripMenuItem3
-        '
-        Me.ListarToolStripMenuItem3.Name = "ListarToolStripMenuItem3"
-        Me.ListarToolStripMenuItem3.Size = New System.Drawing.Size(125, 22)
-        Me.ListarToolStripMenuItem3.Text = "Listar"
-        '
         'VentaToolStripMenuItem
         '
-        Me.VentaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RealizarToolStripMenuItem, Me.ListarToolStripMenuItem4, Me.RepartoToolStripMenuItem})
         Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
         Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
-        'RealizarToolStripMenuItem
+        'ExtraToolStripMenuItem
         '
-        Me.RealizarToolStripMenuItem.Name = "RealizarToolStripMenuItem"
-        Me.RealizarToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
-        Me.RealizarToolStripMenuItem.Text = "Realizar"
+        Me.ExtraToolStripMenuItem.Name = "ExtraToolStripMenuItem"
+        Me.ExtraToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ExtraToolStripMenuItem.Text = "Extra"
+        Me.ExtraToolStripMenuItem.Visible = False
         '
-        'ListarToolStripMenuItem4
+        'MODODIABLOSKEREToolStripMenuItem
         '
-        Me.ListarToolStripMenuItem4.Name = "ListarToolStripMenuItem4"
-        Me.ListarToolStripMenuItem4.Size = New System.Drawing.Size(115, 22)
-        Me.ListarToolStripMenuItem4.Text = "Listar"
-        '
-        'RepartoToolStripMenuItem
-        '
-        Me.RepartoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListarToolStripMenuItem5})
-        Me.RepartoToolStripMenuItem.Name = "RepartoToolStripMenuItem"
-        Me.RepartoToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
-        Me.RepartoToolStripMenuItem.Text = "Reparto"
-        '
-        'ListarToolStripMenuItem5
-        '
-        Me.ListarToolStripMenuItem5.Name = "ListarToolStripMenuItem5"
-        Me.ListarToolStripMenuItem5.Size = New System.Drawing.Size(102, 22)
-        Me.ListarToolStripMenuItem5.Text = "Listar"
+        Me.MODODIABLOSKEREToolStripMenuItem.Name = "MODODIABLOSKEREToolStripMenuItem"
+        Me.MODODIABLOSKEREToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.MODODIABLOSKEREToolStripMenuItem.Text = "MODO DIABLO SKERE"
         '
         'lblBienvenida
         '
@@ -179,6 +110,97 @@ Partial Class frmPrincipal
         Me.lblBienvenida.TabIndex = 3
         Me.lblBienvenida.Text = "Bienvenido"
         '
+        'StockToolStripMenuItem
+        '
+        Me.StockToolStripMenuItem.Name = "StockToolStripMenuItem"
+        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.StockToolStripMenuItem.Text = "Stock"
+        '
+        'OfertaWebToolStripMenuItem
+        '
+        Me.OfertaWebToolStripMenuItem.Name = "OfertaWebToolStripMenuItem"
+        Me.OfertaWebToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.OfertaWebToolStripMenuItem.Text = "Oferta Web"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem1, Me.EmpleadoToolStripMenuItem1, Me.ProductoToolStripMenuItem1, Me.DistribuidorToolStripMenuItem1, Me.StockToolStripMenuItem1, Me.VentaToolStripMenuItem1, Me.OfertaWebToolStripMenuItem1, Me.ExtraToolStripMenuItem1})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(882, 24)
+        Me.MenuStrip1.TabIndex = 5
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ClienteToolStripMenuItem1
+        '
+        Me.ClienteToolStripMenuItem1.Name = "ClienteToolStripMenuItem1"
+        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(56, 20)
+        Me.ClienteToolStripMenuItem1.Text = "Cliente"
+        '
+        'EmpleadoToolStripMenuItem1
+        '
+        Me.EmpleadoToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipoEmpleadoToolStripMenuItem1})
+        Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(72, 20)
+        Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
+        '
+        'TipoEmpleadoToolStripMenuItem1
+        '
+        Me.TipoEmpleadoToolStripMenuItem1.Name = "TipoEmpleadoToolStripMenuItem1"
+        Me.TipoEmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
+        Me.TipoEmpleadoToolStripMenuItem1.Text = "TipoEmpleado"
+        '
+        'ProductoToolStripMenuItem1
+        '
+        Me.ProductoToolStripMenuItem1.Name = "ProductoToolStripMenuItem1"
+        Me.ProductoToolStripMenuItem1.Size = New System.Drawing.Size(68, 20)
+        Me.ProductoToolStripMenuItem1.Text = "Producto"
+        '
+        'DistribuidorToolStripMenuItem1
+        '
+        Me.DistribuidorToolStripMenuItem1.Name = "DistribuidorToolStripMenuItem1"
+        Me.DistribuidorToolStripMenuItem1.Size = New System.Drawing.Size(81, 20)
+        Me.DistribuidorToolStripMenuItem1.Text = "Distribuidor"
+        '
+        'StockToolStripMenuItem1
+        '
+        Me.StockToolStripMenuItem1.Name = "StockToolStripMenuItem1"
+        Me.StockToolStripMenuItem1.Size = New System.Drawing.Size(48, 20)
+        Me.StockToolStripMenuItem1.Text = "Stock"
+        '
+        'VentaToolStripMenuItem1
+        '
+        Me.VentaToolStripMenuItem1.Name = "VentaToolStripMenuItem1"
+        Me.VentaToolStripMenuItem1.Size = New System.Drawing.Size(48, 20)
+        Me.VentaToolStripMenuItem1.Text = "Venta"
+        '
+        'OfertaWebToolStripMenuItem1
+        '
+        Me.OfertaWebToolStripMenuItem1.Name = "OfertaWebToolStripMenuItem1"
+        Me.OfertaWebToolStripMenuItem1.Size = New System.Drawing.Size(76, 20)
+        Me.OfertaWebToolStripMenuItem1.Text = "OfertaWeb"
+        '
+        'ExtraToolStripMenuItem1
+        '
+        Me.ExtraToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SKEREMODODIABLOToolStripMenuItem, Me.YABASTAToolStripMenuItem})
+        Me.ExtraToolStripMenuItem1.Name = "ExtraToolStripMenuItem1"
+        Me.ExtraToolStripMenuItem1.Size = New System.Drawing.Size(44, 20)
+        Me.ExtraToolStripMenuItem1.Text = "Extra"
+        Me.ExtraToolStripMenuItem1.Visible = False
+        '
+        'SKEREMODODIABLOToolStripMenuItem
+        '
+        Me.SKEREMODODIABLOToolStripMenuItem.Name = "SKEREMODODIABLOToolStripMenuItem"
+        Me.SKEREMODODIABLOToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.SKEREMODODIABLOToolStripMenuItem.Text = "SKEREMODODIABLO"
+        '
+        'YABASTAToolStripMenuItem
+        '
+        Me.YABASTAToolStripMenuItem.Name = "YABASTAToolStripMenuItem"
+        Me.YABASTAToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.YABASTAToolStripMenuItem.Text = "YABASTA"
+        Me.YABASTAToolStripMenuItem.Visible = False
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -187,7 +209,6 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.lblBienvenida)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmPrincipal"
         Me.Text = "Sodivom"
         Me.MenuStrip1.ResumeLayout(False)
@@ -196,25 +217,27 @@ Partial Class frmPrincipal
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ClienteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmpleadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TipoEmpleadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents QuitarToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents ListarToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents DistribuidorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents QuitarToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents ListarToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents VentaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ListarToolStripMenuItem4 As ToolStripMenuItem
-    Friend WithEvents RepartoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ListarToolStripMenuItem5 As ToolStripMenuItem
-    Friend WithEvents RealizarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblBienvenida As Label
+    Friend WithEvents ExtraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MODODIABLOSKEREToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StockToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OfertaWebToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ClienteToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents EmpleadoToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ProductoToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DistribuidorToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents StockToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents VentaToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents OfertaWebToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ExtraToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents SKEREMODODIABLOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents YABASTAToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TipoEmpleadoToolStripMenuItem1 As ToolStripMenuItem
 End Class

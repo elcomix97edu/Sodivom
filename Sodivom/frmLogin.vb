@@ -7,16 +7,17 @@ Public Class frmLogin
     Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
         Dim unValidar As New clsValidar
 
-        If unValidar.Valido(txtuser.Text) Then
+        If unValidar.Valido(mskCi.Text) Then
 
             If unValidar.Valido(txtpass.Text) Then
 
                 'cabra
                 Dim unDE As New clsControladora
-                Dim ok = unDE.login(txtuser.Text, txtpass.Text)
-                If ok Then
+                Dim empleado = unDE.login(mskCi.Text, txtpass.Text)
+                If empleado IsNot Nothing Then
                     'MsgBox("Despliego formulario principal")
                     Dim frmp As New frmPrincipal
+                    frmp.empleado = empleado
                     frmp.Show()
                     Me.Hide()
 

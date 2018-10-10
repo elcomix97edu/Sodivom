@@ -6,9 +6,6 @@ Public Class frmCliente
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Dim val As New clsValidar
-
-
-
         'validaciones
         If val.VerificarCampos(Me) Then
 
@@ -103,6 +100,7 @@ Public Class frmCliente
             txtDireccion.Text = dgvCliente.CurrentRow.Cells(3).Value.ToString
             txtTelefono.Text = dgvCliente.CurrentRow.Cells(4).Value.ToString
             txtEmail.Text = dgvCliente.CurrentRow.Cells(5).Value.ToString
+            mskCi.Enabled = False
         End If
 
     End Sub

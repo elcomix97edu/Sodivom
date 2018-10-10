@@ -65,3 +65,5 @@ C:\Users\jerem\Desktop\Sodivom-master\Sodivom\obj\Debug\Sodivom.exe
 C:\Users\jerem\Desktop\Sodivom-master\Sodivom\obj\Debug\Sodivom.xml
 C:\Users\jerem\Desktop\Sodivom-master\Sodivom\obj\Debug\Sodivom.pdb
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmTipoEmpleado.resources
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmProducto.resources
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.frmStock.resources

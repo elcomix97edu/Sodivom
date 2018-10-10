@@ -59,5 +59,25 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _274976300bafcabe798a4da051f8fb62b6c99fbbv2_00() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_274976300bafcabe798a4da051f8fb62b6c99fbbv2_00", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Skere() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Skere", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
     End Module
 End Namespace

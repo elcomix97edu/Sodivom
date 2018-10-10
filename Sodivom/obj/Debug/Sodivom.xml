@@ -22,5 +22,15 @@ Sodivom
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:Sodivom.My.Resources.Resources._274976300bafcabe798a4da051f8fb62b6c99fbbv2_00">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Sodivom.My.Resources.Resources.Skere">
+<summary>
+  Busca un recurso adaptado de tipo System.Byte[].
+</summary>
+</member>
 </members>
 </doc>

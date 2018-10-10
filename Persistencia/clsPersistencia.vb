@@ -4,7 +4,8 @@ Public Class clsPersistencia
         Private Function conectar() As MySqlConnection
             If Not con Is Nothing Then con.Close()
             Dim miConexion As String
-        miConexion = "server=localhost; uid=root ; password=Belpois59656 ; database=sodivom  ;"
+        'miConexion = "server=127.0.0.1; uid=root ; password=; database=database;"
+        miConexion = "server=localhost; uid=root ; password= ; database=sodivom  ; SslMode=none;"
         Try
                 con = New MySqlConnection(miConexion)
                 con.Open()

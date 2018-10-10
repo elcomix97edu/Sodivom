@@ -16,4 +16,9 @@ Public Class clsDTipoEmpleado
         Return unPte.listarTipoEmpleado
     End Function
 
+    Public Function ExisteTipoEmpleado(tipo As String) As Boolean
+        Dim unPte As New clsPTipoEmpleado
+        Return unPte.existe(tipo)
+    End Function
+
 End Class

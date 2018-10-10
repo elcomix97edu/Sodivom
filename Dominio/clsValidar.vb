@@ -48,7 +48,7 @@ Public Class clsValidar
             End If
             If TypeOf unControl Is MaskedTextBox Then
                 unControl.backcolor = Color.White
-                If unControl.MaskFull = False Then
+                If unControl.Text = "" Then
                     unControl.backcolor = Color.Red
                     completos = False
                 End If

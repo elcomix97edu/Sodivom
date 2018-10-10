@@ -6,14 +6,14 @@ Public Class clsPTipoEmpleado
 
     Public Function AltaTipoEmpleado(tipo As String) As Boolean
         Dim consulta As String
-        consulta = "INSERT INTO tipo_empleado (tipo_empleado) VALUES ('" & tipo & "' )"
+        consulta = "INSERT INTO tipoempleado (tipoempleado) VALUES ('" & tipo & "' )"
 
         Return ejecutarSQL(consulta)
     End Function
 
     Public Function existe(tipo As String) As Boolean
         Dim consultaSQL As String
-        consultaSQL = "SELECT * FROM tipo_empleado WHERE tipo_empleado='" & tipo & "'"
+        consultaSQL = "SELECT * FROM tipoempleado WHERE tipoempleado='" & tipo & "'"
         Dim datos = ejecutarYdevolver(consultaSQL)
         If datos.HasRows Then
             Return True
@@ -58,7 +58,7 @@ Public Class clsPTipoEmpleado
 
     Public Function eliminarTipoEmpleado(tipo As String) As Boolean
         Dim consulta As String
-        consulta = "DELETE FROM tipo_empleado WHERE tipo_empleado =" & tipo & ";"
+        consulta = "DELETE FROM tipoempleado WHERE tipoempleado = '" & tipo & "';"
         Return ejecutarSQL(consulta)
     End Function
 

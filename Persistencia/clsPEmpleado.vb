@@ -3,14 +3,15 @@ Imports MySql.Data.MySqlClient
 
 Public Class clsPEmpleado
     Inherits clsPersistencia
-    Public Function login(usuario As String, contrasenia As String) As Boolean
+    Public Function login(ci As String, contrasenia As String) As clsEEmpleado
         Dim consultaSQL As String
-        consultaSQL = "SELECT * FROM usuarios WHERE user='" & usuario & "' AND pass='" & contrasenia & "';"
+        'consultaSQL = "SELECT * FROM emple WHERE user='" & usuario & "' AND pass='" & contrasenia & "';"
+        consultaSQL = "SELECT * FROM empleado INNER JOIN persona ON empleado.ci = persona.ci WHERE persona.ci='" & ci & "' AND empleado.contrasenia='" & contrasenia & "';"
         Dim datos = ejecutarYdevolver(consultaSQL)
-        If datos.HasRows Then
-            Return True
+        If datos.Read() Then
+            Return crearEmpleado(datos)
         Else
-            Return False
+            Return Nothing
         End If
 
     End Function
@@ -28,7 +29,7 @@ Public Class clsPEmpleado
         consulta = "INSERT INTO persona (ci,nombre,apellido,telefono,direccion,email) VALUES (" & unempl.ci & ",'" & unempl.nombre & "','" & unempl.apellido & "','" & unempl.telefono & "', '" & unempl.direccion & "', '" & unempl.email & "')"
         ejecutarSQL(consulta)
 
-        consulta = "INSERT INTO empleado (ci,contrasenia,sueldo,tipoEmpleado) VALUES (" & unempl.ci & ",'" & unempl.contrseña & "'," & unempl.sueldo & "," & unempl.tipoEmpleado & ")"
+        consulta = "INSERT INTO empleado (ci,contrasenia,sueldo,idtipoempleado) VALUES (" & unempl.ci & ",'" & unempl.contrseña & "'," & unempl.sueldo & "," & unempl.tipoEmpleado & ")"
 
         Return ejecutarSQL(consulta)
     End Function
@@ -57,7 +58,7 @@ Public Class clsPEmpleado
         unEmpleado.telefono = datos.Item("telefono").ToString
         unEmpleado.contrseña = datos.Item("contrasenia").ToString
         unEmpleado.sueldo = CInt(datos.Item("sueldo").ToString)
-        unEmpleado.tipoEmpleado = CInt(datos.Item("tipoEmpleado").ToString)
+        unEmpleado.tipoEmpleado = CInt(datos.Item("idtipoEmpleado").ToString)
 
         Return unEmpleado
     End Function
@@ -65,11 +66,11 @@ Public Class clsPEmpleado
     Public Function listarEmpleado(parametro As String, busqueda As Integer) As List(Of clsEEmpleado)
         Dim consulta As String
         If busqueda = 1 Then 'Por ci
-            consulta = "SELECT * FROM empleado INNER JOIN persona ON empleado.ci = persona.ci WHERE empleado.ci='" & parametro & "';"
+            consulta = "SELECT * FROM empleado INNER JOIN persona ON empleado.ci = persona.ci WHERE persona.ci='" & parametro & "';"
         ElseIf busqueda = 2 Then 'Por Apellido
-            consulta = "SELECT * FROM empleado INNER JOIN persona ON empleado.ci = persona.ci WHERE empleado.apellido='" & parametro & "';"
+            consulta = "SELECT * FROM empleado INNER JOIN persona ON empleado.ci = persona.ci WHERE persona.apellido='" & parametro & "';"
         ElseIf busqueda = 3 Then 'Por Cargo
-            consulta = "SELECT * FROM empleado INNER JOIN persona ON empleado.ci = persona.ci WHERE empleado.tipoEmpleado='" & parametro & "';"
+            consulta = "SELECT * FROM empleado INNER JOIN persona ON empleado.ci = persona.ci WHERE empleado.idtipoEmpleado='" & parametro & "';"
         End If
 
 
@@ -98,7 +99,7 @@ Public Class clsPEmpleado
         consulta = "UPDATE persona SET nombre = '" & unempl.nombre & "' , apellido = '" & unempl.apellido & "' , direccion = '" & unempl.direccion & "', telefono = '" & unempl.telefono & "', email= '" & unempl.email & "' WHERE ci =" & unempl.ci & "; "
         ejecutarSQL(consulta)
 
-        consulta = "UPDATE empleado SET sueldo= " & unempl.sueldo & " , contrasenia = '" & unempl.contrseña & "' , tipoEmpleado = " & unempl.tipoEmpleado & " WHERE ci =" & unempl.ci & "; "
+        consulta = "UPDATE empleado SET sueldo= " & unempl.sueldo & " , contrasenia = '" & unempl.contrseña & "' , idtipoEmpleado = " & unempl.tipoEmpleado & " WHERE ci =" & unempl.ci & "; "
         Return ejecutarSQL(consulta)
     End Function
 

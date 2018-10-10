@@ -67,6 +67,7 @@
     <Compile Include="clsPCliente.vb" />
     <Compile Include="clsPEmpleado.vb" />
     <Compile Include="clsPersistencia.vb" />
+    <Compile Include="clsPProducto.vb" />
     <Compile Include="clsPTipoEmpleado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

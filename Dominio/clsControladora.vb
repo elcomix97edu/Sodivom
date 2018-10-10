@@ -46,11 +46,16 @@ Public Class clsControladora
         Return unPte.ListadoTipoEmpleado
     End Function
 
+    Public Function ExisteTipoEmpleado(tipo As String) As Boolean
+        Dim unPte As New clsDTipoEmpleado
+        Return unPte.ExisteTipoEmpleado(tipo)
+    End Function
+
 
     'Empleado
-    Public Function login(usuario As String, contrasenia As String) As Boolean
+    Public Function login(ci As String, contrasenia As String) As clsEEmpleado
         Dim unPE As New clsDEmpleado
-        Return unPE.login(usuario, contrasenia)
+        Return unPE.login(ci, contrasenia)
     End Function
 
     Public Function AgregarEmpleado(unempl As clsEEmpleado) As Boolean
@@ -71,6 +76,39 @@ Public Class clsControladora
     Public Function ModificarEmpleado(unempl As clsEEmpleado) As Boolean
         Dim unPE As New clsDEmpleado
         Return unPE.modificarEmpleado(unempl)
+    End Function
+
+    Public Function ExisteEmpleado(ci As Integer) As Boolean
+        Dim unPE As New clsDEmpleado
+        Return unPE.ExisteEmpleado(ci)
+    End Function
+
+
+    'Producto
+
+    Public Function AgregarProducto(unprod As clsEProducto) As Boolean
+        Dim unPP As New clsDProducto
+        Return unPP.AgregarProducto(unprod)
+    End Function
+
+    Public Function ListarProducto(parametro As String, busqueda As Integer) As List(Of clsEProducto)
+        Dim unPc As New clsDProducto
+        Return unPc.ListarProducto(parametro, busqueda)
+    End Function
+
+    Public Function EliminarProducto(codigo As Integer) As Boolean
+        Dim unPc As New clsDProducto
+        Return unPc.EliminarProducto(codigo)
+    End Function
+
+    Public Function ModificarProducto(producto As clsEProducto) As Boolean
+        Dim unPC As New clsDProducto
+        Return unPC.ModificarProducto(producto)
+    End Function
+
+    Public Function ExisteProducto(codigo As Integer) As Boolean
+        Dim per As New clsDProducto
+        Return per.ExisteProducto(codigo)
     End Function
 
 End Class
