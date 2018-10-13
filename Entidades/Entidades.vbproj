@@ -67,6 +67,7 @@
     <Compile Include="clsEEmpleado.vb" />
     <Compile Include="clsEPersona.vb" />
     <Compile Include="clsEProducto.vb" />
+    <Compile Include="clsEStock.vb" />
     <Compile Include="clsETipoEmpleado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

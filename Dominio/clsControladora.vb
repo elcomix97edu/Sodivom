@@ -111,4 +111,31 @@ Public Class clsControladora
         Return per.ExisteProducto(codigo)
     End Function
 
+
+    'Stock
+    Public Function AgregarStock(unstock As clsEStock) As Boolean
+        Dim unPP As New clsDStock
+        Return unPP.AgregarStock(unstock)
+    End Function
+
+    Public Function ListarStock(parametro As String, busqueda As Integer) As List(Of clsEStock)
+        Dim unSt As New clsDStock
+        Return unSt.ListarStock(parametro, busqueda)
+    End Function
+
+    Public Function EliminarStock(codigo As Integer) As Boolean
+        Dim unSt As New clsDStock
+        Return unSt.EliminarStock(codigo)
+    End Function
+
+    Public Function ModificarStock(stock As clsEStock) As Boolean
+        Dim unSt As New clsDStock
+        Return unSt.ModificarStock(stock)
+    End Function
+
+    Public Function ExisteStock(stock As clsEStock) As Boolean
+        Dim per As New clsDStock
+        Return per.ExisteStock(stock)
+    End Function
+
 End Class

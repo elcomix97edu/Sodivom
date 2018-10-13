@@ -208,4 +208,16 @@ Public Class frmProducto
         End Select
 
     End Sub
+
+    Private Sub rdbTodo_CheckedChanged(sender As Object, e As EventArgs) Handles rdbTodo.CheckedChanged
+
+    End Sub
+
+    Private Sub rdbNombre_CheckedChanged(sender As Object, e As EventArgs) Handles rdbNombre.CheckedChanged
+
+    End Sub
+
+    Private Sub rbdCodigo_CheckedChanged(sender As Object, e As EventArgs) Handles rbdCodigo.CheckedChanged
+
+    End Sub
 End Class
