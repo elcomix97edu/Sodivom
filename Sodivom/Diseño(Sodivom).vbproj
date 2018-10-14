@@ -213,6 +213,9 @@
     <EmbeddedResource Include="frmTipoEmpleado.resx">
       <DependentUpon>frmTipoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVenta.resx">
+      <DependentUpon>frmVenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -246,7 +249,7 @@
     <None Include="Resources\274976300bafcabe798a4da051f8fb62b6c99fbbv2_00.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Skere.mp3" />
+    <None Include="Resources\Skere2.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

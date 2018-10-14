@@ -13,6 +13,11 @@ Public Class clsControladora
         Return unDc.listarCliente(parametro, usaci)
     End Function
 
+    Public Function ListarAllClientes() As List(Of clsECliente)
+        Dim unPc As New clsDCliente
+        Return unPc.ListarAllClientes()
+    End Function
+
     Public Function EliminarCliente(ci As Integer) As Boolean
         Dim unDc As New clsDCliente
         Return unDc.eliminarCliente(ci)
@@ -136,6 +141,30 @@ Public Class clsControladora
     Public Function ExisteStock(stock As clsEStock) As Boolean
         Dim per As New clsDStock
         Return per.ExisteStock(stock)
+    End Function
+
+    Public Function GetStocksProd(idprod As Integer) As List(Of clsEStock)
+        Dim unSt As New clsDStock
+        Return unSt.GetStocksProd(idprod)
+    End Function
+
+    'Venta
+    Dim unDV As New clsDVenta
+
+    Public Function AltaVenta(fecha As Date, importe As Integer, empl As clsEEmpleado) As Boolean
+        Return unDV.AltaVenta(fecha, importe, empl)
+    End Function
+
+    Public Function AltaVentaProducto(idventa As Integer, idprod As Integer, cantidad As Integer) As Boolean
+        Return unDV.AltaVentaProducto(idventa, idprod, cantidad)
+    End Function
+
+    Public Function AltaVentaDeProducto(idventa As Integer, cicli As Integer) As Boolean
+        Return unDV.AltaVentaDeProducto(idventa, cicli)
+    End Function
+
+    Public Function GetIdVenta(fecha As Date, ciEmpl As Integer) As Integer
+        Return unDV.GetIdVenta(fecha, ciEmpl)
     End Function
 
 End Class

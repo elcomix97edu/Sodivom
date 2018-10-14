@@ -12,6 +12,11 @@ Public Class clsDCliente
         Return unPc.listarCliente(parametro, usaci)
     End Function
 
+    Public Function ListarAllClientes() As List(Of clsECliente)
+        Dim unPc As New clsPCliente
+        Return unPc.listarallCliente()
+    End Function
+
     Public Function EliminarCliente(ci As Integer) As Boolean
         Dim unPc As New clsPCliente
         Return unPc.eliminarCliente(ci)

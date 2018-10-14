@@ -26,6 +26,7 @@ Public Class clsLimpiar
             If TypeOf unControl Is DataGridView Then
                 unControl.Rows.Clear()
             End If
+            unControl.Enabled = True
         Next
 
     End Sub

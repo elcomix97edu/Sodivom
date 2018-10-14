@@ -170,6 +170,8 @@ Public Class frmStock
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         Dim unLim As New clsLimpiar
         unLim.Limpiar(Me)
+        txtFechaIng.Text = Date.Now
+        txtId.Text = "0"
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click

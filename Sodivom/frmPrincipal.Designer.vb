@@ -22,6 +22,7 @@ Partial Class frmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TipoEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,7 +46,11 @@ Partial Class frmPrincipal
         Me.ExtraToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SKEREMODODIABLOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.YABASTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.GroupAlertas = New System.Windows.Forms.GroupBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
+        Me.GroupAlertas.SuspendLayout()
         Me.SuspendLayout()
         '
         'ClienteToolStripMenuItem
@@ -104,7 +109,7 @@ Partial Class frmPrincipal
         Me.lblBienvenida.AutoSize = True
         Me.lblBienvenida.BackColor = System.Drawing.Color.Transparent
         Me.lblBienvenida.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBienvenida.Location = New System.Drawing.Point(267, 448)
+        Me.lblBienvenida.Location = New System.Drawing.Point(284, 555)
         Me.lblBienvenida.Name = "lblBienvenida"
         Me.lblBienvenida.Size = New System.Drawing.Size(148, 31)
         Me.lblBienvenida.TabIndex = 3
@@ -127,7 +132,7 @@ Partial Class frmPrincipal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem1, Me.EmpleadoToolStripMenuItem1, Me.ProductoToolStripMenuItem1, Me.DistribuidorToolStripMenuItem1, Me.StockToolStripMenuItem1, Me.VentaToolStripMenuItem1, Me.OfertaWebToolStripMenuItem1, Me.ExtraToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(882, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(964, 24)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -201,11 +206,34 @@ Partial Class frmPrincipal
         Me.YABASTAToolStripMenuItem.Text = "YABASTA"
         Me.YABASTAToolStripMenuItem.Visible = False
         '
+        'ListView1
+        '
+        Me.ListView1.Location = New System.Drawing.Point(6, 19)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(430, 215)
+        Me.ListView1.TabIndex = 7
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'GroupAlertas
+        '
+        Me.GroupAlertas.Controls.Add(Me.ListView1)
+        Me.GroupAlertas.Location = New System.Drawing.Point(52, 57)
+        Me.GroupAlertas.Name = "GroupAlertas"
+        Me.GroupAlertas.Size = New System.Drawing.Size(442, 240)
+        Me.GroupAlertas.TabIndex = 8
+        Me.GroupAlertas.TabStop = False
+        Me.GroupAlertas.Text = "Alertas"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 10
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(882, 520)
+        Me.ClientSize = New System.Drawing.Size(964, 607)
+        Me.Controls.Add(Me.GroupAlertas)
         Me.Controls.Add(Me.lblBienvenida)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
@@ -213,6 +241,7 @@ Partial Class frmPrincipal
         Me.Text = "Sodivom"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.GroupAlertas.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -240,4 +269,7 @@ Partial Class frmPrincipal
     Friend WithEvents SKEREMODODIABLOToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents YABASTAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TipoEmpleadoToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents GroupAlertas As GroupBox
+    Friend WithEvents Timer1 As Timer
 End Class

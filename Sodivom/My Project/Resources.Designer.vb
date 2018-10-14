@@ -71,12 +71,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Skere() As Byte()
+        Friend ReadOnly Property Skere2() As System.IO.UnmanagedMemoryStream
             Get
-                Dim obj As Object = ResourceManager.GetObject("Skere", resourceCulture)
-                Return CType(obj,Byte())
+                Return ResourceManager.GetStream("Skere2", resourceCulture)
             End Get
         End Property
     End Module

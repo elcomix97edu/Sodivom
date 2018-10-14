@@ -39,7 +39,7 @@ Public Class clsPStock
         Dim consulta As String
         If busqueda = 1 Then 'Todo
             consulta = "SELECT * FROM stock ;"
-        ElseIf busqueda = 2 Then 'Por Nombre
+        ElseIf busqueda = 2 Then 'Por Codigo
             consulta = "SELECT * FROM stock WHERE idproducto ='" & parametro & "';"
         End If
 
@@ -65,5 +65,20 @@ Public Class clsPStock
         Dim consulta As String
         consulta = "UPDATE stock SET stock = '" & unstock.stock & "' , fechaing = '" & unstock.fechaing.ToString("yyyy-MM-dd") & "' , fechaven = '" & unstock.fechaven.ToString("yyyy-MM-dd") & "'  WHERE id =" & unstock.id & "; "
         Return ejecutarSQL(consulta)
+    End Function
+
+    Public Function GetStocksProd(idprod As Integer) As List(Of clsEStock)
+        Dim consulta As String
+        consulta = "SELECT * FROM stock WHERE idproducto = " & idprod & " ORDER BY fechaing ASC LIMIT 2"
+        Dim datos As MySqlDataReader
+        datos = ejecutarYdevolver(consulta)
+
+        Dim listastock As New List(Of clsEStock)
+
+        While datos.Read
+            listastock.Add(crearStock(datos))
+        End While
+
+        Return listastock
     End Function
 End Class

@@ -22,4 +22,8 @@ Public Class clsDStock
     Public Function ExisteStock(Stock As clsEStock) As Boolean
         Return unSt.existe(Stock)
     End Function
+
+    Public Function GetStocksProd(idprod As Integer) As List(Of clsEStock)
+        Return unSt.GetStocksProd(idprod)
+    End Function
 End Class

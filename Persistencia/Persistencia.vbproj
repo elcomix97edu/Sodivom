@@ -70,6 +70,7 @@
     <Compile Include="clsPProducto.vb" />
     <Compile Include="clsPStock.vb" />
     <Compile Include="clsPTipoEmpleado.vb" />
+    <Compile Include="clsPVenta.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

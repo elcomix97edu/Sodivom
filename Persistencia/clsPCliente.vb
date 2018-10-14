@@ -52,6 +52,24 @@ Public Class clsPCliente
         Return listaclientes
     End Function
 
+
+    Public Function listarallCliente() As List(Of clsECliente)
+        Dim consulta As String
+        consulta = "SELECT * FROM cliente INNER JOIN persona ON cliente.ci = persona.ci"
+
+
+        Dim datos As MySqlDataReader
+        datos = ejecutarYdevolver(consulta)
+
+        Dim listaclientes As New List(Of clsECliente)
+
+        While datos.Read
+            listaclientes.Add(crearCliente(datos))
+        End While
+
+        Return listaclientes
+    End Function
+
     Public Function eliminarCliente(ci As Integer) As Boolean
         Dim consulta As String
         consulta = "DELETE FROM cliente WHERE ci =" & ci & ";"
