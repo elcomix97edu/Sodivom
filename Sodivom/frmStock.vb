@@ -147,25 +147,6 @@ Public Class frmStock
 
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles lbltituloStock.Click
-
-    End Sub
-
-    Private Sub lblNombre_Click(sender As Object, e As EventArgs) Handles lblStock.Click
-
-    End Sub
-
-    Private Sub lblApellido_Click(sender As Object, e As EventArgs) Handles lblFechaIng.Click
-
-    End Sub
-
-    Private Sub lblDir_Click(sender As Object, e As EventArgs) Handles lblFechaVen.Click
-
-    End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         Dim unLim As New clsLimpiar
@@ -223,13 +204,6 @@ Public Class frmStock
 
     End Sub
 
-    Private Sub rdbTodo_CheckedChanged(sender As Object, e As EventArgs) Handles rdbTodo.CheckedChanged
-
-    End Sub
-
-    Private Sub rdbProducto_CheckedChanged(sender As Object, e As EventArgs) Handles rdbProducto.CheckedChanged
-
-    End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         Dim codigo As Integer
@@ -283,11 +257,5 @@ Public Class frmStock
         End Select
     End Sub
 
-    Private Sub dgvDatos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellContentClick
 
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtId.TextChanged
-
-    End Sub
 End Class

@@ -28,6 +28,12 @@ Partial Class frmStock
         Me.rdbTodo = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripción = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechaingreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaVen = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnListar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -41,12 +47,6 @@ Partial Class frmStock
         Me.lblProducto = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.comboProducto = New System.Windows.Forms.ComboBox()
-        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripción = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechaingreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaVen = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -112,6 +112,43 @@ Partial Class frmStock
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(447, 267)
         Me.dgvDatos.TabIndex = 51
+        '
+        'Producto
+        '
+        Me.Producto.HeaderText = "Producto"
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        '
+        'Descripción
+        '
+        Me.Descripción.HeaderText = "Descripción"
+        Me.Descripción.Name = "Descripción"
+        Me.Descripción.ReadOnly = True
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        '
+        'fechaingreso
+        '
+        Me.fechaingreso.HeaderText = "Fecha de ingreso"
+        Me.fechaingreso.Name = "fechaingreso"
+        Me.fechaingreso.ReadOnly = True
+        '
+        'FechaVen
+        '
+        Me.FechaVen.HeaderText = "Fecha de vencimiento"
+        Me.FechaVen.Name = "FechaVen"
+        Me.FechaVen.ReadOnly = True
+        '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        Me.Id.Visible = False
         '
         'btnListar
         '
@@ -228,43 +265,6 @@ Partial Class frmStock
         Me.comboProducto.Name = "comboProducto"
         Me.comboProducto.Size = New System.Drawing.Size(127, 21)
         Me.comboProducto.TabIndex = 59
-        '
-        'Producto
-        '
-        Me.Producto.HeaderText = "Producto"
-        Me.Producto.Name = "Producto"
-        Me.Producto.ReadOnly = True
-        '
-        'Descripción
-        '
-        Me.Descripción.HeaderText = "Descripción"
-        Me.Descripción.Name = "Descripción"
-        Me.Descripción.ReadOnly = True
-        '
-        'Stock
-        '
-        Me.Stock.HeaderText = "Stock"
-        Me.Stock.Name = "Stock"
-        Me.Stock.ReadOnly = True
-        '
-        'fechaingreso
-        '
-        Me.fechaingreso.HeaderText = "Fecha de ingreso"
-        Me.fechaingreso.Name = "fechaingreso"
-        Me.fechaingreso.ReadOnly = True
-        '
-        'FechaVen
-        '
-        Me.FechaVen.HeaderText = "Fecha de vencimiento"
-        Me.FechaVen.Name = "FechaVen"
-        Me.FechaVen.ReadOnly = True
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "Id"
-        Me.Id.Name = "Id"
-        Me.Id.ReadOnly = True
-        Me.Id.Visible = False
         '
         'frmStock
         '

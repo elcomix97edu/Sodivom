@@ -49,6 +49,7 @@ Partial Class frmPrincipal
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupAlertas = New System.Windows.Forms.GroupBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerSkere = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.GroupAlertas.SuspendLayout()
         Me.SuspendLayout()
@@ -228,6 +229,10 @@ Partial Class frmPrincipal
         '
         Me.Timer1.Interval = 10
         '
+        'TimerSkere
+        '
+        Me.TimerSkere.Interval = 1000
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -272,4 +277,5 @@ Partial Class frmPrincipal
     Friend WithEvents ListView1 As ListView
     Friend WithEvents GroupAlertas As GroupBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents TimerSkere As Timer
 End Class

@@ -121,7 +121,13 @@
   <data name="Skere2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Skere2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="SKEREEEEEEEE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SKEREEEEEEEE.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="_274976300bafcabe798a4da051f8fb62b6c99fbbv2_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\274976300bafcabe798a4da051f8fb62b6c99fbbv2_00.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Any_City_Resort___Presented_by_Mark_Allen__Markting_Head" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Any City Resort _ Presented by Mark Allen, Markting Head.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

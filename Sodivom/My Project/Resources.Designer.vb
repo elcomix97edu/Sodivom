@@ -71,11 +71,30 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Any_City_Resort___Presented_by_Mark_Allen__Markting_Head() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Any_City_Resort___Presented_by_Mark_Allen__Markting_Head", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property Skere2() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Skere2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property SKEREEEEEEEE() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("SKEREEEEEEEE", resourceCulture)
             End Get
         End Property
     End Module

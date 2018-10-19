@@ -11,6 +11,7 @@ Public Class frmPrincipal
     Dim sumarX As Boolean = True
     Dim SumarY As Boolean = False
     Dim rnd As New Random
+    Dim player As New Media.SoundPlayer
     '///////////
 
     Public Property empleado As clsEEmpleado
@@ -169,41 +170,76 @@ Public Class frmPrincipal
         My.Computer.Audio.Play(My.Resources.Skere2, AudioPlayMode.BackgroundLoop)
         YABASTAToolStripMenuItem.Visible = True
         Timer1.Enabled = True
+        lblBienvenida.Text = "SKEREEEEEE!!!!!!!"
+
+        Dim song_path As String = My.Computer.FileSystem.GetTempFileName
+        Dim bytes(CInt(My.Resources.Skere2.Length - 1)) As Byte
+        My.Resources.Skere2.Read(bytes, 0, CInt(My.Resources.Skere2.Length))
+        IO.File.WriteAllBytes(song_path, bytes)
+
+
+        player.SoundLocation = song_path
+        player.PlayLooping()
+
+        TimerSkere.Enabled = True
+
     End Sub
+
 
     Private Sub YABASTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YABASTAToolStripMenuItem.Click
         My.Computer.Audio.Stop()
+        lblBienvenida.Text = "Bienvenido " & empleado.nombre & ""
+        Timer1.Enabled = False
+        TimerSkere.Enabled = False
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         If posX = maxX Then
             sumarX = False
-        ElseIf posX = 0 Then
+        ElseIf posX < 0 Then
             sumarX = True
         End If
 
-        If posY = 0 Then
+        If posY < 0 Then
             SumarY = True
         ElseIf posY = maxY Then
             SumarY = False
         End If
 
         If sumarX Then
-            posX = posX + 1
+            posX = posX + 5
         Else
-            posX = posX - 1
+            posX = posX - 5
 
         End If
 
         If SumarY Then
-            posY = posY + 1
+            posY = posY + 5
         Else
-            posY = posY - 1
+            posY = posY - 5
         End If
 
         lblBienvenida.Location = New Point(posX, posY)
         lblBienvenida.ForeColor = Color.FromArgb(255, rnd.Next(255), rnd.Next(255), rnd.Next(255))
         'Me.BackColor = Color.FromArgb(255, rnd.Next(255), rnd.Next(255), rnd.Next(255))
+    End Sub
+
+    Private Sub TimerSkere_Tick(sender As Object, e As EventArgs) Handles TimerSkere.Tick
+        Dim song_path As String = My.Computer.FileSystem.GetTempFileName
+        Dim bytes(CInt(My.Resources.SKEREEEEEEEE.Length - 1)) As Byte
+        My.Resources.SKEREEEEEEEE.Read(bytes, 0, CInt(My.Resources.SKEREEEEEEEE.Length))
+        IO.File.WriteAllBytes(song_path, bytes)
+
+        Dim player2 As New Media.SoundPlayer
+        player2.SoundLocation = song_path
+        player2.Play()
+
+        System.Threading.Thread.Sleep(1800)
+        player.PlayLooping()
+
+        TimerSkere.Interval = (rnd.Next(9) + 1) * 1000
+
     End Sub
 End Class

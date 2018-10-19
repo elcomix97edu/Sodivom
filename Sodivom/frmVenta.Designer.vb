@@ -22,6 +22,7 @@ Partial Class frmVenta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVenta))
         Me.lblVenta = New System.Windows.Forms.Label()
         Me.lblCajero = New System.Windows.Forms.Label()
         Me.lblNombreCajero = New System.Windows.Forms.Label()
@@ -37,10 +38,6 @@ Partial Class frmVenta
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.contReparto = New System.Windows.Forms.GroupBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -54,6 +51,16 @@ Partial Class frmVenta
         Me.chkRUT = New System.Windows.Forms.CheckBox()
         Me.mskRUT = New System.Windows.Forms.MaskedTextBox()
         Me.btnRealizarVenta = New System.Windows.Forms.Button()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.contReparto.SuspendLayout()
         Me.SuspendLayout()
@@ -203,26 +210,6 @@ Partial Class frmVenta
         Me.dgvProductos.Size = New System.Drawing.Size(509, 166)
         Me.dgvProductos.TabIndex = 10
         '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
-        '
-        'Producto
-        '
-        Me.Producto.HeaderText = "Producto"
-        Me.Producto.Name = "Producto"
-        '
-        'Cantidad
-        '
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
-        '
-        'PrecioUnidad
-        '
-        Me.PrecioUnidad.HeaderText = "Precio Unidad"
-        Me.PrecioUnidad.Name = "PrecioUnidad"
-        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -350,11 +337,81 @@ Partial Class frmVenta
         Me.btnRealizarVenta.Text = "Realizar Venta"
         Me.btnRealizarVenta.UseVisualStyleBackColor = True
         '
+        'PrintDocument1
+        '
+        Me.PrintDocument1.DocumentName = "Factura"
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(667, 13)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(540, 84)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(44, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Nombre"
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Enabled = False
+        Me.txtNombre.Location = New System.Drawing.Point(585, 83)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombre.TabIndex = 19
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Código"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        '
+        'Producto
+        '
+        Me.Producto.HeaderText = "Producto"
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        '
+        'Cantidad
+        '
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        '
+        'PrecioUnidad
+        '
+        Me.PrecioUnidad.HeaderText = "Precio Unidad"
+        Me.PrecioUnidad.Name = "PrecioUnidad"
+        Me.PrecioUnidad.ReadOnly = True
+        '
         'frmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(866, 466)
+        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnRealizarVenta)
         Me.Controls.Add(Me.mskRUT)
         Me.Controls.Add(Me.lblPrecioSub)
@@ -407,10 +464,6 @@ Partial Class frmVenta
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents dgvProductos As DataGridView
-    Friend WithEvents Codigo As DataGridViewTextBoxColumn
-    Friend WithEvents Producto As DataGridViewTextBoxColumn
-    Friend WithEvents Cantidad As DataGridViewTextBoxColumn
-    Friend WithEvents PrecioUnidad As DataGridViewTextBoxColumn
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents contReparto As GroupBox
     Friend WithEvents TextBox2 As TextBox
@@ -424,4 +477,14 @@ Partial Class frmVenta
     Friend WithEvents chkRUT As CheckBox
     Friend WithEvents mskRUT As MaskedTextBox
     Friend WithEvents btnRealizarVenta As Button
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents Codigo As DataGridViewTextBoxColumn
+    Friend WithEvents Producto As DataGridViewTextBoxColumn
+    Friend WithEvents Cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents PrecioUnidad As DataGridViewTextBoxColumn
 End Class

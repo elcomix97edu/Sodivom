@@ -251,6 +251,12 @@
   <ItemGroup>
     <None Include="Resources\Skere2.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SKEREEEEEEEE.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Any City Resort _ Presented by Mark Allen, Markting Head.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
