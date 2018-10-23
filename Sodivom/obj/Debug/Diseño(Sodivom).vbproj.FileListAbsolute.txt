@@ -34,3 +34,38 @@ C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Diseño(
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.exe
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.xml
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.exe.config
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.exe
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Dominio.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Entidades.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Persistencia.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Google.Protobuf.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Dominio.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Dominio.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Entidades.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Entidades.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\MySql.Data.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Persistencia.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Persistencia.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbprojAssemblyReference.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmAltaCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmBajaCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmListarCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmModificarCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmEmpleado.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmLogin.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmPrincipal.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmProducto.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmStock.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmTipoEmpleado.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmVenta.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.Resources.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbproj.GenerateResource.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbproj.CoreCompileInputs.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbproj.CopyComplete
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.exe
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.pdb

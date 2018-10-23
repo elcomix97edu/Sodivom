@@ -38,7 +38,6 @@ Partial Class frmStock
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.txtFechaVen = New System.Windows.Forms.TextBox()
         Me.txtFechaIng = New System.Windows.Forms.TextBox()
         Me.txtStock = New System.Windows.Forms.TextBox()
         Me.lblFechaIng = New System.Windows.Forms.Label()
@@ -47,6 +46,8 @@ Partial Class frmStock
         Me.lblProducto = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.comboProducto = New System.Windows.Forms.ComboBox()
+        Me.DtpFechaVen = New System.Windows.Forms.DateTimePicker()
+        Me.ChkNoVence = New System.Windows.Forms.CheckBox()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -186,13 +187,6 @@ Partial Class frmStock
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'txtFechaVen
-        '
-        Me.txtFechaVen.Location = New System.Drawing.Point(187, 186)
-        Me.txtFechaVen.Name = "txtFechaVen"
-        Me.txtFechaVen.Size = New System.Drawing.Size(127, 20)
-        Me.txtFechaVen.TabIndex = 46
-        '
         'txtFechaIng
         '
         Me.txtFechaIng.Location = New System.Drawing.Point(187, 152)
@@ -266,11 +260,30 @@ Partial Class frmStock
         Me.comboProducto.Size = New System.Drawing.Size(127, 21)
         Me.comboProducto.TabIndex = 59
         '
+        'DtpFechaVen
+        '
+        Me.DtpFechaVen.Location = New System.Drawing.Point(187, 186)
+        Me.DtpFechaVen.Name = "DtpFechaVen"
+        Me.DtpFechaVen.Size = New System.Drawing.Size(127, 20)
+        Me.DtpFechaVen.TabIndex = 60
+        '
+        'ChkNoVence
+        '
+        Me.ChkNoVence.AutoSize = True
+        Me.ChkNoVence.Location = New System.Drawing.Point(187, 212)
+        Me.ChkNoVence.Name = "ChkNoVence"
+        Me.ChkNoVence.Size = New System.Drawing.Size(73, 17)
+        Me.ChkNoVence.TabIndex = 61
+        Me.ChkNoVence.Text = "No vence"
+        Me.ChkNoVence.UseVisualStyleBackColor = True
+        '
         'frmStock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ChkNoVence)
+        Me.Controls.Add(Me.DtpFechaVen)
         Me.Controls.Add(Me.comboProducto)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.btnLimpiar)
@@ -283,7 +296,6 @@ Partial Class frmStock
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnIngresar)
-        Me.Controls.Add(Me.txtFechaVen)
         Me.Controls.Add(Me.txtFechaIng)
         Me.Controls.Add(Me.txtStock)
         Me.Controls.Add(Me.lblFechaIng)
@@ -308,7 +320,6 @@ Partial Class frmStock
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnIngresar As Button
-    Friend WithEvents txtFechaVen As TextBox
     Friend WithEvents txtFechaIng As TextBox
     Friend WithEvents txtStock As TextBox
     Friend WithEvents lblFechaIng As Label
@@ -323,4 +334,6 @@ Partial Class frmStock
     Friend WithEvents fechaingreso As DataGridViewTextBoxColumn
     Friend WithEvents FechaVen As DataGridViewTextBoxColumn
     Friend WithEvents Id As DataGridViewTextBoxColumn
+    Friend WithEvents DtpFechaVen As DateTimePicker
+    Friend WithEvents ChkNoVence As CheckBox
 End Class
