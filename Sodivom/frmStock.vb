@@ -272,4 +272,8 @@ Public Class frmStock
     Private Sub lbltituloStock_Click(sender As Object, e As EventArgs) Handles lbltituloStock.Click
 
     End Sub
+
+    Private Sub dgvDatos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellContentClick
+
+    End Sub
 End Class

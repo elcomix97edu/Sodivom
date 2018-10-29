@@ -93,6 +93,10 @@ Public Class frmProducto
                     Cell.Value = unProducto.precio.ToString
                     Row.Cells.Add(Cell)
 
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unProducto.minstock.ToString
+                    Row.Cells.Add(Cell)
+
 
                     dgvDatos.Rows.Add(Row)
                     a = a + 1
@@ -123,17 +127,18 @@ Public Class frmProducto
                 prod.nombre = txtNombre.Text
                 prod.descripcion = txtDescripcion.Text
                 prod.precio = txtPrecio.Text
+                prod.minstock = txtMinStock.Text
 
 
                 If unaCon.AgregarProducto(prod) Then
-                    MsgBox("Empleado agregado Correctamente")
+                    MsgBox("Producto agregado Correctamente")
                 Else
-                    MsgBox("Hubo un error al agregar el Empleado")
+                    MsgBox("Hubo un error al agregar el producto")
                 End If
 
 
             Else
-                MsgBox("Empleado existente")
+                MsgBox("Producto existente")
 
             End If
         Else
@@ -148,6 +153,7 @@ Public Class frmProducto
             txtNombre.Text = dgvDatos.CurrentRow.Cells(1).Value.ToString
             txtDescripcion.Text = dgvDatos.CurrentRow.Cells(2).Value.ToString
             txtPrecio.Text = dgvDatos.CurrentRow.Cells(3).Value.ToString
+            txtMinStock.Text = dgvDatos.CurrentRow.Cells(4).Value.ToString
             txtCodigo.Enabled = False
         End If
     End Sub
@@ -186,7 +192,7 @@ Public Class frmProducto
 
 
 
-        Select Case MsgBox("Desea actualizar el empleado " & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+        Select Case MsgBox("Desea actualizar el producto " & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
             Case MsgBoxResult.Yes
                 'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
                 Dim unprod As New clsEProducto 'Crea el empleado
@@ -194,14 +200,15 @@ Public Class frmProducto
                 unprod.nombre = txtNombre.Text
                 unprod.descripcion = txtDescripcion.Text
                 unprod.precio = txtPrecio.Text
+                unprod.minstock = txtMinStock.Text
 
 
                 Dim unaC As New clsControladora
                 If unaC.ModificarProducto(unprod) Then
-                    MsgBox("Empleado Actualizado Correctamente")
+                    MsgBox("Producto actualizado correctamente")
                     Listar()
                 Else
-                    MsgBox("Ocurrio un error al actualizar el Empleado")
+                    MsgBox("Ocurrio un error al actualizar el producto")
                 End If
                 'Case MsgBoxResult.No
                 '    MessageBox.Show("NO button")

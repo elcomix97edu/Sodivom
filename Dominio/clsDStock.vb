@@ -26,4 +26,8 @@ Public Class clsDStock
     Public Function GetStocksProd(idprod As Integer) As List(Of clsEStock)
         Return unSt.GetStocksProd(idprod)
     End Function
+
+    Public Function SumStock(idprod As String) As Integer
+        Return unSt.SumStock(idprod)
+    End Function
 End Class

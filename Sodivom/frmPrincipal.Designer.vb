@@ -214,6 +214,7 @@ Partial Class frmPrincipal
         Me.ListView1.Size = New System.Drawing.Size(430, 215)
         Me.ListView1.TabIndex = 7
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.List
         '
         'GroupAlertas
         '

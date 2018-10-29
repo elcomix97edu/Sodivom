@@ -28,10 +28,6 @@ Partial Class frmProducto
         Me.rdbTodo = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnListar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -45,6 +41,13 @@ Partial Class frmProducto
         Me.lblCi = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.rbdCodigo = New System.Windows.Forms.RadioButton()
+        Me.txtMinStock = New System.Windows.Forms.TextBox()
+        Me.lblMinStock = New System.Windows.Forms.Label()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MinStock = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -104,36 +107,12 @@ Partial Class frmProducto
         Me.dgvDatos.AllowUserToAddRows = False
         Me.dgvDatos.AllowUserToDeleteRows = False
         Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Descripcion, Me.Precio})
+        Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Descripcion, Me.Precio, Me.MinStock})
         Me.dgvDatos.Location = New System.Drawing.Point(339, 49)
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(447, 267)
         Me.dgvDatos.TabIndex = 33
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        '
-        'Descripcion
-        '
-        Me.Descripcion.HeaderText = "Descripcion"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
         '
         'btnListar
         '
@@ -250,11 +229,60 @@ Partial Class frmProducto
         Me.rbdCodigo.Text = "Codigo"
         Me.rbdCodigo.UseVisualStyleBackColor = True
         '
+        'txtMinStock
+        '
+        Me.txtMinStock.Location = New System.Drawing.Point(154, 179)
+        Me.txtMinStock.Name = "txtMinStock"
+        Me.txtMinStock.Size = New System.Drawing.Size(118, 20)
+        Me.txtMinStock.TabIndex = 40
+        '
+        'lblMinStock
+        '
+        Me.lblMinStock.AutoSize = True
+        Me.lblMinStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMinStock.Location = New System.Drawing.Point(25, 177)
+        Me.lblMinStock.Name = "lblMinStock"
+        Me.lblMinStock.Size = New System.Drawing.Size(123, 20)
+        Me.lblMinStock.TabIndex = 39
+        Me.lblMinStock.Text = "Minimo de stock"
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        '
+        'Descripcion
+        '
+        Me.Descripcion.HeaderText = "Descripcion"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.ReadOnly = True
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        '
+        'MinStock
+        '
+        Me.MinStock.HeaderText = "Minimo de stock"
+        Me.MinStock.Name = "MinStock"
+        Me.MinStock.ReadOnly = True
+        '
         'frmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 367)
+        Me.Controls.Add(Me.txtMinStock)
+        Me.Controls.Add(Me.lblMinStock)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.rbdCodigo)
@@ -304,4 +332,7 @@ Partial Class frmProducto
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
     Friend WithEvents Descripcion As DataGridViewTextBoxColumn
     Friend WithEvents Precio As DataGridViewTextBoxColumn
+    Friend WithEvents MinStock As DataGridViewTextBoxColumn
+    Friend WithEvents txtMinStock As TextBox
+    Friend WithEvents lblMinStock As Label
 End Class

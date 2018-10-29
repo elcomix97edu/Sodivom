@@ -3,6 +3,7 @@
     Private mnombre As String
     Private mdescripcion As String
     Private mprecio As Integer
+    Private mminstock As Integer
 
     Public Property codigo As Integer
         Get
@@ -39,4 +40,13 @@
             mprecio = value
         End Set
     End Property
+    Public Property minstock As Integer
+        Get
+            Return mminstock
+        End Get
+        Set(value As Integer)
+            mminstock = value
+        End Set
+    End Property
+
 End Class
