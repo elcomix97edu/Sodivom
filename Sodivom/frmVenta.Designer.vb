@@ -29,15 +29,16 @@ Partial Class frmVenta
         Me.lblCliente = New System.Windows.Forms.Label()
         Me.comboCliente = New System.Windows.Forms.ComboBox()
         Me.chkAnonimo = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboProd = New System.Windows.Forms.ComboBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.contReparto = New System.Windows.Forms.GroupBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -54,15 +55,18 @@ Partial Class frmVenta
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtIdVenta = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.lblFecha = New System.Windows.Forms.Label()
+        Me.lblNumFecha = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.contReparto.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblVenta
@@ -127,33 +131,6 @@ Partial Class frmVenta
         Me.chkAnonimo.Text = "Anónimo"
         Me.chkAnonimo.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(531, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(441, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Label1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(486, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Label2"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -210,6 +187,29 @@ Partial Class frmVenta
         Me.dgvProductos.Size = New System.Drawing.Size(509, 166)
         Me.dgvProductos.TabIndex = 10
         '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Código"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        '
+        'Producto
+        '
+        Me.Producto.HeaderText = "Producto"
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        '
+        'Cantidad
+        '
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        '
+        'PrecioUnidad
+        '
+        Me.PrecioUnidad.HeaderText = "Precio Unidad"
+        Me.PrecioUnidad.Name = "PrecioUnidad"
+        Me.PrecioUnidad.ReadOnly = True
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -223,6 +223,7 @@ Partial Class frmVenta
         '
         'contReparto
         '
+        Me.contReparto.Controls.Add(Me.Label1)
         Me.contReparto.Controls.Add(Me.TextBox2)
         Me.contReparto.Enabled = False
         Me.contReparto.Location = New System.Drawing.Point(552, 165)
@@ -234,9 +235,9 @@ Partial Class frmVenta
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(88, 44)
+        Me.TextBox2.Location = New System.Drawing.Point(81, 31)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(181, 20)
         Me.TextBox2.TabIndex = 0
         '
         'lblTotal
@@ -355,15 +356,6 @@ Partial Class frmVenta
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(667, 13)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -381,37 +373,81 @@ Partial Class frmVenta
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 19
         '
-        'Codigo
+        'txtIdVenta
         '
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
+        Me.txtIdVenta.Location = New System.Drawing.Point(81, 28)
+        Me.txtIdVenta.Name = "txtIdVenta"
+        Me.txtIdVenta.Size = New System.Drawing.Size(100, 20)
+        Me.txtIdVenta.TabIndex = 21
         '
-        'Producto
+        'Label2
         '
-        Me.Producto.HeaderText = "Producto"
-        Me.Producto.Name = "Producto"
-        Me.Producto.ReadOnly = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(31, 31)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "IdVenta"
         '
-        'Cantidad
+        'GroupBox1
         '
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
+        Me.GroupBox1.Controls.Add(Me.btnBuscar)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.txtIdVenta)
+        Me.GroupBox1.Location = New System.Drawing.Point(633, 337)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox1.TabIndex = 23
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Busqueda"
         '
-        'PrecioUnidad
+        'btnBuscar
         '
-        Me.PrecioUnidad.HeaderText = "Precio Unidad"
-        Me.PrecioUnidad.Name = "PrecioUnidad"
-        Me.PrecioUnidad.ReadOnly = True
+        Me.btnBuscar.Location = New System.Drawing.Point(63, 71)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 23
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.Location = New System.Drawing.Point(194, 49)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(74, 24)
+        Me.lblFecha.TabIndex = 24
+        Me.lblFecha.Text = "Fecha :"
+        '
+        'lblNumFecha
+        '
+        Me.lblNumFecha.AutoSize = True
+        Me.lblNumFecha.Location = New System.Drawing.Point(274, 57)
+        Me.lblNumFecha.Name = "lblNumFecha"
+        Me.lblNumFecha.Size = New System.Drawing.Size(34, 13)
+        Me.lblNumFecha.TabIndex = 25
+        Me.lblNumFecha.Text = "fecha"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Dirección"
         '
         'frmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(866, 466)
+        Me.Controls.Add(Me.lblNumFecha)
+        Me.Controls.Add(Me.lblFecha)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnRealizarVenta)
         Me.Controls.Add(Me.mskRUT)
         Me.Controls.Add(Me.lblPrecioSub)
@@ -425,9 +461,6 @@ Partial Class frmVenta
         Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.btnAgregar)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chkRUT)
         Me.Controls.Add(Me.chkAnonimo)
         Me.Controls.Add(Me.ComboProd)
@@ -444,6 +477,8 @@ Partial Class frmVenta
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.contReparto.ResumeLayout(False)
         Me.contReparto.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -455,9 +490,6 @@ Partial Class frmVenta
     Friend WithEvents lblCliente As Label
     Friend WithEvents comboCliente As ComboBox
     Friend WithEvents chkAnonimo As CheckBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboProd As ComboBox
     Friend WithEvents btnAgregar As Button
@@ -480,11 +512,17 @@ Partial Class frmVenta
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
-    Friend WithEvents Button2 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Codigo As DataGridViewTextBoxColumn
     Friend WithEvents Producto As DataGridViewTextBoxColumn
     Friend WithEvents Cantidad As DataGridViewTextBoxColumn
     Friend WithEvents PrecioUnidad As DataGridViewTextBoxColumn
+    Friend WithEvents txtIdVenta As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents lblFecha As Label
+    Friend WithEvents lblNumFecha As Label
+    Friend WithEvents Label1 As Label
 End Class

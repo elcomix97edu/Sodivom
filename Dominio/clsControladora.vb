@@ -167,4 +167,8 @@ Public Class clsControladora
         Return unDV.GetIdVenta(fecha, ciEmpl)
     End Function
 
+    Public Function TraerVenta(id As String) As clsEVenta
+        Return unDV.TraerVenta(id)
+    End Function
+
 End Class

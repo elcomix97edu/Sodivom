@@ -153,8 +153,8 @@ Partial Class frmPrincipal
         'TipoEmpleadoToolStripMenuItem1
         '
         Me.TipoEmpleadoToolStripMenuItem1.Name = "TipoEmpleadoToolStripMenuItem1"
-        Me.TipoEmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
-        Me.TipoEmpleadoToolStripMenuItem1.Text = "TipoEmpleado"
+        Me.TipoEmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.TipoEmpleadoToolStripMenuItem1.Text = "Cargo"
         '
         'ProductoToolStripMenuItem1
         '

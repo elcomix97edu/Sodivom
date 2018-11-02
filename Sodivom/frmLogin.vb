@@ -1,7 +1,7 @@
 ﻿Imports Dominio
 Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.AcceptButton = btnlogin
     End Sub
 
     Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
@@ -11,11 +11,10 @@ Public Class frmLogin
 
             If unValidar.Valido(txtpass.Text) Then
 
-                'cabra
+
                 Dim unDE As New clsControladora
                 Dim empleado = unDE.login(mskCi.Text, txtpass.Text)
                 If empleado IsNot Nothing Then
-                    'MsgBox("Despliego formulario principal")
                     Dim frmp As New frmPrincipal
                     frmp.empleado = empleado
                     frmp.Show()
@@ -36,5 +35,9 @@ Public Class frmLogin
 
 
 
+    End Sub
+
+    Private Sub mskCi_MouseClick(sender As Object, e As MouseEventArgs) Handles mskCi.MouseClick
+        mskCi.Select(0, 0)
     End Sub
 End Class

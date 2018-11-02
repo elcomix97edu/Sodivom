@@ -29,6 +29,20 @@ Public Class frmVenta
         Return selectedValue.precio
     End Function
 
+    Private Function GetNomProd(cod As Integer) As String
+        Dim selectedValue As clsEProducto
+        selectedValue = listaProd.Find(Function(p) p.codigo = cod)
+        Return selectedValue.nombre
+    End Function
+
+    Private Function GetNomCli(ci As String) As String
+        Dim selectedValue As clsECliente
+        selectedValue = listaCli.Find(Function(p) p.ci = ci)
+        Dim res As String
+        res = selectedValue.nombre & " " & selectedValue.apellido
+        Return res
+    End Function
+
     'Private Function GetNombreCli(id As Integer) As String
     '    Dim selectedValue As clsETipoEmpleado
     '    selectedValue = listaCargos.Find(Function(p) p.id = id)
@@ -48,6 +62,7 @@ Public Class frmVenta
         lblNombreCajero.Text = unempl.nombre & " " & unempl.apellido
         listaCli = unaCon.ListarAllClientes() 'Lista todos los clientes
         listaProd = unaCon.ListarProducto("", 1) 'Lista todos los productos
+        lblNumFecha.Text = Date.Now
         'Dim nomcli As String 'Variable para tener nombre completo de cliente
         For Each Cliente In listaCli
             comboCliente.Items.Add(Cliente.nombre.ToString & " " & Cliente.apellido.ToString)
@@ -65,27 +80,6 @@ Public Class frmVenta
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Dim conjunto As String = comboCliente.Text   
-        'Dim palabras As String() = conjunto.Split(New Char() {" "c})
-        'Label1.Text = palabras.GetValue(0).ToString
-        'Label2.Text = palabras.GetValue(1).ToString
-        'Label1.Text = GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString)
-
-        'Dim conjunto As String = ComboProd.Text
-        'Dim palabras As String() = conjunto.Split(New Char() {" "c})
-        'Label1.Text = palabras.GetValue(0).ToString
-        'Label2.Text = palabras.GetValue(1).ToString.Replace("(", "")
-        'Label1.Text = GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString)
-
-        PrintDialog1.Document = PrintDocument1
-        PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
-        With PrintDocument1
-            .PrinterSettings.DefaultPageSettings.Landscape = False
-            .Print()
-
-        End With
-    End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked Then
@@ -218,6 +212,17 @@ Public Class frmVenta
 
 
         unaCon.AltaVentaDeProducto(idventa, GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString))
+
+        '/////////Impresion de la factura
+        PrintDialog1.Document = PrintDocument1
+        PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
+        With PrintDocument1
+            .PrinterSettings.DefaultPageSettings.Landscape = False
+            .Print()
+
+        End With
+        '////////////////
+        MsgBox("Venta Realizada Correctamente")
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
@@ -255,10 +260,6 @@ Public Class frmVenta
         Return New Bitmap(InputImage, New Size(800, 600))
     End Function
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.ShowDialog()
-    End Sub
 
     Private Sub dgvProductos_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellEndEdit
 
@@ -303,5 +304,54 @@ Public Class frmVenta
         lblPrecioIva.Text = preciototal * 0.22
         lblPrecioSub.Text = preciototal * 0.78
 
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        dgvProductos.Rows.Clear()
+        Dim idventa As Integer
+        If txtIdVenta.Text = "" Then
+            MsgBox("Ingrese un ID de venta para realizar la búsqueda")
+        Else
+            idventa = CInt(txtIdVenta.Text)
+        End If
+
+        Dim unacon As New clsControladora
+        Dim venta = unacon.TraerVenta(idventa)
+
+        lblNombreCajero.Text = venta.Cajero
+        lblNumFecha.Text = venta.fecha
+        comboCliente.Text = GetNomCli(venta.cliente)
+        lblPrecioTotal.Text = venta.total
+        lblPrecioSub.Text = CInt(venta.total) * 0.78
+        lblPrecioIva.Text = CInt(venta.total) * 0.22
+
+        Dim Row As DataGridViewRow
+        Dim Cell As DataGridViewCell
+        For i As Integer = 0 To venta.listpord.Count - 1
+            Row = New DataGridViewRow
+
+            Cell = New DataGridViewTextBoxCell
+            Cell.Value = venta.listpord.Item(i).codigoprod
+            Row.Cells.Add(Cell)
+
+            Cell = New DataGridViewTextBoxCell
+            Cell.Value = GetNomProd(venta.listpord.Item(i).codigoprod)
+            Row.Cells.Add(Cell)
+
+            Cell = New DataGridViewTextBoxCell
+            Cell.Value = venta.listpord.Item(i).stock
+            Row.Cells.Add(Cell)
+
+            Cell = New DataGridViewTextBoxCell
+            Cell.Value = GetPrecioProd(venta.listpord.Item(i).codigoprod)
+            Row.Cells.Add(Cell)
+
+            dgvProductos.Rows.Add(Row)
+        Next
+
+    End Sub
+
+    Private Sub mskRUT_MouseClick(sender As Object, e As MouseEventArgs) Handles mskRUT.MouseClick
+        mskRUT.Select(0, 0)
     End Sub
 End Class

@@ -24,13 +24,13 @@ Partial Class frmTipoEmpleado
     Private Sub InitializeComponent()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoEmpleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnListar = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTipo = New System.Windows.Forms.TextBox()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoEmpleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,11 +38,11 @@ Partial Class frmTipoEmpleado
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(39, 9)
+        Me.Label8.Location = New System.Drawing.Point(92, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(233, 37)
+        Me.Label8.Size = New System.Drawing.Size(105, 37)
         Me.Label8.TabIndex = 63
-        Me.Label8.Text = "Tipo Empleado"
+        Me.Label8.Text = "Cargo"
         '
         'dgvDatos
         '
@@ -55,18 +55,6 @@ Partial Class frmTipoEmpleado
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(253, 224)
         Me.dgvDatos.TabIndex = 58
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "Id"
-        Me.Id.Name = "Id"
-        Me.Id.ReadOnly = True
-        '
-        'TipoEmpleado
-        '
-        Me.TipoEmpleado.HeaderText = "TipoEmpleado"
-        Me.TipoEmpleado.Name = "TipoEmpleado"
-        Me.TipoEmpleado.ReadOnly = True
         '
         'btnListar
         '
@@ -101,16 +89,28 @@ Partial Class frmTipoEmpleado
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 20)
+        Me.Label1.Size = New System.Drawing.Size(52, 20)
         Me.Label1.TabIndex = 37
-        Me.Label1.Text = "Tipo Empleado"
+        Me.Label1.Text = "Cargo"
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(134, 68)
+        Me.txtTipo.Location = New System.Drawing.Point(70, 68)
         Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(144, 20)
+        Me.txtTipo.Size = New System.Drawing.Size(208, 20)
         Me.txtTipo.TabIndex = 64
+        '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        '
+        'TipoEmpleado
+        '
+        Me.TipoEmpleado.HeaderText = "Cargo"
+        Me.TipoEmpleado.Name = "TipoEmpleado"
+        Me.TipoEmpleado.ReadOnly = True
         '
         'frmTipoEmpleado
         '
@@ -125,7 +125,7 @@ Partial Class frmTipoEmpleado
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmTipoEmpleado"
-        Me.Text = "frmTipoEmpleado"
+        Me.Text = "frmCargo"
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -137,7 +137,7 @@ Partial Class frmTipoEmpleado
     Friend WithEvents btnBorrar As Button
     Friend WithEvents btnIngresar As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtTipo As TextBox
     Friend WithEvents Id As DataGridViewTextBoxColumn
     Friend WithEvents TipoEmpleado As DataGridViewTextBoxColumn
-    Friend WithEvents txtTipo As TextBox
 End Class

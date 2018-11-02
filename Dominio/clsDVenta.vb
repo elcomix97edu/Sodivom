@@ -18,4 +18,8 @@ Public Class clsDVenta
     Public Function GetIdVenta(fecha As Date, ciEmpl As Integer) As Integer
         Return unPV.GetIdVenta(fecha, ciEmpl)
     End Function
+
+    Public Function TraerVenta(id As String) As clsEVenta
+        Return unPV.TraerVenta(id)
+    End Function
 End Class
