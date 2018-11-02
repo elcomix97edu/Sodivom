@@ -57,7 +57,7 @@ Public Class frmStock
             comboProducto.Text = dgvDatos.CurrentRow.Cells(0).Value.ToString & " (" & dgvDatos.CurrentRow.Cells(1).Value.ToString & ")"
             txtStock.Text = dgvDatos.CurrentRow.Cells(2).Value.ToString
             txtFechaIng.Text = dgvDatos.CurrentRow.Cells(3).Value.ToString
-            txtFechaVen.Text = dgvDatos.CurrentRow.Cells(4).Value.ToString
+            DtpFechaVen.Text = dgvDatos.CurrentRow.Cells(4).Value.ToString
             txtId.Text = dgvDatos.CurrentRow.Cells(5).Value.ToString
             comboProducto.Enabled = False
             txtFechaIng.Enabled = False
@@ -171,7 +171,7 @@ Public Class frmStock
             sto.codigoprod = cod
             sto.stock = txtStock.Text
             sto.fechaing = txtFechaIng.Text
-            sto.fechaven = txtFechaVen.Text
+            sto.fechaven = DtpFechaVen.Text
             sto.id = txtId.Text
 
 
@@ -216,7 +216,7 @@ Public Class frmStock
                 unstock.codigoprod = codigo 'Carga los datos del empleado
                 unstock.stock = txtStock.Text
                 unstock.fechaing = txtFechaIng.Text
-                unstock.fechaven = txtFechaVen.Text
+                unstock.fechaven = DtpFechaVen.Text
                 unstock.id = txtId.Text
 
 
@@ -257,5 +257,23 @@ Public Class frmStock
         End Select
     End Sub
 
+    Private Sub txtFechaVen_TextChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ChkNoVence.CheckedChanged
+        If ChkNoVence.Checked Then
+            DtpFechaVen.Text = "jueves, 01 de enero de 1920"
+        Else
+
+        End If
+    End Sub
+
+    Private Sub lbltituloStock_Click(sender As Object, e As EventArgs) Handles lbltituloStock.Click
+
+    End Sub
+
+    Private Sub dgvDatos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellContentClick
+
+    End Sub
 End Class

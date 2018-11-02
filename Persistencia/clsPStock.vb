@@ -81,4 +81,13 @@ Public Class clsPStock
 
         Return listastock
     End Function
+
+    Public Function SumStock(codprod As String) As Integer
+        Dim consulta As String
+        consulta = "SELECT SUM(stock) FROM stock WHERE idproducto = " & codprod & ""
+        Dim datos = ejecutarYdevolver(consulta)
+        datos.Read()
+        Return CInt(datos.Item("SUM(stock)").ToString)
+    End Function
+
 End Class
