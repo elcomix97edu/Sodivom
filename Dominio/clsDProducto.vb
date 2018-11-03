@@ -25,4 +25,9 @@ Public Class clsDProducto
         Dim per As New clsPProducto
         Return per.existe(codigo)
     End Function
+
+    Public Function GetMinStock(codigo As Integer) As Integer
+        Dim unPP As New clsPProducto
+        Return unPP.GetMinStock(codigo)
+    End Function
 End Class

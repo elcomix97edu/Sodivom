@@ -116,6 +116,12 @@ Public Class clsControladora
         Return per.ExisteProducto(codigo)
     End Function
 
+    Public Function GetMinStock(codigo As Integer) As Integer
+        Dim unDP As New clsDProducto
+        Return unDP.GetMinStock(codigo)
+    End Function
+
+
 
     'Stock
     Public Function AgregarStock(unstock As clsEStock) As Boolean
@@ -146,6 +152,11 @@ Public Class clsControladora
     Public Function GetStocksProd(idprod As Integer) As List(Of clsEStock)
         Dim unSt As New clsDStock
         Return unSt.GetStocksProd(idprod)
+    End Function
+
+    Public Function SumStock(idprod As String) As Integer
+        Dim unSt As New clsDStock
+        Return unSt.SumStock(idprod)
     End Function
 
     'Venta
@@ -217,6 +228,10 @@ Public Class clsControladora
     Public Function ExistePedido(id As Integer) As Boolean
         Dim per As New clsDPedido
         Return per.ExistePedido(id)
+    End Function
+
+    Public Function TraerVenta(id As String) As clsEVenta
+        Return unDV.TraerVenta(id)
     End Function
 
 End Class

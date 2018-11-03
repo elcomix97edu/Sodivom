@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports Dominio
 Imports Entidades
 
 Public Class frmPrincipal
@@ -50,6 +51,8 @@ Public Class frmPrincipal
 
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles Me.Load
         lblBienvenida.Text = "Bienvenido " & empleado.nombre & "" 'Carga el nombre del empleado en la etiqueta de bienvenida
+
+        AlertaBajoStock()
 
         Select Case empleado.tipoEmpleado
             Case 1 'Administrador
@@ -247,5 +250,30 @@ Public Class frmPrincipal
         Dim unfrmpedido As New frmPedidodistribuidor
         unfrmpedido.MdiParent = Me
         unfrmpedido.Show()
+    End Sub
+
+    Private Sub AlertaBajoStock()
+        Dim con As New clsControladora
+        Dim ListaProd = con.ListarProducto("", 1)
+
+        For Each prod In ListaProd
+            Dim minstock = con.GetMinStock(prod.codigo) 'Minimo de stock en productos
+            Dim stocksPord = con.GetStocksProd(prod.codigo) 'Stocks del mismo producto
+            Dim stock As Integer
+
+            Dim aviso As String
+
+
+            For Each cosa In stocksPord
+                stock += cosa.stock
+            Next
+            If stock < minstock Then
+
+                aviso = "El stock de " & prod.nombre & " esta por debajo del minimo definido (" & prod.minstock & "), quedan " & stock & "."
+                Dim lista As ListViewItem = New ListViewItem(aviso)
+                ListView1.Items.Add(lista)
+            End If
+
+        Next
     End Sub
 End Class

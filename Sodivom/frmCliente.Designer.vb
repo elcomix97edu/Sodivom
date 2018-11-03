@@ -50,7 +50,6 @@ Partial Class frmCliente
         Me.rdbApellido = New System.Windows.Forms.RadioButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.chkRUT = New System.Windows.Forms.CheckBox()
         CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -292,22 +291,11 @@ Partial Class frmCliente
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'chkRUT
-        '
-        Me.chkRUT.AutoSize = True
-        Me.chkRUT.Location = New System.Drawing.Point(272, 49)
-        Me.chkRUT.Name = "chkRUT"
-        Me.chkRUT.Size = New System.Drawing.Size(49, 17)
-        Me.chkRUT.TabIndex = 16
-        Me.chkRUT.Text = "RUT"
-        Me.chkRUT.UseVisualStyleBackColor = True
-        '
         'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 339)
-        Me.Controls.Add(Me.chkRUT)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.rdbApellido)
@@ -366,5 +354,4 @@ Partial Class frmCliente
     Friend WithEvents rdbApellido As RadioButton
     Friend WithEvents Label8 As Label
     Friend WithEvents btnLimpiar As Button
-    Friend WithEvents chkRUT As CheckBox
 End Class
