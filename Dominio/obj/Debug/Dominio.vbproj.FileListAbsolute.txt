@@ -58,3 +58,21 @@ C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Dominio\obj\Debug\Dominio.vb
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Dominio\obj\Debug\Dominio.dll
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Dominio\obj\Debug\Dominio.xml
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Dominio.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Dominio.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Entidades.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Persistencia.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\MySql.Data.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Entidades.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Entidades.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Persistencia.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\bin\Debug\Persistencia.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.vbprojAssemblyReference.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.vbproj.CoreCompileInputs.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.vbproj.CopyComplete
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Dominio\obj\Debug\Dominio.pdb

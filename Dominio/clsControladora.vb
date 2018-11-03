@@ -167,4 +167,56 @@ Public Class clsControladora
         Return unDV.GetIdVenta(fecha, ciEmpl)
     End Function
 
+    'Distribuidor
+    Public Function AgregarDistribuidor(undis As clsEDistribuidor) As Boolean
+        Dim unDD As New clsDDistribuidor
+        Return unDD.AgregarDistribuidor(undis)
+    End Function
+
+    Public Function ListarDistribuidor(parametro As String, busqueda As Integer) As List(Of clsEDistribuidor)
+        Dim unPc As New clsDDistribuidor
+        Return unPc.ListarDistribuidor(parametro, busqueda)
+    End Function
+
+    Public Function EliminarDistribuidor(id As Integer) As Boolean
+        Dim unPc As New clsDDistribuidor
+        Return unPc.EliminarDistribuidor(id)
+    End Function
+
+    Public Function ModificarDistribuidor(distribuidor As clsEDistribuidor) As Boolean
+        Dim unPC As New clsDDistribuidor
+        Return unPC.ModificarDistribuidor(distribuidor)
+    End Function
+
+    Public Function ExisteDistribuidor(id As Integer) As Boolean
+        Dim per As New clsDDistribuidor
+        Return per.ExisteDistribuidor(id)
+    End Function
+
+    'Pedido Distribuidor
+    Public Function AgregarPedido(unpedido As clsEPedido) As Boolean
+        Dim unPP As New clsDPedido
+        Return unPP.AgregarPedido(unpedido)
+    End Function
+
+    Public Function ListarPedido(parametro As String, busqueda As Integer) As List(Of clsEPedido)
+        Dim unSt As New clsDPedido
+        Return unSt.ListarPedido(parametro, busqueda)
+    End Function
+
+    Public Function EliminarPedido(id As Integer) As Boolean
+        Dim unSt As New clsDPedido
+        Return unSt.EliminarPedido(id)
+    End Function
+
+    Public Function ModificarPedido(pedido As clsEPedido) As Boolean
+        Dim unSt As New clsDPedido
+        Return unSt.ModificarPedido(pedido)
+    End Function
+
+    Public Function ExistePedido(id As Integer) As Boolean
+        Dim per As New clsDPedido
+        Return per.ExistePedido(id)
+    End Function
+
 End Class

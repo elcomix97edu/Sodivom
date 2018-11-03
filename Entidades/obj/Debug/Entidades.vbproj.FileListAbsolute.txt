@@ -28,3 +28,13 @@ C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidade
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.dll
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.xml
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\bin\Debug\Entidades.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\bin\Debug\Entidades.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\obj\Debug\Entidades.Resources.resources
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\obj\Debug\Entidades.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\obj\Debug\Entidades.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache

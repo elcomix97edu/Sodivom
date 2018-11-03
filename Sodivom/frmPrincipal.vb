@@ -242,4 +242,10 @@ Public Class frmPrincipal
         TimerSkere.Interval = (rnd.Next(9) + 1) * 1000
 
     End Sub
+
+    Private Sub PedidoAlDistribuidorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PedidoAlDistribuidorToolStripMenuItem.Click
+        Dim unfrmpedido As New frmPedidodistribuidor
+        unfrmpedido.MdiParent = Me
+        unfrmpedido.Show()
+    End Sub
 End Class

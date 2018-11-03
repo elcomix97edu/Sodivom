@@ -48,3 +48,17 @@ C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persi
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.xml
 C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\bin\Debug\Persistencia.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\bin\Debug\Entidades.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\bin\Debug\Entidades.pdb
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\bin\Debug\Entidades.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.vbprojAssemblyReference.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.Resources.resources
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.vbproj.CoreCompileInputs.cache
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.vbproj.CopyComplete
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.xml
+C:\Users\Mateo\Documents\Proyecto\Sodivom\Persistencia\obj\Debug\Persistencia.pdb

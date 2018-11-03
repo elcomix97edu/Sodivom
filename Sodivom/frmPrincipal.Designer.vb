@@ -50,6 +50,7 @@ Partial Class frmPrincipal
         Me.GroupAlertas = New System.Windows.Forms.GroupBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSkere = New System.Windows.Forms.Timer(Me.components)
+        Me.PedidoAlDistribuidorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupAlertas.SuspendLayout()
         Me.SuspendLayout()
@@ -164,6 +165,7 @@ Partial Class frmPrincipal
         '
         'DistribuidorToolStripMenuItem1
         '
+        Me.DistribuidorToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PedidoAlDistribuidorToolStripMenuItem})
         Me.DistribuidorToolStripMenuItem1.Name = "DistribuidorToolStripMenuItem1"
         Me.DistribuidorToolStripMenuItem1.Size = New System.Drawing.Size(81, 20)
         Me.DistribuidorToolStripMenuItem1.Text = "Distribuidor"
@@ -177,7 +179,7 @@ Partial Class frmPrincipal
         'VentaToolStripMenuItem1
         '
         Me.VentaToolStripMenuItem1.Name = "VentaToolStripMenuItem1"
-        Me.VentaToolStripMenuItem1.Size = New System.Drawing.Size(48, 20)
+        Me.VentaToolStripMenuItem1.Size = New System.Drawing.Size(49, 20)
         Me.VentaToolStripMenuItem1.Text = "Venta"
         '
         'OfertaWebToolStripMenuItem1
@@ -233,6 +235,12 @@ Partial Class frmPrincipal
         '
         Me.TimerSkere.Interval = 1000
         '
+        'PedidoAlDistribuidorToolStripMenuItem
+        '
+        Me.PedidoAlDistribuidorToolStripMenuItem.Name = "PedidoAlDistribuidorToolStripMenuItem"
+        Me.PedidoAlDistribuidorToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.PedidoAlDistribuidorToolStripMenuItem.Text = "Pedido al distribuidor"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -278,4 +286,5 @@ Partial Class frmPrincipal
     Friend WithEvents GroupAlertas As GroupBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents TimerSkere As Timer
+    Friend WithEvents PedidoAlDistribuidorToolStripMenuItem As ToolStripMenuItem
 End Class
