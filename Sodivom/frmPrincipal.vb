@@ -2,7 +2,7 @@
 Imports Dominio
 Imports Entidades
 
-Public Class frmPrincipal
+Public Class Inicio
     Private mempleado As New clsEEmpleado
     '//////Some Things in case of a nuclear war
     Dim maxX As Integer
@@ -297,7 +297,7 @@ Public Class frmPrincipal
             For Each lote In stocksPord
                 If lote.fechaven < fechacomparacion Then
 
-                    aviso = "La fecha de caducidad de " & prod.nombre & " se acerca, se vence el" & lote.fechaven & "."
+                    aviso = "La fecha de caducidad de " & prod.nombre & " se acerca, se vence el " & lote.fechaven & "."
                     Dim lista As ListViewItem = New ListViewItem(aviso)
                     ListView1.Items.Add(lista)
                 End If
@@ -308,6 +308,33 @@ Public Class frmPrincipal
 
 
         Next
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        For Each frm As Form In Me.MdiChildren
+            frm.Close()
+        Next
+
+    End Sub
+
+    Private Sub lblBienvenida_Click(sender As Object, e As EventArgs) Handles lblBienvenida.Click
+
     End Sub
 End Class
 

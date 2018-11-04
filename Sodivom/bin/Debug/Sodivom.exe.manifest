@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b5SmDq+O3lmFqzAyKPek6wJ0UMQZOmkPEsz9oeVY9Bs=</dsig:DigestValue>
+        <dsig:DigestValue>w841HTrLGVFKqFT9SgYe4GZRqyYN7ecs9la1sKeesuA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>f/EQ/pKQ30LqlQYKDG5P9BSlgLBYyXsyigo+UFJZMo0=</dsig:DigestValue>
+        <dsig:DigestValue>Lp/AvPXI3Cp5FLu9EvVwUkqATU20K3O/s3pxGwgK8pg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,19 +85,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aqnalZKOYsy3gdu+nMGnruNT6IxedDDw327jbvHHngc=</dsig:DigestValue>
+        <dsig:DigestValue>zPXm6xTdwPpFsk1VoojFfkvCDFXobbOXKLU8iVE/Z2A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sodivom.exe" size="3370976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sodivom.exe" size="3764192">
       <assemblyIdentity name="Sodivom" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iNtYsVfAbdtE1pVR1AzJowttgoFYdXcGTThj4lnpwAo=</dsig:DigestValue>
+        <dsig:DigestValue>GrWaoC2nyyDyY+1XV27qA8FrOeGpBpSOnYkrehz/7yM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

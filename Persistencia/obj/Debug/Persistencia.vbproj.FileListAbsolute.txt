@@ -12,3 +12,17 @@ C:\Users\Juancito\Documents\GitProyecto\Sodivom\Persistencia\obj\Debug\Persisten
 C:\Users\Juancito\Documents\GitProyecto\Sodivom\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Juancito\Documents\GitProyecto\Sodivom\Persistencia\obj\Debug\Persistencia.xml
 C:\Users\Juancito\Documents\GitProyecto\Sodivom\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\bin\Debug\Persistencia.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\bin\Debug\Entidades.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\bin\Debug\Entidades.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\bin\Debug\Entidades.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.vbprojAssemblyReference.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.Resources.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.vbproj.CoreCompileInputs.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.vbproj.CopyComplete
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Persistencia\obj\Debug\Persistencia.pdb

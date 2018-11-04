@@ -42,11 +42,11 @@ Partial Class frmProducto
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
-        Me.MinStock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MinStock = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtMinStock = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -276,23 +276,11 @@ Partial Class frmProducto
         Me.dgvDatos.Size = New System.Drawing.Size(503, 291)
         Me.dgvDatos.TabIndex = 33
         '
-        'MinStock
+        'Codigo
         '
-        Me.MinStock.HeaderText = "Minimo de stock"
-        Me.MinStock.Name = "MinStock"
-        Me.MinStock.ReadOnly = True
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        '
-        'Descripcion
-        '
-        Me.Descripcion.HeaderText = "Descripcion"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
         '
         'Nombre
         '
@@ -300,11 +288,23 @@ Partial Class frmProducto
         Me.Nombre.Name = "Nombre"
         Me.Nombre.ReadOnly = True
         '
-        'Codigo
+        'Descripcion
         '
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
+        Me.Descripcion.HeaderText = "Descripcion"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.ReadOnly = True
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        '
+        'MinStock
+        '
+        Me.MinStock.HeaderText = "Minimo de stock"
+        Me.MinStock.Name = "MinStock"
+        Me.MinStock.ReadOnly = True
         '
         'txtMinStock
         '
@@ -359,10 +359,9 @@ Partial Class frmProducto
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.rbdCodigo)
         Me.Controls.Add(Me.Panel2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmProducto"
+        Me.Text = "Producto"
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

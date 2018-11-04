@@ -15,7 +15,7 @@ Public Class frmLogin
                 Dim unDE As New clsControladora
                 Dim empleado = unDE.login(mskCi.Text, txtpass.Text)
                 If empleado IsNot Nothing Then
-                    Dim frmp As New frmPrincipal
+                    Dim frmp As New Inicio
                     frmp.empleado = empleado
                     frmp.Show()
                     Me.Hide()
@@ -39,5 +39,9 @@ Public Class frmLogin
 
     Private Sub mskCi_MouseClick(sender As Object, e As MouseEventArgs) Handles mskCi.MouseClick
         mskCi.Select(0, 0)
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class

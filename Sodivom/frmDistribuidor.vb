@@ -192,4 +192,8 @@ Public Class frmDistribuidor
         End Select
 
     End Sub
+
+    Private Sub frmDistribuidor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

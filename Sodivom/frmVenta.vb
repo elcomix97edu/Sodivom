@@ -72,7 +72,7 @@ Public Class frmVenta
         Next
     End Sub
 
-    Private Sub chkAnonimo_CheckedChanged(sender As Object, e As EventArgs) Handles chkAnonimo.CheckedChanged
+    Private Sub chkAnonimo_CheckedChanged(sender As Object, e As EventArgs)
         If chkAnonimo.Checked Then
             comboCliente.Text = "Anónimo -"
         Else
@@ -80,13 +80,13 @@ Public Class frmVenta
         End If
     End Sub
 
-    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
+    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs)
         If Not IsNumeric(txtCantidad.Text) And txtCantidad.Text <> "" Then
             MsgBox("Se ingresaron caracteres no válidos")
         End If
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs)
         Dim Row As DataGridViewRow
         Dim Cell As DataGridViewCell
         Dim a As Integer = 0
@@ -150,7 +150,7 @@ Public Class frmVenta
 
     End Sub
 
-    Private Sub chkRUT_CheckedChanged(sender As Object, e As EventArgs) Handles chkRUT.CheckedChanged
+    Private Sub chkRUT_CheckedChanged(sender As Object, e As EventArgs)
         If chkRUT.Checked Then
             mskRUT.Enabled = True
             txtNombre.Enabled = True
@@ -173,7 +173,7 @@ Public Class frmVenta
         End If
     End Sub
 
-    Private Sub btnRealizarVenta_Click(sender As Object, e As EventArgs) Handles btnRealizarVenta.Click
+    Private Sub btnRealizarVenta_Click(sender As Object, e As EventArgs)
         Dim unaCon As New clsControladora
         Dim fecha As Date = Date.Now
         Dim stocks As New List(Of clsEStock)
@@ -274,7 +274,7 @@ Public Class frmVenta
     End Function
 
 
-    Private Sub dgvProductos_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellEndEdit
+    Private Sub dgvProductos_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs)
 
         '/////////VERIFICACION DE STOCK/////////////////
         Dim listastock As New List(Of clsEStock)
@@ -307,7 +307,7 @@ Public Class frmVenta
 
     End Sub
 
-    Private Sub dgvProductos_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles dgvProductos.RowsRemoved
+    Private Sub dgvProductos_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs)
         ProdIng = dgvProductos.Rows.Count
         preciototal = 0
         For i As Integer = 0 To ProdIng - 1
@@ -316,6 +316,14 @@ Public Class frmVenta
         lblPrecioTotal.Text = preciototal
         lblPrecioIva.Text = preciototal * 0.22
         lblPrecioSub.Text = preciototal * 0.78
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
     End Sub
 

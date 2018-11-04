@@ -186,7 +186,7 @@ Partial Class frmTipoEmpleado
     Friend WithEvents txtTipo As TextBox
     Friend WithEvents Id As DataGridViewTextBoxColumn
     Friend WithEvents TipoEmpleado As DataGridViewTextBoxColumn
-    Friend WithEvents txtTipo As TextBox
+    'Friend WithEvents txtTipo As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
 End Class

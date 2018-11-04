@@ -38,3 +38,43 @@ C:\Users\Juancito\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Diseño(Sodivo
 C:\Users\Juancito\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.exe
 C:\Users\Juancito\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.xml
 C:\Users\Juancito\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbprojAssemblyReference.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmAltaCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmBajaCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmListarCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmModificarCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmCliente.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmDistribuidor.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmEmpleado.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmLogin.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmPedidodistribuidor.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmOfertaWeb.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmProducto.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmStock.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmTipoEmpleado.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.frmVenta.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.Resources.resources
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbproj.GenerateResource.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbproj.CoreCompileInputs.cache
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.exe
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.exe.config
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.exe.manifest
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.application
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.exe
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Sodivom.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Dominio.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Entidades.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Persistencia.dll
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Dominio.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Dominio.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Entidades.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Entidades.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Persistencia.pdb
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\bin\Debug\Persistencia.xml
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.exe.manifest
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.application
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbproj.CopyComplete
+C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Sodivom\obj\Debug\Sodivom.Inicio.resources

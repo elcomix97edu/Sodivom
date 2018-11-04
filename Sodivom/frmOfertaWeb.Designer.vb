@@ -59,46 +59,52 @@ Partial Class frmOfertaWeb
         Me.ComboProd3 = New System.Windows.Forms.ComboBox()
         Me.ComboProd4 = New System.Windows.Forms.ComboBox()
         Me.ComboProd5 = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(400, 157)
+        Me.TextBox2.Location = New System.Drawing.Point(162, 166)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(108, 20)
         Me.TextBox2.TabIndex = 1
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(670, 157)
+        Me.TextBox3.Location = New System.Drawing.Point(162, 192)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(108, 20)
         Me.TextBox3.TabIndex = 2
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(400, 203)
+        Me.TextBox5.Location = New System.Drawing.Point(460, 166)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(108, 20)
         Me.TextBox5.TabIndex = 4
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(670, 207)
+        Me.TextBox6.Location = New System.Drawing.Point(460, 192)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(108, 20)
         Me.TextBox6.TabIndex = 5
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(400, 257)
+        Me.TextBox8.Location = New System.Drawing.Point(757, 166)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(108, 20)
         Me.TextBox8.TabIndex = 7
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(670, 257)
+        Me.TextBox9.Location = New System.Drawing.Point(757, 192)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(108, 20)
         Me.TextBox9.TabIndex = 8
@@ -106,7 +112,7 @@ Partial Class frmOfertaWeb
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(97, 164)
+        Me.Label1.Location = New System.Drawing.Point(68, 142)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 9
@@ -114,28 +120,28 @@ Partial Class frmOfertaWeb
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(400, 314)
+        Me.TextBox11.Location = New System.Drawing.Point(292, 317)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(108, 20)
         Me.TextBox11.TabIndex = 11
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(670, 314)
+        Me.TextBox12.Location = New System.Drawing.Point(292, 343)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(108, 20)
         Me.TextBox12.TabIndex = 12
         '
         'TextBox14
         '
-        Me.TextBox14.Location = New System.Drawing.Point(400, 372)
+        Me.TextBox14.Location = New System.Drawing.Point(597, 317)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(108, 20)
         Me.TextBox14.TabIndex = 14
         '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(670, 370)
+        Me.TextBox15.Location = New System.Drawing.Point(597, 343)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(108, 20)
         Me.TextBox15.TabIndex = 15
@@ -143,7 +149,7 @@ Partial Class frmOfertaWeb
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(97, 208)
+        Me.Label2.Location = New System.Drawing.Point(365, 142)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 16
@@ -152,7 +158,7 @@ Partial Class frmOfertaWeb
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(97, 260)
+        Me.Label3.Location = New System.Drawing.Point(659, 142)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 17
@@ -161,7 +167,7 @@ Partial Class frmOfertaWeb
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(97, 317)
+        Me.Label4.Location = New System.Drawing.Point(201, 293)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
         Me.Label4.TabIndex = 18
@@ -170,7 +176,7 @@ Partial Class frmOfertaWeb
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(97, 377)
+        Me.Label5.Location = New System.Drawing.Point(503, 293)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 13)
         Me.Label5.TabIndex = 19
@@ -179,7 +185,7 @@ Partial Class frmOfertaWeb
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(328, 164)
+        Me.Label6.Location = New System.Drawing.Point(68, 169)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(66, 13)
         Me.Label6.TabIndex = 20
@@ -188,7 +194,7 @@ Partial Class frmOfertaWeb
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(328, 208)
+        Me.Label7.Location = New System.Drawing.Point(365, 169)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(66, 13)
         Me.Label7.TabIndex = 21
@@ -197,7 +203,7 @@ Partial Class frmOfertaWeb
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(328, 260)
+        Me.Label8.Location = New System.Drawing.Point(659, 169)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(66, 13)
         Me.Label8.TabIndex = 22
@@ -206,7 +212,7 @@ Partial Class frmOfertaWeb
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(328, 319)
+        Me.Label9.Location = New System.Drawing.Point(201, 320)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(66, 13)
         Me.Label9.TabIndex = 23
@@ -215,7 +221,7 @@ Partial Class frmOfertaWeb
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(328, 377)
+        Me.Label10.Location = New System.Drawing.Point(503, 320)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(66, 13)
         Me.Label10.TabIndex = 24
@@ -224,7 +230,7 @@ Partial Class frmOfertaWeb
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(597, 164)
+        Me.Label11.Location = New System.Drawing.Point(68, 195)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(67, 13)
         Me.Label11.TabIndex = 25
@@ -233,7 +239,7 @@ Partial Class frmOfertaWeb
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(597, 210)
+        Me.Label12.Location = New System.Drawing.Point(365, 195)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(67, 13)
         Me.Label12.TabIndex = 26
@@ -242,7 +248,7 @@ Partial Class frmOfertaWeb
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(597, 260)
+        Me.Label13.Location = New System.Drawing.Point(659, 195)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(67, 13)
         Me.Label13.TabIndex = 27
@@ -251,7 +257,7 @@ Partial Class frmOfertaWeb
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(597, 321)
+        Me.Label14.Location = New System.Drawing.Point(201, 346)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(67, 13)
         Me.Label14.TabIndex = 28
@@ -260,7 +266,7 @@ Partial Class frmOfertaWeb
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(597, 375)
+        Me.Label15.Location = New System.Drawing.Point(503, 346)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(67, 13)
         Me.Label15.TabIndex = 29
@@ -270,7 +276,7 @@ Partial Class frmOfertaWeb
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(-5, 157)
+        Me.Label16.Location = New System.Drawing.Point(36, 106)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(96, 20)
         Me.Label16.TabIndex = 30
@@ -280,7 +286,7 @@ Partial Class frmOfertaWeb
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(-5, 203)
+        Me.Label17.Location = New System.Drawing.Point(335, 106)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(96, 20)
         Me.Label17.TabIndex = 31
@@ -290,7 +296,7 @@ Partial Class frmOfertaWeb
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(-5, 255)
+        Me.Label18.Location = New System.Drawing.Point(630, 106)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(96, 20)
         Me.Label18.TabIndex = 32
@@ -300,7 +306,7 @@ Partial Class frmOfertaWeb
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(-5, 312)
+        Me.Label19.Location = New System.Drawing.Point(170, 257)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(96, 20)
         Me.Label19.TabIndex = 33
@@ -310,7 +316,7 @@ Partial Class frmOfertaWeb
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(-5, 372)
+        Me.Label20.Location = New System.Drawing.Point(471, 257)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(96, 20)
         Me.Label20.TabIndex = 34
@@ -318,29 +324,35 @@ Partial Class frmOfertaWeb
         '
         'ButtonActualizar
         '
-        Me.ButtonActualizar.Location = New System.Drawing.Point(375, 415)
+        Me.ButtonActualizar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ButtonActualizar.FlatAppearance.BorderSize = 0
+        Me.ButtonActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ButtonActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonActualizar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ButtonActualizar.Location = New System.Drawing.Point(348, 418)
         Me.ButtonActualizar.Name = "ButtonActualizar"
-        Me.ButtonActualizar.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonActualizar.Size = New System.Drawing.Size(175, 40)
         Me.ButtonActualizar.TabIndex = 35
         Me.ButtonActualizar.Text = "Actualizar"
-        Me.ButtonActualizar.UseVisualStyleBackColor = True
+        Me.ButtonActualizar.UseVisualStyleBackColor = False
         '
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(314, 39)
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(342, 35)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(181, 37)
+        Me.Label22.Size = New System.Drawing.Size(193, 31)
         Me.Label22.TabIndex = 37
-        Me.Label22.Text = "Oferta Web"
+        Me.Label22.Text = "OFERTA WEB"
         '
         'ComboProd1
         '
         Me.ComboProd1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboProd1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboProd1.FormattingEnabled = True
-        Me.ComboProd1.Location = New System.Drawing.Point(147, 157)
+        Me.ComboProd1.Location = New System.Drawing.Point(127, 139)
         Me.ComboProd1.Name = "ComboProd1"
         Me.ComboProd1.Size = New System.Drawing.Size(143, 21)
         Me.ComboProd1.TabIndex = 38
@@ -350,7 +362,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboProd2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboProd2.FormattingEnabled = True
-        Me.ComboProd2.Location = New System.Drawing.Point(147, 203)
+        Me.ComboProd2.Location = New System.Drawing.Point(425, 139)
         Me.ComboProd2.Name = "ComboProd2"
         Me.ComboProd2.Size = New System.Drawing.Size(143, 21)
         Me.ComboProd2.TabIndex = 38
@@ -360,7 +372,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboProd3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboProd3.FormattingEnabled = True
-        Me.ComboProd3.Location = New System.Drawing.Point(147, 257)
+        Me.ComboProd3.Location = New System.Drawing.Point(722, 139)
         Me.ComboProd3.Name = "ComboProd3"
         Me.ComboProd3.Size = New System.Drawing.Size(143, 21)
         Me.ComboProd3.TabIndex = 38
@@ -370,7 +382,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboProd4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboProd4.FormattingEnabled = True
-        Me.ComboProd4.Location = New System.Drawing.Point(147, 314)
+        Me.ComboProd4.Location = New System.Drawing.Point(257, 290)
         Me.ComboProd4.Name = "ComboProd4"
         Me.ComboProd4.Size = New System.Drawing.Size(143, 21)
         Me.ComboProd4.TabIndex = 38
@@ -380,16 +392,65 @@ Partial Class frmOfertaWeb
         Me.ComboProd5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboProd5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboProd5.FormattingEnabled = True
-        Me.ComboProd5.Location = New System.Drawing.Point(147, 370)
+        Me.ComboProd5.Location = New System.Drawing.Point(562, 290)
         Me.ComboProd5.Name = "ComboProd5"
         Me.ComboProd5.Size = New System.Drawing.Size(143, 21)
         Me.ComboProd5.TabIndex = 38
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Location = New System.Drawing.Point(12, 117)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(279, 107)
+        Me.Panel1.TabIndex = 39
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(309, 117)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(279, 107)
+        Me.Panel2.TabIndex = 40
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Location = New System.Drawing.Point(605, 117)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(279, 107)
+        Me.Panel3.TabIndex = 41
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Location = New System.Drawing.Point(143, 268)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(279, 107)
+        Me.Panel4.TabIndex = 42
+        '
+        'Panel5
+        '
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Location = New System.Drawing.Point(448, 268)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(279, 107)
+        Me.Panel5.TabIndex = 43
+        '
+        'Panel6
+        '
+        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Location = New System.Drawing.Point(12, 48)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(872, 10)
+        Me.Panel6.TabIndex = 44
         '
         'frmOfertaWeb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 450)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(896, 495)
         Me.Controls.Add(Me.ComboProd5)
         Me.Controls.Add(Me.ComboProd4)
         Me.Controls.Add(Me.ComboProd3)
@@ -427,8 +488,15 @@ Partial Class frmOfertaWeb
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.Panel6)
         Me.Name = "frmOfertaWeb"
-        Me.Text = "frmOfertaWeb"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Oferta web"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -470,4 +538,10 @@ Partial Class frmOfertaWeb
     Friend WithEvents ComboProd3 As ComboBox
     Friend WithEvents ComboProd4 As ComboBox
     Friend WithEvents ComboProd5 As ComboBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel6 As Panel
 End Class

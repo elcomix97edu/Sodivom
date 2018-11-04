@@ -49,7 +49,6 @@ Partial Class frmCliente
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.chkRUT = New System.Windows.Forms.CheckBox()
-        Me.lblCerrar = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.rdbCi = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -316,17 +315,6 @@ Partial Class frmCliente
         Me.chkRUT.Text = "RUT"
         Me.chkRUT.UseVisualStyleBackColor = True
         '
-        'lblCerrar
-        '
-        Me.lblCerrar.AutoSize = True
-        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCerrar.ForeColor = System.Drawing.Color.Gray
-        Me.lblCerrar.Location = New System.Drawing.Point(864, 9)
-        Me.lblCerrar.Name = "lblCerrar"
-        Me.lblCerrar.Size = New System.Drawing.Size(20, 20)
-        Me.lblCerrar.TabIndex = 17
-        Me.lblCerrar.Text = "X"
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
@@ -373,7 +361,6 @@ Partial Class frmCliente
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(896, 495)
         Me.Controls.Add(Me.rdbApellido)
-        Me.Controls.Add(Me.lblCerrar)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.chkRUT)
         Me.Controls.Add(Me.rdbCi)
@@ -398,10 +385,9 @@ Partial Class frmCliente
         Me.Controls.Add(Me.lblCi)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmCliente"
+        Me.Text = "Cliente"
         CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -435,7 +421,6 @@ Partial Class frmCliente
     Friend WithEvents Label8 As Label
     Friend WithEvents btnLimpiar As Button
     Friend WithEvents chkRUT As CheckBox
-    Friend WithEvents lblCerrar As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents rdbCi As RadioButton
     Friend WithEvents Label7 As Label
