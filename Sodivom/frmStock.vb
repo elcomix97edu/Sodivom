@@ -189,7 +189,7 @@ Public Class frmStock
 
 
             Else
-                MsgBox("Ya se a ingresado este stock, desea ingresarlo igualente?", MsgBoxStyle.YesNo)
+                MsgBox("Ya se a ingresado este stock, desea ingresarlo igualmente?", MsgBoxStyle.YesNo)
                 If MsgBoxResult.Yes Then
                     unaCon.AgregarStock(sto)
                 Else

@@ -164,9 +164,8 @@ Public Class frmProducto
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim codigo As Integer
-        Dim nombre As String
-        codigo = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
+        codigo = CInt(txtCodigo.Text)
+
 
 
         Select Case MsgBox("Desea quitar el producto " & txtNombre.Text & " " & txtDescripcion.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
@@ -185,10 +184,7 @@ Public Class frmProducto
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        Dim codigo As Integer
-        Dim nombre As String
-        codigo = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
+
 
 
 

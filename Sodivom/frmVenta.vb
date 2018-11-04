@@ -29,6 +29,20 @@ Public Class frmVenta
         Return selectedValue.precio
     End Function
 
+    Private Function GetNomProd(cod As Integer) As String
+        Dim selectedValue As clsEProducto
+        selectedValue = listaProd.Find(Function(p) p.codigo = cod)
+        Return selectedValue.nombre
+    End Function
+
+    Private Function GetNomCli(ci As String) As String
+        Dim selectedValue As clsECliente
+        selectedValue = listaCli.Find(Function(p) p.ci = ci)
+        Dim res As String
+        res = selectedValue.nombre & " " & selectedValue.apellido
+        Return res
+    End Function
+
     'Private Function GetNombreCli(id As Integer) As String
     '    Dim selectedValue As clsETipoEmpleado
     '    selectedValue = listaCargos.Find(Function(p) p.id = id)
@@ -48,6 +62,7 @@ Public Class frmVenta
         lblNombreCajero.Text = unempl.nombre & " " & unempl.apellido
         listaCli = unaCon.ListarAllClientes() 'Lista todos los clientes
         listaProd = unaCon.ListarProducto("", 1) 'Lista todos los productos
+        lblNumFecha.Text = Date.Now
         'Dim nomcli As String 'Variable para tener nombre completo de cliente
         For Each Cliente In listaCli
             comboCliente.Items.Add(Cliente.nombre.ToString & " " & Cliente.apellido.ToString)
@@ -62,36 +77,6 @@ Public Class frmVenta
             comboCliente.Text = "Anónimo -"
         Else
 
-        End If
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Dim conjunto As String = comboCliente.Text   
-        'Dim palabras As String() = conjunto.Split(New Char() {" "c})
-        'Label1.Text = palabras.GetValue(0).ToString
-        'Label2.Text = palabras.GetValue(1).ToString
-        'Label1.Text = GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString)
-
-        'Dim conjunto As String = ComboProd.Text
-        'Dim palabras As String() = conjunto.Split(New Char() {" "c})
-        'Label1.Text = palabras.GetValue(0).ToString
-        'Label2.Text = palabras.GetValue(1).ToString.Replace("(", "")
-        'Label1.Text = GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString)
-
-        PrintDialog1.Document = PrintDocument1
-        PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
-        With PrintDocument1
-            .PrinterSettings.DefaultPageSettings.Landscape = False
-            .Print()
-
-        End With
-    End Sub
-
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked Then
-            contReparto.Enabled = True
-        Else
-            contReparto.Enabled = False
         End If
     End Sub
 
@@ -178,6 +163,15 @@ Public Class frmVenta
             comboCliente.Enabled = True
         End If
     End Sub
+    Private Sub CheckBoxReparto_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxReparto.CheckedChanged
+        If CheckBoxReparto.Checked Then
+            contReparto.Enabled = True
+            txtDireccion.Enabled = True
+        Else
+            contReparto.Enabled = False
+            txtDireccion.Enabled = False
+        End If
+    End Sub
 
     Private Sub btnRealizarVenta_Click(sender As Object, e As EventArgs) Handles btnRealizarVenta.Click
         Dim unaCon As New clsControladora
@@ -213,11 +207,29 @@ Public Class frmVenta
             unaCon.AltaVentaProducto(idventa, CInt(dgvProductos.Rows(i).Cells(0).Value.ToString), CInt(dgvProductos.Rows(i).Cells(2).Value.ToString))
         Next
 
+
+
         Dim conjunto As String = comboCliente.Text
-        Dim palabras As String() = conjunto.Split(New Char() {" "c})
+        Dim palabras As String() = conjunto.Split(New Char() {" "c}) 'profe si ves esto me arruinaste un fin de semana mejor dicho un año entero 
 
 
         unaCon.AltaVentaDeProducto(idventa, GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString))
+
+        If CheckBoxReparto.Checked Then
+            unaCon.AltaReparto(idventa, txtDireccion.Text)
+        End If
+        '/////////Impresion de la factura
+        PrintDialog1.Document = PrintDocument1
+        PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
+        With PrintDocument1
+            .PrinterSettings.DefaultPageSettings.Landscape = False
+            .Print()
+
+        End With
+
+        '////////////////
+
+        MsgBox("Venta Realizada Correctamente")
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
@@ -249,16 +261,18 @@ Public Class frmVenta
         e.Graphics.DrawString(lblPrecioIva.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 750, 550) 'IVA
         e.Graphics.DrawString(lblPrecioTotal.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 750, 573) 'Total
 
+        If CheckBoxReparto.Checked Then 'Si usa reparto
+            e.Graphics.DrawString(txtDireccion.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 132, 218) 'rEPARTo
+        Else
+            e.Graphics.DrawString("X", New Drawing.Font("Times New Roman", 12), Brushes.Black, 132, 218) 'Escribe X el campo del repartowe
+
+        End If
     End Sub
 
     Public Shared Function ResizeImage(ByVal InputImage As Image) As Image
         Return New Bitmap(InputImage, New Size(800, 600))
     End Function
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.ShowDialog()
-    End Sub
 
     Private Sub dgvProductos_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellEndEdit
 
@@ -304,4 +318,9 @@ Public Class frmVenta
         lblPrecioSub.Text = preciototal * 0.78
 
     End Sub
+
+    'Private Sub TextRepartoo_TextChanged(sender As Object, e As EventArgs) Handles TextRepartoo.TextChanged
+
+    'End Sub
 End Class
+

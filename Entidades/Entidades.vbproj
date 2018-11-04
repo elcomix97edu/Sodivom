@@ -64,11 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsECliente.vb" />
+    <Compile Include="clsEDistribuidor.vb" />
     <Compile Include="clsEEmpleado.vb" />
+    <Compile Include="clsEPedido.vb" />
     <Compile Include="clsEPersona.vb" />
     <Compile Include="clsEProducto.vb" />
     <Compile Include="clsEStock.vb" />
     <Compile Include="clsETipoEmpleado.vb" />
+    <Compile Include="clsEVenta.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

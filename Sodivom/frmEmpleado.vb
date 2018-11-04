@@ -209,13 +209,10 @@ Public Class frmEmpleado
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim ci As Integer
-        Dim nombre, apellido As String
-        ci = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
-        apellido = dgvDatos.CurrentRow.Cells(2).Value.ToString
+        ci = CInt(mskCi.Text)
 
 
-        Select Case MsgBox("Desea quitar el empleado " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+        Select Case MsgBox("Desea quitar el empleado " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Empleado")
             Case MsgBoxResult.Yes
                 Dim unaC As New clsControladora
                 If unaC.EliminarEmpleado(ci) Then
@@ -231,11 +228,6 @@ Public Class frmEmpleado
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        Dim ci As Integer
-        Dim nombre, apellido As String
-        ci = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
-        apellido = dgvDatos.CurrentRow.Cells(2).Value.ToString
 
 
         Select Case MsgBox("Desea actualizar el empleado " & txtNombre.Text & " " & txtApellido.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
@@ -265,8 +257,8 @@ Public Class frmEmpleado
 
     End Sub
 
-    Private Sub dgvDatos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellContentClick
-
+    Private Sub mskCi_MouseClick(sender As Object, e As MouseEventArgs) Handles mskCi.MouseClick
+        mskCi.Select(0, 0)
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

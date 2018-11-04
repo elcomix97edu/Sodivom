@@ -46,13 +46,11 @@ Public Class frmCliente
         'End If
 
         Dim ci As Integer
-        Dim nombre, apellido As String
-        ci = CInt(dgvCliente.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvCliente.CurrentRow.Cells(1).Value.ToString
-        apellido = dgvCliente.CurrentRow.Cells(2).Value.ToString
+        ci = CInt(mskCi.Text)
 
 
-        Select Case MsgBox("Desea quitar el cliente " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+
+        Select Case MsgBox("Desea quitar el cliente " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Cliente")
             Case MsgBoxResult.Yes
                 Dim unaC As New clsControladora
                 If unaC.EliminarCliente(ci) Then
@@ -68,11 +66,6 @@ Public Class frmCliente
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
-        Dim ci As Integer
-        Dim nombre, apellido As String
-        ci = CInt(dgvCliente.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvCliente.CurrentRow.Cells(1).Value.ToString
-        apellido = dgvCliente.CurrentRow.Cells(2).Value.ToString
 
 
         Select Case MsgBox("Desea actualizar el cliente " & txtNombre.Text & " " & txtApellido.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
@@ -110,15 +103,6 @@ Public Class frmCliente
         unLimpiar.Limpiar(Me)
     End Sub
 
-    Private Sub chkRUT_CheckedChanged(sender As Object, e As EventArgs) Handles chkRUT.CheckedChanged
-        If chkRUT.Checked Then
-            lblCi.Text = "RUT"
-            mskCi.Mask = "000000000000"
-        Else
-            lblCi.Text = "Ci"
-            mskCi.Mask = "00000000"
-        End If
-    End Sub
 
     Public Sub Listar()
         If Not (rdbCi.Checked Or rdbApellido.Checked) Then
@@ -195,27 +179,7 @@ Public Class frmCliente
         End If
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
-
-    Private Sub dgvCliente_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCliente.CellContentClick
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
-
-    End Sub
-
-    Private Sub Label1_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub rdbCi_CheckedChanged(sender As Object, e As EventArgs) Handles rdbCi.CheckedChanged
-
+    Private Sub mskCi_MouseClick(sender As Object, e As MouseEventArgs) Handles mskCi.MouseClick
+        mskCi.Select(0, 0)
     End Sub
 End Class

@@ -51,6 +51,7 @@ Partial Class frmPrincipal
         Me.GroupAlertas = New System.Windows.Forms.GroupBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSkere = New System.Windows.Forms.Timer(Me.components)
+        Me.PedidoAlDistribuidorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BarraTitulo = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
@@ -172,8 +173,8 @@ Partial Class frmPrincipal
         'TipoEmpleadoToolStripMenuItem1
         '
         Me.TipoEmpleadoToolStripMenuItem1.Name = "TipoEmpleadoToolStripMenuItem1"
-        Me.TipoEmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(258, 34)
-        Me.TipoEmpleadoToolStripMenuItem1.Text = "TipoEmpleado"
+        Me.TipoEmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.TipoEmpleadoToolStripMenuItem1.Text = "Cargo"
         '
         'ProductoToolStripMenuItem1
         '
@@ -190,6 +191,7 @@ Partial Class frmPrincipal
         Me.DistribuidorToolStripMenuItem1.Image = CType(resources.GetObject("DistribuidorToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.DistribuidorToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.DistribuidorToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.DistribuidorToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PedidoAlDistribuidorToolStripMenuItem})
         Me.DistribuidorToolStripMenuItem1.Name = "DistribuidorToolStripMenuItem1"
         Me.DistribuidorToolStripMenuItem1.Size = New System.Drawing.Size(243, 54)
         Me.DistribuidorToolStripMenuItem1.Text = "Distribuidor"
@@ -292,6 +294,12 @@ Partial Class frmPrincipal
         Me.BarraTitulo.Size = New System.Drawing.Size(1050, 50)
         Me.BarraTitulo.TabIndex = 11
         '
+        'PedidoAlDistribuidorToolStripMenuItem
+        '
+        Me.PedidoAlDistribuidorToolStripMenuItem.Name = "PedidoAlDistribuidorToolStripMenuItem"
+        Me.PedidoAlDistribuidorToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.PedidoAlDistribuidorToolStripMenuItem.Text = "Pedido al distribuidor"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -345,4 +353,5 @@ Partial Class frmPrincipal
     Friend WithEvents TimerSkere As Timer
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BarraTitulo As Panel
+    Friend WithEvents PedidoAlDistribuidorToolStripMenuItem As ToolStripMenuItem
 End Class

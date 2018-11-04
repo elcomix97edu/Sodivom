@@ -13,6 +13,7 @@ Public Class frmPrincipal
     Dim SumarY As Boolean = False
     Dim rnd As New Random
     Dim player As New Media.SoundPlayer
+
     '///////////
 
     Public Property empleado As clsEEmpleado
@@ -53,6 +54,8 @@ Public Class frmPrincipal
         lblBienvenida.Text = "Bienvenido " & empleado.nombre & "" 'Carga el nombre del empleado en la etiqueta de bienvenida
 
         AlertaBajoStock()
+        'AlertaCaducidad()
+        AlertaFechaVencimiento()
 
         Select Case empleado.tipoEmpleado
             Case 1 'Administrador
@@ -246,10 +249,10 @@ Public Class frmPrincipal
 
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
-
-
-
+    Private Sub PedidoAlDistribuidorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PedidoAlDistribuidorToolStripMenuItem.Click
+        Dim unfrmpedido As New frmPedidodistribuidor
+        unfrmpedido.MdiParent = Me
+        unfrmpedido.Show()
     End Sub
 
     Private Sub AlertaBajoStock()
@@ -269,7 +272,7 @@ Public Class frmPrincipal
             Next
             If stock < minstock Then
 
-                aviso = "El stock de " & prod.nombre & " esta por debajo del minimo definido (" & prod.minstock & "), quedan " & stock & "."
+                aviso = "El stock de " & prod.nombre & " esta por debajo del minimo definido (" & prod.minstock & "), " & stock & "."
                 Dim lista As ListViewItem = New ListViewItem(aviso)
                 ListView1.Items.Add(lista)
             End If
@@ -277,15 +280,34 @@ Public Class frmPrincipal
         Next
     End Sub
 
-    Private Sub lblBienvenida_Click(sender As Object, e As EventArgs) Handles lblBienvenida.Click
+    Private Sub AlertaFechaVencimiento()
+        Dim con As New clsControladora
+        Dim ListaProd = con.ListarProducto("", 1)
 
-    End Sub
+        For Each prod In ListaProd
+            Dim stocksPord = con.GetStocksProd(prod.codigo) 'Stocks del mismo producto
+            Dim stock As Integer
+            Dim hoy As Date
+            hoy = Date.Now
+            Dim fechacomparacion As Date = Date.Now
+            fechacomparacion = fechacomparacion.AddDays(15)
+            Dim aviso As String
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
-    End Sub
+            For Each lote In stocksPord
+                If lote.fechaven < fechacomparacion Then
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
+                    aviso = "La fecha de caducidad de " & prod.nombre & " se acerca, se vence el" & lote.fechaven & "."
+                    Dim lista As ListViewItem = New ListViewItem(aviso)
+                    ListView1.Items.Add(lista)
+                End If
 
+
+
+            Next
+
+
+        Next
     End Sub
 End Class
+
