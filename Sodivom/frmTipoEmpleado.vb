@@ -65,4 +65,12 @@ Public Class frmTipoEmpleado
 
         End If
     End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) 
+
+    End Sub
 End Class

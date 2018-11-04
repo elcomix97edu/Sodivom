@@ -194,4 +194,28 @@ Public Class frmCliente
 
         End If
     End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub dgvCliente_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCliente.CellContentClick
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
+
+    End Sub
+
+    Private Sub Label1_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub rdbCi_CheckedChanged(sender As Object, e As EventArgs) Handles rdbCi.CheckedChanged
+
+    End Sub
 End Class

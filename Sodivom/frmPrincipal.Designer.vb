@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,10 @@ Partial Class frmPrincipal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TipoEmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -50,8 +51,11 @@ Partial Class frmPrincipal
         Me.GroupAlertas = New System.Windows.Forms.GroupBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSkere = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BarraTitulo = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupAlertas.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ClienteToolStripMenuItem
@@ -107,14 +111,15 @@ Partial Class frmPrincipal
         '
         'lblBienvenida
         '
-        Me.lblBienvenida.AutoSize = True
-        Me.lblBienvenida.BackColor = System.Drawing.Color.Transparent
-        Me.lblBienvenida.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBienvenida.Location = New System.Drawing.Point(284, 555)
+        Me.lblBienvenida.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.lblBienvenida.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBienvenida.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblBienvenida.Location = New System.Drawing.Point(906, 67)
         Me.lblBienvenida.Name = "lblBienvenida"
-        Me.lblBienvenida.Size = New System.Drawing.Size(148, 31)
+        Me.lblBienvenida.Size = New System.Drawing.Size(394, 40)
         Me.lblBienvenida.TabIndex = 3
         Me.lblBienvenida.Text = "Bienvenido"
+        Me.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'StockToolStripMenuItem
         '
@@ -130,80 +135,112 @@ Partial Class frmPrincipal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.AutoSize = False
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem1, Me.EmpleadoToolStripMenuItem1, Me.ProductoToolStripMenuItem1, Me.DistribuidorToolStripMenuItem1, Me.StockToolStripMenuItem1, Me.VentaToolStripMenuItem1, Me.OfertaWebToolStripMenuItem1, Me.ExtraToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(964, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 130, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(250, 650)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ClienteToolStripMenuItem1
         '
+        Me.ClienteToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClienteToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClienteToolStripMenuItem1.Image = CType(resources.GetObject("ClienteToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.ClienteToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ClienteToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ClienteToolStripMenuItem1.Name = "ClienteToolStripMenuItem1"
-        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(56, 20)
+        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(243, 54)
         Me.ClienteToolStripMenuItem1.Text = "Cliente"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipoEmpleadoToolStripMenuItem1})
+        Me.EmpleadoToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmpleadoToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.EmpleadoToolStripMenuItem1.Image = CType(resources.GetObject("EmpleadoToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.EmpleadoToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.EmpleadoToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(72, 20)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(243, 54)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'TipoEmpleadoToolStripMenuItem1
         '
         Me.TipoEmpleadoToolStripMenuItem1.Name = "TipoEmpleadoToolStripMenuItem1"
-        Me.TipoEmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
+        Me.TipoEmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(258, 34)
         Me.TipoEmpleadoToolStripMenuItem1.Text = "TipoEmpleado"
         '
         'ProductoToolStripMenuItem1
         '
+        Me.ProductoToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductoToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ProductoToolStripMenuItem1.Name = "ProductoToolStripMenuItem1"
-        Me.ProductoToolStripMenuItem1.Size = New System.Drawing.Size(68, 20)
+        Me.ProductoToolStripMenuItem1.Size = New System.Drawing.Size(243, 34)
         Me.ProductoToolStripMenuItem1.Text = "Producto"
         '
         'DistribuidorToolStripMenuItem1
         '
+        Me.DistribuidorToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DistribuidorToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DistribuidorToolStripMenuItem1.Image = CType(resources.GetObject("DistribuidorToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.DistribuidorToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DistribuidorToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DistribuidorToolStripMenuItem1.Name = "DistribuidorToolStripMenuItem1"
-        Me.DistribuidorToolStripMenuItem1.Size = New System.Drawing.Size(81, 20)
+        Me.DistribuidorToolStripMenuItem1.Size = New System.Drawing.Size(243, 54)
         Me.DistribuidorToolStripMenuItem1.Text = "Distribuidor"
         '
         'StockToolStripMenuItem1
         '
+        Me.StockToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StockToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.StockToolStripMenuItem1.Name = "StockToolStripMenuItem1"
-        Me.StockToolStripMenuItem1.Size = New System.Drawing.Size(48, 20)
+        Me.StockToolStripMenuItem1.Size = New System.Drawing.Size(243, 34)
         Me.StockToolStripMenuItem1.Text = "Stock"
         '
         'VentaToolStripMenuItem1
         '
+        Me.VentaToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VentaToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.VentaToolStripMenuItem1.Image = CType(resources.GetObject("VentaToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.VentaToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.VentaToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.VentaToolStripMenuItem1.Name = "VentaToolStripMenuItem1"
-        Me.VentaToolStripMenuItem1.Size = New System.Drawing.Size(48, 20)
+        Me.VentaToolStripMenuItem1.Size = New System.Drawing.Size(243, 54)
         Me.VentaToolStripMenuItem1.Text = "Venta"
         '
         'OfertaWebToolStripMenuItem1
         '
+        Me.OfertaWebToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OfertaWebToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.OfertaWebToolStripMenuItem1.Name = "OfertaWebToolStripMenuItem1"
-        Me.OfertaWebToolStripMenuItem1.Size = New System.Drawing.Size(76, 20)
+        Me.OfertaWebToolStripMenuItem1.Size = New System.Drawing.Size(243, 34)
         Me.OfertaWebToolStripMenuItem1.Text = "OfertaWeb"
         '
         'ExtraToolStripMenuItem1
         '
         Me.ExtraToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SKEREMODODIABLOToolStripMenuItem, Me.YABASTAToolStripMenuItem})
+        Me.ExtraToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtraToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ExtraToolStripMenuItem1.Name = "ExtraToolStripMenuItem1"
-        Me.ExtraToolStripMenuItem1.Size = New System.Drawing.Size(44, 20)
+        Me.ExtraToolStripMenuItem1.Size = New System.Drawing.Size(243, 34)
         Me.ExtraToolStripMenuItem1.Text = "Extra"
         Me.ExtraToolStripMenuItem1.Visible = False
         '
         'SKEREMODODIABLOToolStripMenuItem
         '
         Me.SKEREMODODIABLOToolStripMenuItem.Name = "SKEREMODODIABLOToolStripMenuItem"
-        Me.SKEREMODODIABLOToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.SKEREMODODIABLOToolStripMenuItem.Size = New System.Drawing.Size(323, 34)
         Me.SKEREMODODIABLOToolStripMenuItem.Text = "SKEREMODODIABLO"
         '
         'YABASTAToolStripMenuItem
         '
         Me.YABASTAToolStripMenuItem.Name = "YABASTAToolStripMenuItem"
-        Me.YABASTAToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.YABASTAToolStripMenuItem.Size = New System.Drawing.Size(323, 34)
         Me.YABASTAToolStripMenuItem.Text = "YABASTA"
         Me.YABASTAToolStripMenuItem.Visible = False
         '
@@ -211,17 +248,20 @@ Partial Class frmPrincipal
         '
         Me.ListView1.Location = New System.Drawing.Point(6, 19)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(430, 215)
+        Me.ListView1.Size = New System.Drawing.Size(624, 374)
         Me.ListView1.TabIndex = 7
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.List
         '
         'GroupAlertas
         '
+        Me.GroupAlertas.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupAlertas.Controls.Add(Me.ListView1)
-        Me.GroupAlertas.Location = New System.Drawing.Point(52, 57)
+        Me.GroupAlertas.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupAlertas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupAlertas.Location = New System.Drawing.Point(270, 67)
         Me.GroupAlertas.Name = "GroupAlertas"
-        Me.GroupAlertas.Size = New System.Drawing.Size(442, 240)
+        Me.GroupAlertas.Size = New System.Drawing.Size(635, 399)
         Me.GroupAlertas.TabIndex = 8
         Me.GroupAlertas.TabStop = False
         Me.GroupAlertas.Text = "Alertas"
@@ -234,22 +274,46 @@ Partial Class frmPrincipal
         '
         Me.TimerSkere.Interval = 1000
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(218, 94)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
+        'BarraTitulo
+        '
+        Me.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BarraTitulo.Location = New System.Drawing.Point(250, 0)
+        Me.BarraTitulo.Name = "BarraTitulo"
+        Me.BarraTitulo.Size = New System.Drawing.Size(1050, 50)
+        Me.BarraTitulo.TabIndex = 11
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(964, 607)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ClientSize = New System.Drawing.Size(1300, 650)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupAlertas)
         Me.Controls.Add(Me.lblBienvenida)
+        Me.Controls.Add(Me.BarraTitulo)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
         Me.Name = "frmPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sodivom"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupAlertas.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ClienteToolStripMenuItem As ToolStripMenuItem
@@ -279,4 +343,6 @@ Partial Class frmPrincipal
     Friend WithEvents GroupAlertas As GroupBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents TimerSkere As Timer
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BarraTitulo As Panel
 End Class

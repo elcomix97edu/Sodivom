@@ -191,7 +191,7 @@ Public Class frmPrincipal
 
     Private Sub YABASTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YABASTAToolStripMenuItem.Click
         My.Computer.Audio.Stop()
-        lblBienvenida.Text = "Bienvenido " & empleado.nombre & ""
+        lblBienvenida.Text = "Bienvenid@ " & empleado.nombre & ""
         Timer1.Enabled = False
         TimerSkere.Enabled = False
 
@@ -275,5 +275,17 @@ Public Class frmPrincipal
             End If
 
         Next
+    End Sub
+
+    Private Sub lblBienvenida_Click(sender As Object, e As EventArgs) Handles lblBienvenida.Click
+
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

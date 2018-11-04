@@ -38,6 +38,10 @@ Partial Class frmVenta
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.contReparto = New System.Windows.Forms.GroupBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -57,10 +61,6 @@ Partial Class frmVenta
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.contReparto.SuspendLayout()
         Me.SuspendLayout()
@@ -209,6 +209,29 @@ Partial Class frmVenta
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.Size = New System.Drawing.Size(509, 166)
         Me.dgvProductos.TabIndex = 10
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Código"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        '
+        'Producto
+        '
+        Me.Producto.HeaderText = "Producto"
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        '
+        'Cantidad
+        '
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        '
+        'PrecioUnidad
+        '
+        Me.PrecioUnidad.HeaderText = "Precio Unidad"
+        Me.PrecioUnidad.Name = "PrecioUnidad"
+        Me.PrecioUnidad.ReadOnly = True
         '
         'CheckBox1
         '
@@ -381,29 +404,6 @@ Partial Class frmVenta
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 19
         '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        '
-        'Producto
-        '
-        Me.Producto.HeaderText = "Producto"
-        Me.Producto.Name = "Producto"
-        Me.Producto.ReadOnly = True
-        '
-        'Cantidad
-        '
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
-        '
-        'PrecioUnidad
-        '
-        Me.PrecioUnidad.HeaderText = "Precio Unidad"
-        Me.PrecioUnidad.Name = "PrecioUnidad"
-        Me.PrecioUnidad.ReadOnly = True
-        '
         'frmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -440,6 +440,7 @@ Partial Class frmVenta
         Me.Controls.Add(Me.lblCajero)
         Me.Controls.Add(Me.lblVenta)
         Me.Name = "frmVenta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmVenta"
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.contReparto.ResumeLayout(False)

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmTipoEmpleado
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class frmTipoEmpleado
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTipoEmpleado))
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -31,29 +32,33 @@ Partial Class frmTipoEmpleado
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTipo = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(39, 9)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(168, 55)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(233, 37)
+        Me.Label8.Size = New System.Drawing.Size(235, 31)
         Me.Label8.TabIndex = 63
-        Me.Label8.Text = "Tipo Empleado"
+        Me.Label8.Text = "TIPO EMPLEADO"
         '
         'dgvDatos
         '
         Me.dgvDatos.AllowUserToAddRows = False
         Me.dgvDatos.AllowUserToDeleteRows = False
+        Me.dgvDatos.BackgroundColor = System.Drawing.SystemColors.WindowText
         Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.TipoEmpleado})
-        Me.dgvDatos.Location = New System.Drawing.Point(25, 162)
+        Me.dgvDatos.Location = New System.Drawing.Point(327, 140)
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
-        Me.dgvDatos.Size = New System.Drawing.Size(253, 224)
+        Me.dgvDatos.Size = New System.Drawing.Size(243, 294)
         Me.dgvDatos.TabIndex = 58
         '
         'Id
@@ -70,36 +75,54 @@ Partial Class frmTipoEmpleado
         '
         'btnListar
         '
-        Me.btnListar.Location = New System.Drawing.Point(203, 111)
+        Me.btnListar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnListar.FlatAppearance.BorderSize = 0
+        Me.btnListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnListar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnListar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnListar.Location = New System.Drawing.Point(80, 314)
         Me.btnListar.Name = "btnListar"
-        Me.btnListar.Size = New System.Drawing.Size(75, 23)
+        Me.btnListar.Size = New System.Drawing.Size(175, 40)
         Me.btnListar.TabIndex = 57
         Me.btnListar.Text = "Listar"
-        Me.btnListar.UseVisualStyleBackColor = True
+        Me.btnListar.UseVisualStyleBackColor = False
         '
         'btnBorrar
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(122, 111)
+        Me.btnBorrar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnBorrar.FlatAppearance.BorderSize = 0
+        Me.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBorrar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnBorrar.Location = New System.Drawing.Point(80, 255)
         Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBorrar.Size = New System.Drawing.Size(175, 40)
         Me.btnBorrar.TabIndex = 56
         Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
+        Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'btnIngresar
         '
-        Me.btnIngresar.Location = New System.Drawing.Point(41, 111)
+        Me.btnIngresar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnIngresar.FlatAppearance.BorderSize = 0
+        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnIngresar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnIngresar.Location = New System.Drawing.Point(80, 197)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
         Me.btnIngresar.TabIndex = 54
         Me.btnIngresar.Text = "Ingresar"
-        Me.btnIngresar.UseVisualStyleBackColor = True
+        Me.btnIngresar.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 69)
+        Me.Label1.Location = New System.Drawing.Point(27, 141)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(115, 20)
         Me.Label1.TabIndex = 37
@@ -107,16 +130,36 @@ Partial Class frmTipoEmpleado
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(134, 68)
+        Me.txtTipo.Location = New System.Drawing.Point(157, 141)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(144, 20)
         Me.txtTipo.TabIndex = 64
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Location = New System.Drawing.Point(12, 67)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(558, 10)
+        Me.Panel1.TabIndex = 65
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(543, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
+        Me.PictureBox1.TabIndex = 66
+        Me.PictureBox1.TabStop = False
         '
         'frmTipoEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(305, 394)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(580, 449)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtTipo)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.dgvDatos)
@@ -124,9 +167,12 @@ Partial Class frmTipoEmpleado
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTipoEmpleado"
         Me.Text = "frmTipoEmpleado"
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -140,4 +186,6 @@ Partial Class frmTipoEmpleado
     Friend WithEvents Id As DataGridViewTextBoxColumn
     Friend WithEvents TipoEmpleado As DataGridViewTextBoxColumn
     Friend WithEvents txtTipo As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

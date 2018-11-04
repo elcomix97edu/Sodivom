@@ -60,25 +60,28 @@ Partial Class frmEmpleado
         Me.comboCargo = New System.Windows.Forms.ComboBox()
         Me.rdbCargo = New System.Windows.Forms.RadioButton()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(308, 5)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(375, 34)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(161, 37)
+        Me.Label8.Size = New System.Drawing.Size(164, 31)
         Me.Label8.TabIndex = 35
-        Me.Label8.Text = "Empleado"
+        Me.Label8.Text = "EMPLEADO"
         '
         'rdbApellido
         '
         Me.rdbApellido.AutoSize = True
-        Me.rdbApellido.Location = New System.Drawing.Point(252, 399)
+        Me.rdbApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbApellido.Location = New System.Drawing.Point(193, 328)
         Me.rdbApellido.Name = "rdbApellido"
-        Me.rdbApellido.Size = New System.Drawing.Size(62, 17)
+        Me.rdbApellido.Size = New System.Drawing.Size(77, 22)
         Me.rdbApellido.TabIndex = 15
         Me.rdbApellido.TabStop = True
         Me.rdbApellido.Text = "Apellido"
@@ -87,19 +90,20 @@ Partial Class frmEmpleado
         'rdbCi
         '
         Me.rdbCi.AutoSize = True
-        Me.rdbCi.Location = New System.Drawing.Point(211, 399)
+        Me.rdbCi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbCi.Location = New System.Drawing.Point(193, 305)
         Me.rdbCi.Name = "rdbCi"
-        Me.rdbCi.Size = New System.Drawing.Size(34, 17)
+        Me.rdbCi.Size = New System.Drawing.Size(40, 22)
         Me.rdbCi.TabIndex = 14
         Me.rdbCi.TabStop = True
-        Me.rdbCi.Text = "Ci"
+        Me.rdbCi.Text = "CI"
         Me.rdbCi.UseVisualStyleBackColor = True
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(200, 365)
+        Me.Label7.Location = New System.Drawing.Point(86, 305)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(79, 20)
         Me.Label7.TabIndex = 32
@@ -109,12 +113,13 @@ Partial Class frmEmpleado
         '
         Me.dgvDatos.AllowUserToAddRows = False
         Me.dgvDatos.AllowUserToDeleteRows = False
+        Me.dgvDatos.BackgroundColor = System.Drawing.SystemColors.WindowText
         Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Ci, Me.Nombre, Me.Apellido, Me.Direccion, Me.Telefono, Me.Email, Me.Sueldo, Me.Cargo, Me.Contraseña})
-        Me.dgvDatos.Location = New System.Drawing.Point(327, 45)
+        Me.dgvDatos.Location = New System.Drawing.Point(381, 96)
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
-        Me.dgvDatos.Size = New System.Drawing.Size(447, 267)
+        Me.dgvDatos.Size = New System.Drawing.Size(499, 279)
         Me.dgvDatos.TabIndex = 31
         Me.dgvDatos.TabStop = False
         '
@@ -175,88 +180,112 @@ Partial Class frmEmpleado
         '
         'btnListar
         '
-        Me.btnListar.Location = New System.Drawing.Point(109, 404)
+        Me.btnListar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnListar.FlatAppearance.BorderSize = 0
+        Me.btnListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnListar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnListar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnListar.Location = New System.Drawing.Point(193, 433)
         Me.btnListar.Name = "btnListar"
-        Me.btnListar.Size = New System.Drawing.Size(75, 23)
+        Me.btnListar.Size = New System.Drawing.Size(175, 40)
         Me.btnListar.TabIndex = 13
         Me.btnListar.Text = "Listar"
-        Me.btnListar.UseVisualStyleBackColor = True
+        Me.btnListar.UseVisualStyleBackColor = False
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(9, 404)
+        Me.btnModificar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnModificar.FlatAppearance.BorderSize = 0
+        Me.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnModificar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnModificar.Location = New System.Drawing.Point(12, 433)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.Size = New System.Drawing.Size(175, 40)
         Me.btnModificar.TabIndex = 12
         Me.btnModificar.Text = "Modificar"
-        Me.btnModificar.UseVisualStyleBackColor = True
+        Me.btnModificar.UseVisualStyleBackColor = False
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(109, 365)
+        Me.btnEliminar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnEliminar.FlatAppearance.BorderSize = 0
+        Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEliminar.Location = New System.Drawing.Point(193, 387)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(175, 40)
         Me.btnEliminar.TabIndex = 11
         Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnIngresar
         '
-        Me.btnIngresar.Location = New System.Drawing.Point(9, 365)
+        Me.btnIngresar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnIngresar.FlatAppearance.BorderSize = 0
+        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnIngresar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnIngresar.Location = New System.Drawing.Point(12, 387)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
         Me.btnIngresar.TabIndex = 10
         Me.btnIngresar.Text = "Ingresar"
-        Me.btnIngresar.UseVisualStyleBackColor = True
+        Me.btnIngresar.UseVisualStyleBackColor = False
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(111, 206)
+        Me.txtEmail.Location = New System.Drawing.Point(248, 183)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(149, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(120, 20)
         Me.txtEmail.TabIndex = 6
         '
         'txtTel
         '
-        Me.txtTel.Location = New System.Drawing.Point(111, 173)
+        Me.txtTel.Location = New System.Drawing.Point(90, 249)
         Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(149, 20)
+        Me.txtTel.Size = New System.Drawing.Size(93, 20)
         Me.txtTel.TabIndex = 5
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(111, 139)
+        Me.txtDireccion.Location = New System.Drawing.Point(90, 217)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(149, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(93, 20)
         Me.txtDireccion.TabIndex = 4
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(111, 105)
+        Me.txtApellido.Location = New System.Drawing.Point(90, 181)
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(149, 20)
+        Me.txtApellido.Size = New System.Drawing.Size(93, 20)
         Me.txtApellido.TabIndex = 3
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(111, 76)
+        Me.txtNombre.Location = New System.Drawing.Point(90, 154)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(149, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(93, 20)
         Me.txtNombre.TabIndex = 2
         '
         'mskCi
         '
-        Me.mskCi.Location = New System.Drawing.Point(111, 45)
+        Me.mskCi.Location = New System.Drawing.Point(90, 123)
         Me.mskCi.Mask = "00000000"
         Me.mskCi.Name = "mskCi"
-        Me.mskCi.Size = New System.Drawing.Size(149, 20)
+        Me.mskCi.Size = New System.Drawing.Size(93, 20)
         Me.mskCi.TabIndex = 1
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(13, 103)
+        Me.Label4.Location = New System.Drawing.Point(13, 181)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(65, 20)
         Me.Label4.TabIndex = 19
@@ -266,7 +295,7 @@ Partial Class frmEmpleado
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(13, 204)
+        Me.Label6.Location = New System.Drawing.Point(189, 185)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 20)
         Me.Label6.TabIndex = 18
@@ -276,7 +305,7 @@ Partial Class frmEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(13, 171)
+        Me.Label5.Location = New System.Drawing.Point(13, 249)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 20)
         Me.Label5.TabIndex = 17
@@ -286,7 +315,7 @@ Partial Class frmEmpleado
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(13, 137)
+        Me.Label3.Location = New System.Drawing.Point(13, 215)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 20)
         Me.Label3.TabIndex = 16
@@ -296,7 +325,7 @@ Partial Class frmEmpleado
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 76)
+        Me.Label2.Location = New System.Drawing.Point(13, 154)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 20)
         Me.Label2.TabIndex = 20
@@ -306,7 +335,7 @@ Partial Class frmEmpleado
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 43)
+        Me.Label1.Location = New System.Drawing.Point(13, 121)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(23, 20)
         Me.Label1.TabIndex = 15
@@ -316,7 +345,7 @@ Partial Class frmEmpleado
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(13, 239)
+        Me.Label9.Location = New System.Drawing.Point(189, 216)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(92, 20)
         Me.Label9.TabIndex = 18
@@ -324,9 +353,9 @@ Partial Class frmEmpleado
         '
         'txtContraseña
         '
-        Me.txtContraseña.Location = New System.Drawing.Point(111, 241)
+        Me.txtContraseña.Location = New System.Drawing.Point(287, 218)
         Me.txtContraseña.Name = "txtContraseña"
-        Me.txtContraseña.Size = New System.Drawing.Size(149, 20)
+        Me.txtContraseña.Size = New System.Drawing.Size(81, 20)
         Me.txtContraseña.TabIndex = 7
         Me.txtContraseña.UseSystemPasswordChar = True
         '
@@ -334,7 +363,7 @@ Partial Class frmEmpleado
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(13, 274)
+        Me.Label10.Location = New System.Drawing.Point(198, 120)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(59, 20)
         Me.Label10.TabIndex = 18
@@ -342,16 +371,16 @@ Partial Class frmEmpleado
         '
         'txtSueldo
         '
-        Me.txtSueldo.Location = New System.Drawing.Point(111, 276)
+        Me.txtSueldo.Location = New System.Drawing.Point(275, 122)
         Me.txtSueldo.Name = "txtSueldo"
-        Me.txtSueldo.Size = New System.Drawing.Size(149, 20)
+        Me.txtSueldo.Size = New System.Drawing.Size(93, 20)
         Me.txtSueldo.TabIndex = 8
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(13, 307)
+        Me.Label11.Location = New System.Drawing.Point(198, 154)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(52, 20)
         Me.Label11.TabIndex = 18
@@ -360,17 +389,18 @@ Partial Class frmEmpleado
         'comboCargo
         '
         Me.comboCargo.FormattingEnabled = True
-        Me.comboCargo.Location = New System.Drawing.Point(111, 306)
+        Me.comboCargo.Location = New System.Drawing.Point(275, 153)
         Me.comboCargo.Name = "comboCargo"
-        Me.comboCargo.Size = New System.Drawing.Size(149, 21)
+        Me.comboCargo.Size = New System.Drawing.Size(93, 21)
         Me.comboCargo.TabIndex = 9
         '
         'rdbCargo
         '
         Me.rdbCargo.AutoSize = True
-        Me.rdbCargo.Location = New System.Drawing.Point(320, 399)
+        Me.rdbCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbCargo.Location = New System.Drawing.Point(193, 351)
         Me.rdbCargo.Name = "rdbCargo"
-        Me.rdbCargo.Size = New System.Drawing.Size(53, 17)
+        Me.rdbCargo.Size = New System.Drawing.Size(67, 22)
         Me.rdbCargo.TabIndex = 16
         Me.rdbCargo.TabStop = True
         Me.rdbCargo.Text = "Cargo"
@@ -378,18 +408,41 @@ Partial Class frmEmpleado
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(701, 13)
+        Me.btnLimpiar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnLimpiar.FlatAppearance.BorderSize = 0
+        Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpiar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnLimpiar.Location = New System.Drawing.Point(756, 387)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(75, 23)
+        Me.btnLimpiar.Size = New System.Drawing.Size(128, 34)
         Me.btnLimpiar.TabIndex = 17
         Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
+        Me.btnLimpiar.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Location = New System.Drawing.Point(12, 45)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(872, 10)
+        Me.Panel1.TabIndex = 36
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(12, 316)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(356, 59)
+        Me.Panel2.TabIndex = 37
         '
         'frmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(896, 495)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.comboCargo)
         Me.Controls.Add(Me.Label8)
@@ -419,7 +472,11 @@ Partial Class frmEmpleado
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmEmpleado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmEmpleado"
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -465,4 +522,6 @@ Partial Class frmEmpleado
     Friend WithEvents Sueldo As DataGridViewTextBoxColumn
     Friend WithEvents Cargo As DataGridViewTextBoxColumn
     Friend WithEvents Contraseña As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class
