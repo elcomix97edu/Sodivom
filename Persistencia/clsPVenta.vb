@@ -71,6 +71,10 @@ Public Class clsPVenta
         unstock.id = 0
         Return unstock
     End Function
-
+    Public Function AltaReparto(idventa As Integer, descripcion As String) As Boolean
+        Dim consulta As String
+        consulta = "INSERT INTO reparto (idventa,descripcion) VALUES (" & idventa & ",'" & descripcion & "')"
+        Return ejecutarSQL(consulta)
+    End Function
 
 End Class

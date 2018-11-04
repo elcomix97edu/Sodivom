@@ -52,3 +52,11 @@ Public Class clsEVenta
         End Set
     End Property
 End Class
+'Public Property listreparto As List(Of clsEVenta)
+'Get
+'Return elistreparto
+'End Get
+'Set(value As List(Of clsEVenta))
+'elistreparto = value
+'End Set
+'End Property

@@ -233,5 +233,9 @@ Public Class clsControladora
     Public Function TraerVenta(id As String) As clsEVenta
         Return unDV.TraerVenta(id)
     End Function
-
+    'Reparto
+    Public Function AltaReparto(idventa As Integer, descripcion As String) As Boolean
+        Dim unLo As New clsDVenta
+        Return unLo.AltaReparto(idventa, descripcion)
+    End Function
 End Class

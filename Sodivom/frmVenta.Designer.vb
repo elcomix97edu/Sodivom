@@ -39,9 +39,11 @@ Partial Class frmVenta
         Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxReparto = New System.Windows.Forms.CheckBox()
         Me.contReparto = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextReparto = New System.Windows.Forms.TextBox()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblPrecioTotal = New System.Windows.Forms.Label()
         Me.lblIva = New System.Windows.Forms.Label()
@@ -63,7 +65,7 @@ Partial Class frmVenta
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.lblNumFecha = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.contReparto.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -210,21 +212,22 @@ Partial Class frmVenta
         Me.PrecioUnidad.Name = "PrecioUnidad"
         Me.PrecioUnidad.ReadOnly = True
         '
-        'CheckBox1
+        'CheckBoxReparto
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(552, 122)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(95, 28)
-        Me.CheckBox1.TabIndex = 11
-        Me.CheckBox1.Text = "Reparto"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBoxReparto.AutoSize = True
+        Me.CheckBoxReparto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBoxReparto.Location = New System.Drawing.Point(552, 122)
+        Me.CheckBoxReparto.Name = "CheckBoxReparto"
+        Me.CheckBoxReparto.Size = New System.Drawing.Size(95, 28)
+        Me.CheckBoxReparto.TabIndex = 11
+        Me.CheckBoxReparto.Text = "Reparto"
+        Me.CheckBoxReparto.UseVisualStyleBackColor = True
         '
         'contReparto
         '
+        Me.contReparto.Controls.Add(Me.Label7)
+        Me.contReparto.Controls.Add(Me.txtDireccion)
         Me.contReparto.Controls.Add(Me.Label1)
-        Me.contReparto.Controls.Add(Me.TextBox2)
         Me.contReparto.Enabled = False
         Me.contReparto.Location = New System.Drawing.Point(552, 165)
         Me.contReparto.Name = "contReparto"
@@ -233,12 +236,28 @@ Partial Class frmVenta
         Me.contReparto.TabStop = False
         Me.contReparto.Text = "Reparto"
         '
-        'TextBox2
+        'txtDireccion
         '
-        Me.TextBox2.Location = New System.Drawing.Point(81, 31)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(181, 20)
-        Me.TextBox2.TabIndex = 0
+        Me.txtDireccion.Enabled = False
+        Me.txtDireccion.Location = New System.Drawing.Point(74, 27)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(188, 20)
+        Me.txtDireccion.TabIndex = 26
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.TabIndex = 1
+        '
+        'TextReparto
+        '
+        Me.TextReparto.Location = New System.Drawing.Point(88, 44)
+        Me.TextReparto.Name = "TextReparto"
+        Me.TextReparto.Size = New System.Drawing.Size(100, 20)
+        Me.TextReparto.TabIndex = 0
         '
         'lblTotal
         '
@@ -429,20 +448,20 @@ Partial Class frmVenta
         Me.lblNumFecha.TabIndex = 25
         Me.lblNumFecha.Text = "fecha"
         '
-        'Label1
+        'Label7
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Dirección"
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(16, 30)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(52, 13)
+        Me.Label7.TabIndex = 27
+        Me.Label7.Text = "Dirección"
         '
         'frmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(866, 466)
+        Me.ClientSize = New System.Drawing.Size(868, 466)
         Me.Controls.Add(Me.lblNumFecha)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.GroupBox1)
@@ -457,7 +476,7 @@ Partial Class frmVenta
         Me.Controls.Add(Me.lblIva)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.contReparto)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.CheckBoxReparto)
         Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.btnAgregar)
@@ -496,9 +515,9 @@ Partial Class frmVenta
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents dgvProductos As DataGridView
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBoxReparto As CheckBox
     Friend WithEvents contReparto As GroupBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextReparto As TextBox
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblPrecioTotal As Label
     Friend WithEvents lblIva As Label
@@ -525,4 +544,6 @@ Partial Class frmVenta
     Friend WithEvents lblFecha As Label
     Friend WithEvents lblNumFecha As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents Label7 As Label
 End Class

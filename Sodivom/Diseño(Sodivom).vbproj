@@ -235,6 +235,9 @@
     <EmbeddedResource Include="frmPedidodistribuidor.resx">
       <DependentUpon>frmPedidodistribuidor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOfertaWeb.resx">
+      <DependentUpon>frmOfertaWeb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>

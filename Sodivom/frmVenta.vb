@@ -80,15 +80,6 @@ Public Class frmVenta
         End If
     End Sub
 
-
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked Then
-            contReparto.Enabled = True
-        Else
-            contReparto.Enabled = False
-        End If
-    End Sub
-
     Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
         If Not IsNumeric(txtCantidad.Text) And txtCantidad.Text <> "" Then
             MsgBox("Se ingresaron caracteres no válidos")
@@ -172,6 +163,15 @@ Public Class frmVenta
             comboCliente.Enabled = True
         End If
     End Sub
+    Private Sub CheckBoxReparto_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxReparto.CheckedChanged
+        If CheckBoxReparto.Checked Then
+            contReparto.Enabled = True
+            txtDireccion.Enabled = True
+        Else
+            contReparto.Enabled = False
+            txtDireccion.Enabled = False
+        End If
+    End Sub
 
     Private Sub btnRealizarVenta_Click(sender As Object, e As EventArgs) Handles btnRealizarVenta.Click
         Dim unaCon As New clsControladora
@@ -207,12 +207,17 @@ Public Class frmVenta
             unaCon.AltaVentaProducto(idventa, CInt(dgvProductos.Rows(i).Cells(0).Value.ToString), CInt(dgvProductos.Rows(i).Cells(2).Value.ToString))
         Next
 
+
+
         Dim conjunto As String = comboCliente.Text
-        Dim palabras As String() = conjunto.Split(New Char() {" "c})
+        Dim palabras As String() = conjunto.Split(New Char() {" "c}) 'profe si ves esto me arruinaste un fin de semana mejor dicho un año entero 
 
 
         unaCon.AltaVentaDeProducto(idventa, GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString))
 
+        If CheckBoxReparto.Checked Then
+            unaCon.AltaReparto(idventa, txtDireccion.Text)
+        End If
         '/////////Impresion de la factura
         PrintDialog1.Document = PrintDocument1
         PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
@@ -221,7 +226,9 @@ Public Class frmVenta
             .Print()
 
         End With
+
         '////////////////
+
         MsgBox("Venta Realizada Correctamente")
     End Sub
 
@@ -254,6 +261,12 @@ Public Class frmVenta
         e.Graphics.DrawString(lblPrecioIva.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 750, 550) 'IVA
         e.Graphics.DrawString(lblPrecioTotal.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 750, 573) 'Total
 
+        If CheckBoxReparto.Checked Then 'Si usa reparto
+            e.Graphics.DrawString(txtDireccion.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 132, 218) 'rEPARTo
+        Else
+            e.Graphics.DrawString("X", New Drawing.Font("Times New Roman", 12), Brushes.Black, 132, 218) 'Escribe X el campo del repartowe
+
+        End If
     End Sub
 
     Public Shared Function ResizeImage(ByVal InputImage As Image) As Image
@@ -306,52 +319,8 @@ Public Class frmVenta
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        dgvProductos.Rows.Clear()
-        Dim idventa As Integer
-        If txtIdVenta.Text = "" Then
-            MsgBox("Ingrese un ID de venta para realizar la búsqueda")
-        Else
-            idventa = CInt(txtIdVenta.Text)
-        End If
+    'Private Sub TextRepartoo_TextChanged(sender As Object, e As EventArgs) Handles TextRepartoo.TextChanged
 
-        Dim unacon As New clsControladora
-        Dim venta = unacon.TraerVenta(idventa)
-
-        lblNombreCajero.Text = venta.Cajero
-        lblNumFecha.Text = venta.fecha
-        comboCliente.Text = GetNomCli(venta.cliente)
-        lblPrecioTotal.Text = venta.total
-        lblPrecioSub.Text = CInt(venta.total) * 0.78
-        lblPrecioIva.Text = CInt(venta.total) * 0.22
-
-        Dim Row As DataGridViewRow
-        Dim Cell As DataGridViewCell
-        For i As Integer = 0 To venta.listpord.Count - 1
-            Row = New DataGridViewRow
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = venta.listpord.Item(i).codigoprod
-            Row.Cells.Add(Cell)
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = GetNomProd(venta.listpord.Item(i).codigoprod)
-            Row.Cells.Add(Cell)
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = venta.listpord.Item(i).stock
-            Row.Cells.Add(Cell)
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = GetPrecioProd(venta.listpord.Item(i).codigoprod)
-            Row.Cells.Add(Cell)
-
-            dgvProductos.Rows.Add(Row)
-        Next
-
-    End Sub
-
-    Private Sub mskRUT_MouseClick(sender As Object, e As MouseEventArgs) Handles mskRUT.MouseClick
-        mskRUT.Select(0, 0)
-    End Sub
+    'End Sub
 End Class
+
