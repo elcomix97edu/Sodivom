@@ -22,7 +22,6 @@ Partial Class frmTipoEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTipoEmpleado))
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,9 +32,7 @@ Partial Class frmTipoEmpleado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTipo = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -143,23 +140,12 @@ Partial Class frmTipoEmpleado
         Me.Panel1.Size = New System.Drawing.Size(558, 10)
         Me.Panel1.TabIndex = 65
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(543, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
-        Me.PictureBox1.TabIndex = 66
-        Me.PictureBox1.TabStop = False
-        '
         'frmTipoEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(580, 449)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtTipo)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.dgvDatos)
@@ -168,11 +154,9 @@ Partial Class frmTipoEmpleado
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTipoEmpleado"
         Me.Text = "frmCargo"
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,5 +172,4 @@ Partial Class frmTipoEmpleado
     Friend WithEvents TipoEmpleado As DataGridViewTextBoxColumn
     'Friend WithEvents txtTipo As TextBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
 End Class

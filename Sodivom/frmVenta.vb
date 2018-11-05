@@ -150,19 +150,6 @@ Public Class frmVenta
 
     End Sub
 
-    Private Sub chkRUT_CheckedChanged(sender As Object, e As EventArgs)
-        If chkRUT.Checked Then
-            mskRUT.Enabled = True
-            txtNombre.Enabled = True
-            chkAnonimo.Enabled = False
-            comboCliente.Enabled = False
-        Else
-            mskRUT.Enabled = False
-            txtNombre.Enabled = False
-            chkAnonimo.Enabled = True
-            comboCliente.Enabled = True
-        End If
-    End Sub
     Private Sub CheckBoxReparto_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxReparto.CheckedChanged
         If CheckBoxReparto.Checked Then
             contReparto.Enabled = True
@@ -388,6 +375,20 @@ Public Class frmVenta
 
 
 
+    End Sub
+
+    Private Sub chkRUT_CheckedChanged_1(sender As Object, e As EventArgs) Handles chkRUT.CheckedChanged
+        If chkRUT.Checked Then
+            mskRUT.Enabled = True
+            txtNombre.Enabled = True
+            chkAnonimo.Enabled = False
+            comboCliente.Enabled = False
+        Else
+            mskRUT.Enabled = False
+            txtNombre.Enabled = False
+            chkAnonimo.Enabled = True
+            comboCliente.Enabled = True
+        End If
     End Sub
 
     'Private Sub TextRepartoo_TextChanged(sender As Object, e As EventArgs) Handles TextRepartoo.TextChanged

@@ -1,9 +1,11 @@
 ﻿Imports System.ComponentModel
+Imports Newtonsoft.Json
 Imports System.IO
 Imports System.Net
 Imports System.Text.RegularExpressions
 Imports Dominio
 Imports Entidades
+Imports Newtonsoft.Json.Linq
 
 Public Class Inicio
     Private mempleado As New clsEEmpleado
@@ -62,7 +64,7 @@ Public Class Inicio
 
         AlertaBajoStock()
         AlertaFechaVencimiento()
-
+        Cotizacion()
 
 
         Select Case empleado.tipoEmpleado
@@ -127,6 +129,83 @@ Public Class Inicio
         'OfertaWebToolStripMenuItem.Visible = True
     End Sub
 
+    Public Sub Cotizacion()
+        Try
+
+            Dim request As HttpWebRequest
+            Dim response As HttpWebResponse = Nothing
+            Dim reader As StreamReader
+            Dim rawresp As String
+            Dim jResults As Object
+            Dim valor As Decimal
+
+            '////////Dolar
+            request = DirectCast(WebRequest.Create("https://free.currencyconverterapi.com/api/v5/convert?q=USD_UYU&compact=ultra"), HttpWebRequest)
+
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            reader = New StreamReader(response.GetResponseStream())
+
+
+            rawresp = reader.ReadToEnd()
+
+            jResults = JObject.Parse(rawresp)
+            valor = If(jResults("USD_UYU") Is Nothing, "", jResults("USD_UYU").ToString())
+            txtPrecioDolar.Text = valor.ToString("F2")
+
+
+            '////////Euro
+            request = DirectCast(WebRequest.Create("https://free.currencyconverterapi.com/api/v5/convert?q=EUR_UYU&compact=ultra"), HttpWebRequest)
+
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            reader = New StreamReader(response.GetResponseStream())
+
+
+            rawresp = reader.ReadToEnd()
+
+            jResults = JObject.Parse(rawresp)
+            valor = If(jResults("EUR_UYU") Is Nothing, "", jResults("EUR_UYU").ToString())
+            txtPrecioEuro.Text = valor.ToString("F2")
+
+
+
+            '////////Peso Argentino
+            request = DirectCast(WebRequest.Create("https://free.currencyconverterapi.com/api/v5/convert?q=ARS_UYU&compact=ultra"), HttpWebRequest)
+
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            reader = New StreamReader(response.GetResponseStream())
+
+
+            rawresp = reader.ReadToEnd()
+
+            jResults = JObject.Parse(rawresp)
+            valor = If(jResults("ARS_UYU") Is Nothing, "", jResults("ARS_UYU").ToString())
+            txtPrecioArg.Text = valor.ToString("F2")
+
+
+            '////////Real
+            request = DirectCast(WebRequest.Create("https://free.currencyconverterapi.com/api/v5/convert?q=BRL_UYU&compact=ultra"), HttpWebRequest)
+
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            reader = New StreamReader(response.GetResponseStream())
+
+
+            rawresp = reader.ReadToEnd()
+
+            jResults = JObject.Parse(rawresp)
+            valor = If(jResults("BRL_UYU") Is Nothing, "", jResults("BRL_UYU").ToString())
+            txtPrecioBr.Text = valor.ToString("F2")
+
+        Catch ex As Exception
+            MsgBox("No se podrá cargar las cotizaciones actuales, no hay conección a internet")
+        End Try
+
+
+
+
+    End Sub
+
+
+
     Private Sub ClienteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem1.Click
         Dim unfrmCli As New frmCliente
         unfrmCli.MdiParent = Me
@@ -183,6 +262,8 @@ Public Class Inicio
         Me.BackgroundImage = My.Resources._274976300bafcabe798a4da051f8fb62b6c99fbbv2_00
         My.Computer.Audio.Play(My.Resources.Skere2, AudioPlayMode.BackgroundLoop)
         YABASTAToolStripMenuItem.Visible = True
+        GroupAlertas.SendToBack()
+        GroupBox1.SendToBack()
         Timer1.Enabled = True
         lblBienvenida.Text = "SKEREEEEEE!!!!!!!"
         MsgBox("Agradesco al trapsito por permitirme culminar este programa :D")
@@ -200,11 +281,31 @@ Public Class Inicio
 
     End Sub
 
+    'Public Function CurrencyConvert() As String
+
+    '    'Grab your values and build your Web Request to the API
+    '    Dim apiURL As String = String.Format("https://free.currencyconverterapi.com/api/v5/convert?q=USD_UYU&compact=ultra")
+
+    '    'Make your Web Request and grab the results
+    '    Dim request = WebRequest.Create(apiURL)
+
+    '    'Get the Response
+    '    Dim streamReader = New StreamReader(request.GetResponse().GetResponseStream(), System.Text.Encoding.ASCII)
+
+    '    'Grab your converted value (ie 2.45 USD)
+    '    Dim result = JsonReade
+
+    '    'Get the Result
+    '    Return result
+    'End Function
+
 
     Private Sub YABASTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YABASTAToolStripMenuItem.Click
         My.Computer.Audio.Stop()
-        lblBienvenida.Location = New Point(284, 555)
+        lblBienvenida.Location = New Point(250, 528)
         lblBienvenida.Text = "Bienvenid@ " & empleado.nombre & ""
+        GroupAlertas.BringToFront()
+        GroupBox1.BringToFront()
         Timer1.Enabled = False
         TimerSkere.Enabled = False
 
@@ -212,7 +313,7 @@ Public Class Inicio
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        If posX = maxX Then
+        If posX > maxX Then
             sumarX = False
         ElseIf posX < 0 Then
             sumarX = True
@@ -220,7 +321,7 @@ Public Class Inicio
 
         If posY < 0 Then
             SumarY = True
-        ElseIf posY = maxY Then
+        ElseIf posY > maxY Then
             SumarY = False
         End If
 

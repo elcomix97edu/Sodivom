@@ -86,7 +86,7 @@ Partial Class frmVenta
         '
         Me.CheckBoxReparto.AutoSize = True
         Me.CheckBoxReparto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBoxReparto.Location = New System.Drawing.Point(6, -7)
+        Me.CheckBoxReparto.Location = New System.Drawing.Point(506, 199)
         Me.CheckBoxReparto.Name = "CheckBoxReparto"
         Me.CheckBoxReparto.Size = New System.Drawing.Size(95, 28)
         Me.CheckBoxReparto.TabIndex = 11
@@ -180,7 +180,6 @@ Partial Class frmVenta
         Me.contReparto.Controls.Add(Me.Label7)
         Me.contReparto.Controls.Add(Me.txtDireccion)
         Me.contReparto.Controls.Add(Me.Label1)
-        Me.contReparto.Controls.Add(Me.CheckBoxReparto)
         Me.contReparto.Enabled = False
         Me.contReparto.Location = New System.Drawing.Point(506, 213)
         Me.contReparto.Name = "contReparto"
@@ -496,6 +495,7 @@ Partial Class frmVenta
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.lblNumFecha)
         Me.Controls.Add(Me.lblFecha)
+        Me.Controls.Add(Me.CheckBoxReparto)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnRealizarVenta)
