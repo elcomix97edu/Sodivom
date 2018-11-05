@@ -155,24 +155,32 @@ Public Class frmEmpleado
             If val.VerificarCI(CInt(mskCi.Text)) Then
                 If unaCon.ExisteEmpleado(CInt(mskCi.Text)) = False Then
 
-                    'Lo que realmente estas buscando
-                    'Dim cli As New clsEEmpleado(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
-                    Dim empl As New clsEEmpleado
-                    empl.ci = mskCi.Text
-                    empl.nombre = txtNombre.Text
-                    empl.apellido = txtApellido.Text
-                    empl.direccion = txtDireccion.Text
-                    empl.telefono = txtTel.Text
-                    empl.email = txtEmail.Text
-                    empl.sueldo = txtSueldo.Text
-                    empl.contrseña = txtContraseña.Text
-                    empl.tipoEmpleado = GetIdTipoEmpl(comboCargo.Text)
+                    If unaCon.ExistePersona(mskCi.Text) = False Then
 
-                    If unaCon.AgregarEmpleado(empl) Then
-                        MsgBox("Empleado agregado Correctamente")
+                        'Lo que realmente estas buscando
+                        'Dim cli As New clsEEmpleado(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
+                        Dim empl As New clsEEmpleado
+                        empl.ci = mskCi.Text
+                        empl.nombre = txtNombre.Text
+                        empl.apellido = txtApellido.Text
+                        empl.direccion = txtDireccion.Text
+                        empl.telefono = txtTel.Text
+                        empl.email = txtEmail.Text
+                        empl.sueldo = txtSueldo.Text
+                        empl.contrseña = txtContraseña.Text
+                        empl.tipoEmpleado = GetIdTipoEmpl(comboCargo.Text)
+
+                        If unaCon.AgregarEmpleado(empl) Then
+                            MsgBox("Empleado agregado Correctamente")
+                        Else
+                            MsgBox("Hubo un error al agregar el Empleado")
+                        End If
+
                     Else
-                        MsgBox("Hubo un error al agregar el Empleado")
+                        MsgBox("Persona registrada como usuario")
                     End If
+
+
 
 
                 Else

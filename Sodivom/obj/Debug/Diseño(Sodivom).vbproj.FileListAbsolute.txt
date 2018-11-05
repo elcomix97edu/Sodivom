@@ -7,6 +7,7 @@ C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Sodivom.
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Dominio.dll
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Entidades.dll
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\MySql.Data.dll
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Persistencia.dll
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Google.Protobuf.dll
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Dominio.pdb
@@ -14,6 +15,7 @@ C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Dominio.
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Entidades.pdb
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Entidades.xml
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\MySql.Data.xml
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Persistencia.pdb
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Persistencia.xml
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Diseño(Sodivom).vbprojAssemblyReference.cache
@@ -41,5 +43,3 @@ C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Diseño(
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.exe
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.xml
 C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\obj\Debug\Sodivom.pdb
-C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Sodivom\bin\Debug\Newtonsoft.Json.xml

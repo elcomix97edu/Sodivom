@@ -1,15 +1,15 @@
 ﻿Public Class clsEDistribuidor
-    Private mid As Integer
+    Private mid As String
     Private mnombre As String
     Private mdescripcion As String
     Private mtelefono As String
     Private memail As String
 
-    Public Property id As Integer
+    Public Property id As String
         Get
             Return mid
         End Get
-        Set(value As Integer)
+        Set(value As String)
             mid = value
         End Set
     End Property

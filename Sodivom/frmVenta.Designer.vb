@@ -89,7 +89,7 @@ Partial Class frmVenta
         Me.CheckBoxReparto.Location = New System.Drawing.Point(506, 199)
         Me.CheckBoxReparto.Name = "CheckBoxReparto"
         Me.CheckBoxReparto.Size = New System.Drawing.Size(95, 28)
-        Me.CheckBoxReparto.TabIndex = 11
+        Me.CheckBoxReparto.TabIndex = 9
         Me.CheckBoxReparto.Text = "Reparto"
         Me.CheckBoxReparto.UseVisualStyleBackColor = True
         '
@@ -108,7 +108,7 @@ Partial Class frmVenta
         Me.txtDireccion.Location = New System.Drawing.Point(102, 41)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(202, 20)
-        Me.txtDireccion.TabIndex = 26
+        Me.txtDireccion.TabIndex = 10
         '
         'TextReparto
         '
@@ -140,7 +140,7 @@ Partial Class frmVenta
         Me.txtIdVenta.Location = New System.Drawing.Point(102, 25)
         Me.txtIdVenta.Name = "txtIdVenta"
         Me.txtIdVenta.Size = New System.Drawing.Size(100, 22)
-        Me.txtIdVenta.TabIndex = 21
+        Me.txtIdVenta.TabIndex = 12
         '
         'Label2
         '
@@ -163,7 +163,7 @@ Partial Class frmVenta
         Me.btnBuscar.Location = New System.Drawing.Point(655, 426)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(175, 40)
-        Me.btnBuscar.TabIndex = 23
+        Me.btnBuscar.TabIndex = 13
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
@@ -203,7 +203,7 @@ Partial Class frmVenta
         'lblNumFecha
         '
         Me.lblNumFecha.AutoSize = True
-        Me.lblNumFecha.Location = New System.Drawing.Point(269, 93)
+        Me.lblNumFecha.Location = New System.Drawing.Point(242, 94)
         Me.lblNumFecha.Name = "lblNumFecha"
         Me.lblNumFecha.Size = New System.Drawing.Size(34, 13)
         Me.lblNumFecha.TabIndex = 50
@@ -225,7 +225,7 @@ Partial Class frmVenta
         Me.txtNombre.Location = New System.Drawing.Point(655, 122)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 48
+        Me.txtNombre.TabIndex = 5
         '
         'Label5
         '
@@ -247,7 +247,7 @@ Partial Class frmVenta
         Me.btnRealizarVenta.Location = New System.Drawing.Point(16, 426)
         Me.btnRealizarVenta.Name = "btnRealizarVenta"
         Me.btnRealizarVenta.Size = New System.Drawing.Size(175, 40)
-        Me.btnRealizarVenta.TabIndex = 46
+        Me.btnRealizarVenta.TabIndex = 11
         Me.btnRealizarVenta.Text = "Realizar Venta"
         Me.btnRealizarVenta.UseVisualStyleBackColor = False
         '
@@ -258,7 +258,7 @@ Partial Class frmVenta
         Me.mskRUT.Mask = "000000000000"
         Me.mskRUT.Name = "mskRUT"
         Me.mskRUT.Size = New System.Drawing.Size(100, 20)
-        Me.mskRUT.TabIndex = 45
+        Me.mskRUT.TabIndex = 4
         '
         'lblPrecioSub
         '
@@ -359,7 +359,7 @@ Partial Class frmVenta
         Me.txtCantidad.Location = New System.Drawing.Point(420, 158)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(67, 20)
-        Me.txtCantidad.TabIndex = 37
+        Me.txtCantidad.TabIndex = 7
         '
         'btnAgregar
         '
@@ -372,7 +372,7 @@ Partial Class frmVenta
         Me.btnAgregar.Location = New System.Drawing.Point(506, 154)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(128, 32)
-        Me.btnAgregar.TabIndex = 36
+        Me.btnAgregar.TabIndex = 8
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
@@ -382,7 +382,7 @@ Partial Class frmVenta
         Me.chkRUT.Location = New System.Drawing.Point(328, 125)
         Me.chkRUT.Name = "chkRUT"
         Me.chkRUT.Size = New System.Drawing.Size(49, 17)
-        Me.chkRUT.TabIndex = 35
+        Me.chkRUT.TabIndex = 3
         Me.chkRUT.Text = "RUT"
         Me.chkRUT.UseVisualStyleBackColor = True
         '
@@ -394,7 +394,7 @@ Partial Class frmVenta
         Me.chkAnonimo.Location = New System.Drawing.Point(255, 124)
         Me.chkAnonimo.Name = "chkAnonimo"
         Me.chkAnonimo.Size = New System.Drawing.Size(67, 17)
-        Me.chkAnonimo.TabIndex = 34
+        Me.chkAnonimo.TabIndex = 2
         Me.chkAnonimo.Text = "Anónimo"
         Me.chkAnonimo.UseVisualStyleBackColor = True
         '
@@ -406,7 +406,7 @@ Partial Class frmVenta
         Me.ComboProd.Location = New System.Drawing.Point(110, 159)
         Me.ComboProd.Name = "ComboProd"
         Me.ComboProd.Size = New System.Drawing.Size(222, 21)
-        Me.ComboProd.TabIndex = 33
+        Me.ComboProd.TabIndex = 6
         '
         'comboCliente
         '
@@ -416,13 +416,13 @@ Partial Class frmVenta
         Me.comboCliente.Location = New System.Drawing.Point(110, 121)
         Me.comboCliente.Name = "comboCliente"
         Me.comboCliente.Size = New System.Drawing.Size(121, 21)
-        Me.comboCliente.TabIndex = 32
+        Me.comboCliente.TabIndex = 1
         Me.comboCliente.Text = "Anónimo -"
         '
         'lblNombreCajero
         '
         Me.lblNombreCajero.AutoSize = True
-        Me.lblNombreCajero.Location = New System.Drawing.Point(107, 93)
+        Me.lblNombreCajero.Location = New System.Drawing.Point(85, 93)
         Me.lblNombreCajero.Name = "lblNombreCajero"
         Me.lblNombreCajero.Size = New System.Drawing.Size(36, 13)
         Me.lblNombreCajero.TabIndex = 31

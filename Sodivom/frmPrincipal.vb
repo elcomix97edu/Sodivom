@@ -196,7 +196,7 @@ Public Class Inicio
             txtPrecioBr.Text = valor.ToString("F2")
 
         Catch ex As Exception
-            MsgBox("No se podrá cargar las cotizaciones actuales, no hay conección a internet")
+            MsgBox("No se podrá cargar las cotizaciones actuales, no hay conexión a internet")
         End Try
 
 

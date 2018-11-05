@@ -70,7 +70,7 @@ Partial Class frmPedidodistribuidor
         Me.btnLimpiar.Location = New System.Drawing.Point(736, 387)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(128, 34)
-        Me.btnLimpiar.TabIndex = 93
+        Me.btnLimpiar.TabIndex = 11
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -80,7 +80,7 @@ Partial Class frmPedidodistribuidor
         Me.rdbFecha.Location = New System.Drawing.Point(149, 321)
         Me.rdbFecha.Name = "rdbFecha"
         Me.rdbFecha.Size = New System.Drawing.Size(55, 17)
-        Me.rdbFecha.TabIndex = 91
+        Me.rdbFecha.TabIndex = 6
         Me.rdbFecha.TabStop = True
         Me.rdbFecha.Text = "Fecha"
         Me.rdbFecha.UseVisualStyleBackColor = True
@@ -91,7 +91,7 @@ Partial Class frmPedidodistribuidor
         Me.rdbTodo.Location = New System.Drawing.Point(149, 287)
         Me.rdbTodo.Name = "rdbTodo"
         Me.rdbTodo.Size = New System.Drawing.Size(50, 17)
-        Me.rdbTodo.TabIndex = 90
+        Me.rdbTodo.TabIndex = 5
         Me.rdbTodo.TabStop = True
         Me.rdbTodo.Text = "Todo"
         Me.rdbTodo.UseVisualStyleBackColor = True
@@ -117,7 +117,7 @@ Partial Class frmPedidodistribuidor
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(441, 291)
-        Me.dgvDatos.TabIndex = 88
+        Me.dgvDatos.TabIndex = 12
         '
         'Id
         '
@@ -154,7 +154,7 @@ Partial Class frmPedidodistribuidor
         Me.btnListar.Location = New System.Drawing.Point(193, 433)
         Me.btnListar.Name = "btnListar"
         Me.btnListar.Size = New System.Drawing.Size(175, 40)
-        Me.btnListar.TabIndex = 87
+        Me.btnListar.TabIndex = 10
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = False
         '
@@ -169,7 +169,7 @@ Partial Class frmPedidodistribuidor
         Me.btnModificar.Location = New System.Drawing.Point(12, 433)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(175, 40)
-        Me.btnModificar.TabIndex = 86
+        Me.btnModificar.TabIndex = 9
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -184,7 +184,7 @@ Partial Class frmPedidodistribuidor
         Me.btnEliminar.Location = New System.Drawing.Point(193, 387)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(175, 40)
-        Me.btnEliminar.TabIndex = 85
+        Me.btnEliminar.TabIndex = 8
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
@@ -199,7 +199,7 @@ Partial Class frmPedidodistribuidor
         Me.btnIngresar.Location = New System.Drawing.Point(12, 387)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
-        Me.btnIngresar.TabIndex = 84
+        Me.btnIngresar.TabIndex = 7
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
@@ -208,21 +208,21 @@ Partial Class frmPedidodistribuidor
         Me.txtImporte.Location = New System.Drawing.Point(204, 221)
         Me.txtImporte.Name = "txtImporte"
         Me.txtImporte.Size = New System.Drawing.Size(127, 20)
-        Me.txtImporte.TabIndex = 83
+        Me.txtImporte.TabIndex = 4
         '
         'txtFecha
         '
         Me.txtFecha.Location = New System.Drawing.Point(204, 187)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.Size = New System.Drawing.Size(127, 20)
-        Me.txtFecha.TabIndex = 82
+        Me.txtFecha.TabIndex = 3
         '
         'txtDescripcion
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(204, 160)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(127, 20)
-        Me.txtDescripcion.TabIndex = 81
+        Me.txtDescripcion.TabIndex = 2
         '
         'lblFechaPedido
         '
@@ -269,7 +269,7 @@ Partial Class frmPedidodistribuidor
         Me.TxtId.Location = New System.Drawing.Point(204, 127)
         Me.TxtId.Name = "TxtId"
         Me.TxtId.Size = New System.Drawing.Size(127, 20)
-        Me.TxtId.TabIndex = 94
+        Me.TxtId.TabIndex = 1
         '
         'Panel1
         '

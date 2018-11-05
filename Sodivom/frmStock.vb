@@ -33,19 +33,19 @@ Public Class frmStock
 
     Dim listaProd As New List(Of clsEProducto)
 
-    Private Function GetCodProd(nombre As String, desc As String) As Integer
+    Private Function GetCodProd(nombre As String, desc As String) As String
         Dim selectedValue As clsEProducto
         selectedValue = listaProd.Find(Function(p) p.nombre = nombre And p.descripcion = desc)
         Return selectedValue.codigo
     End Function
 
-    Private Function GetNomProd(id As Integer) As String
+    Private Function GetNomProd(id As String) As String
         Dim selectedValue As clsEProducto
         selectedValue = listaProd.Find(Function(p) p.codigo = id)
         Return selectedValue.nombre
     End Function
 
-    Private Function GetDescProd(id As Integer) As String
+    Private Function GetDescProd(id As String) As String
         Dim selectedValue As clsEProducto
         selectedValue = listaProd.Find(Function(p) p.codigo = id)
         Return selectedValue.descripcion
@@ -89,7 +89,7 @@ Public Class frmStock
                     Dim nombre As String = palabras.GetValue(0).ToString
                     Dim desc As String = palabras.GetValue(1).ToString.Replace("(", "")
                     desc = desc.Replace(")", "")
-                    Dim cod As Integer = GetCodProd(nombre, desc)
+                    Dim cod As String = GetCodProd(nombre, desc)
 
                     res = cod
                     busqueda = 2
@@ -165,7 +165,7 @@ Public Class frmStock
             Dim nombre As String = palabras.GetValue(0).ToString
             Dim desc As String = palabras.GetValue(1).ToString.Replace("(", "")
             desc = desc.Replace(")", "")
-            Dim cod As Integer = GetCodProd(nombre, desc)
+            Dim cod As String = GetCodProd(nombre, desc)
 
             Dim sto As New clsEStock
             sto.codigoprod = cod
@@ -211,7 +211,7 @@ Public Class frmStock
 
         If val.VerificarCampos(Me) Then
 
-            Dim codigo As Integer
+            Dim codigo As String
             codigo = GetCodProd(dgvDatos.CurrentRow.Cells(0).Value.ToString, dgvDatos.CurrentRow.Cells(1).Value.ToString)
 
             Select Case MsgBox("Desea actualizar el stock del producto " & comboProducto.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
@@ -255,8 +255,8 @@ Public Class frmStock
 
         If val.VerificarCampos(Me) Then
 
-            Dim id As Integer
-            id = CInt(dgvDatos.CurrentRow.Cells(5).Value.ToString)
+            Dim id As String
+            id = dgvDatos.CurrentRow.Cells(5).Value.ToString
 
 
             Select Case MsgBox("Desea quitar el stock del producto" & comboProducto.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)

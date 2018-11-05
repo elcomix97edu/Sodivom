@@ -82,7 +82,7 @@ Partial Class frmEmpleado
         Me.rdbApellido.Location = New System.Drawing.Point(193, 328)
         Me.rdbApellido.Name = "rdbApellido"
         Me.rdbApellido.Size = New System.Drawing.Size(77, 22)
-        Me.rdbApellido.TabIndex = 15
+        Me.rdbApellido.TabIndex = 11
         Me.rdbApellido.TabStop = True
         Me.rdbApellido.Text = "Apellido"
         Me.rdbApellido.UseVisualStyleBackColor = True
@@ -94,7 +94,7 @@ Partial Class frmEmpleado
         Me.rdbCi.Location = New System.Drawing.Point(193, 305)
         Me.rdbCi.Name = "rdbCi"
         Me.rdbCi.Size = New System.Drawing.Size(40, 22)
-        Me.rdbCi.TabIndex = 14
+        Me.rdbCi.TabIndex = 10
         Me.rdbCi.TabStop = True
         Me.rdbCi.Text = "CI"
         Me.rdbCi.UseVisualStyleBackColor = True
@@ -120,7 +120,7 @@ Partial Class frmEmpleado
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(499, 279)
-        Me.dgvDatos.TabIndex = 31
+        Me.dgvDatos.TabIndex = 18
         Me.dgvDatos.TabStop = False
         '
         'Ci
@@ -189,7 +189,7 @@ Partial Class frmEmpleado
         Me.btnListar.Location = New System.Drawing.Point(193, 433)
         Me.btnListar.Name = "btnListar"
         Me.btnListar.Size = New System.Drawing.Size(175, 40)
-        Me.btnListar.TabIndex = 13
+        Me.btnListar.TabIndex = 16
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = False
         '
@@ -204,7 +204,7 @@ Partial Class frmEmpleado
         Me.btnModificar.Location = New System.Drawing.Point(12, 433)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(175, 40)
-        Me.btnModificar.TabIndex = 12
+        Me.btnModificar.TabIndex = 15
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -219,7 +219,7 @@ Partial Class frmEmpleado
         Me.btnEliminar.Location = New System.Drawing.Point(193, 387)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(175, 40)
-        Me.btnEliminar.TabIndex = 11
+        Me.btnEliminar.TabIndex = 14
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
@@ -234,7 +234,7 @@ Partial Class frmEmpleado
         Me.btnIngresar.Location = New System.Drawing.Point(12, 387)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
-        Me.btnIngresar.TabIndex = 10
+        Me.btnIngresar.TabIndex = 13
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
@@ -243,7 +243,7 @@ Partial Class frmEmpleado
         Me.txtEmail.Location = New System.Drawing.Point(248, 183)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(120, 20)
-        Me.txtEmail.TabIndex = 6
+        Me.txtEmail.TabIndex = 8
         '
         'txtTel
         '
@@ -356,7 +356,7 @@ Partial Class frmEmpleado
         Me.txtContraseña.Location = New System.Drawing.Point(287, 218)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(81, 20)
-        Me.txtContraseña.TabIndex = 7
+        Me.txtContraseña.TabIndex = 9
         Me.txtContraseña.UseSystemPasswordChar = True
         '
         'Label10
@@ -374,7 +374,7 @@ Partial Class frmEmpleado
         Me.txtSueldo.Location = New System.Drawing.Point(275, 122)
         Me.txtSueldo.Name = "txtSueldo"
         Me.txtSueldo.Size = New System.Drawing.Size(93, 20)
-        Me.txtSueldo.TabIndex = 8
+        Me.txtSueldo.TabIndex = 6
         '
         'Label11
         '
@@ -392,7 +392,7 @@ Partial Class frmEmpleado
         Me.comboCargo.Location = New System.Drawing.Point(275, 153)
         Me.comboCargo.Name = "comboCargo"
         Me.comboCargo.Size = New System.Drawing.Size(93, 21)
-        Me.comboCargo.TabIndex = 9
+        Me.comboCargo.TabIndex = 7
         '
         'rdbCargo
         '
@@ -401,7 +401,7 @@ Partial Class frmEmpleado
         Me.rdbCargo.Location = New System.Drawing.Point(193, 351)
         Me.rdbCargo.Name = "rdbCargo"
         Me.rdbCargo.Size = New System.Drawing.Size(67, 22)
-        Me.rdbCargo.TabIndex = 16
+        Me.rdbCargo.TabIndex = 12
         Me.rdbCargo.TabStop = True
         Me.rdbCargo.Text = "Cargo"
         Me.rdbCargo.UseVisualStyleBackColor = True

@@ -21,7 +21,7 @@ Public Class clsDDistribuidor
         Return unPC.modificarDistribuidor(Distribuidor)
     End Function
 
-    Public Function ExisteDistribuidor(id As Integer) As Boolean
+    Public Function ExisteDistribuidor(id As String) As Boolean
         Dim per As New clsPDistribuidor
         Return per.existe(id)
     End Function

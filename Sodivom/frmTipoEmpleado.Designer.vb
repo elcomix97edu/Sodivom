@@ -56,7 +56,7 @@ Partial Class frmTipoEmpleado
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(243, 294)
-        Me.dgvDatos.TabIndex = 58
+        Me.dgvDatos.TabIndex = 5
         '
         'Id
         '
@@ -81,7 +81,7 @@ Partial Class frmTipoEmpleado
         Me.btnListar.Location = New System.Drawing.Point(80, 314)
         Me.btnListar.Name = "btnListar"
         Me.btnListar.Size = New System.Drawing.Size(175, 40)
-        Me.btnListar.TabIndex = 57
+        Me.btnListar.TabIndex = 4
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = False
         '
@@ -96,7 +96,7 @@ Partial Class frmTipoEmpleado
         Me.btnBorrar.Location = New System.Drawing.Point(80, 255)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(175, 40)
-        Me.btnBorrar.TabIndex = 56
+        Me.btnBorrar.TabIndex = 3
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
@@ -111,7 +111,7 @@ Partial Class frmTipoEmpleado
         Me.btnIngresar.Location = New System.Drawing.Point(80, 197)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
-        Me.btnIngresar.TabIndex = 54
+        Me.btnIngresar.TabIndex = 2
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
@@ -130,7 +130,7 @@ Partial Class frmTipoEmpleado
         Me.txtTipo.Location = New System.Drawing.Point(85, 141)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(208, 20)
-        Me.txtTipo.TabIndex = 64
+        Me.txtTipo.TabIndex = 1
         '
         'Panel1
         '

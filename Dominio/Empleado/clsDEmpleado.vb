@@ -31,4 +31,9 @@ Public Class clsDEmpleado
         Dim unPE As New clsPEmpleado
         Return unPE.existe(ci)
     End Function
+
+    Public Function ExistePersona(ci As Integer) As Boolean
+        Dim unPE As New clsPEmpleado
+        Return unPE.existePersona(ci)
+    End Function
 End Class

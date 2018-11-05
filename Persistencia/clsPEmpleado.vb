@@ -46,6 +46,19 @@ Public Class clsPEmpleado
 
     End Function
 
+
+    Public Function existePersona(ci As String) As Boolean
+        Dim consultaSQL As String
+        consultaSQL = "SELECT * FROM persona WHERE ci='" & ci & "'"
+        Dim datos = ejecutarYdevolver(consultaSQL)
+        If datos.HasRows Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
     Public Function crearEmpleado(ByVal datos As MySqlDataReader) As clsEEmpleado
         'Dim unEmpleado As New clsEEmpleado(CInt(datos.Item("ci").ToString), datos.Item("nombre").ToString, datos.Item("apellido").ToString, datos.Item("direccion").ToString, datos.Item("telefono").ToString, datos.Item("email").ToString)
         Dim unEmpleado As New clsEEmpleado

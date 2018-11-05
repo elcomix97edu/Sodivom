@@ -85,77 +85,88 @@ Public Class frmOfertaWeb
 
     End Sub
 
-    Private Function GetCodProd(nombre As String, desc As String) As Integer
+    Private Function GetCodProd(nombre As String, desc As String) As String
         Dim selectedValue As clsEProducto
         selectedValue = listaProd.Find(Function(p) p.nombre = nombre And p.descripcion = desc)
         Return selectedValue.codigo
     End Function
 
     Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
+        Dim val As New clsValidar
 
-        Select Case MsgBox("Desea actualizar las ofertas web ?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-            Case MsgBoxResult.Yes
-                Dim listofe As New List(Of clsEOfertaWeb)
-                Dim oferta As New clsEOfertaWeb
-                '///////////Prod1
-                Dim conjunto As String = ComboProd1.Text
-                Dim palabras As String() = conjunto.Split(New Char() {" "c})
-                Dim nombre As String = palabras.GetValue(0).ToString
-                Dim desc As String = palabras.GetValue(1).ToString.Replace("(", "")
-                desc = desc.Replace(")", "")
-                oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe1.Text)
-                listofe.Add(oferta)
-                '///////////Prod2
-                conjunto = ComboProd2.Text
-                palabras = conjunto.Split(New Char() {" "c})
-                nombre = palabras.GetValue(0).ToString
-                desc = palabras.GetValue(1).ToString.Replace("(", "")
-                desc = desc.Replace(")", "")
-                oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe2.Text)
-                listofe.Add(oferta)
-                '///////////Prod3
-                conjunto = ComboProd3.Text
-                palabras = conjunto.Split(New Char() {" "c})
-                nombre = palabras.GetValue(0).ToString
-                desc = palabras.GetValue(1).ToString.Replace("(", "")
-                desc = desc.Replace(")", "")
-                oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe3.Text)
-                listofe.Add(oferta)
-                '///////////Prod4
-                conjunto = ComboProd4.Text
-                palabras = conjunto.Split(New Char() {" "c})
-                nombre = palabras.GetValue(0).ToString
-                desc = palabras.GetValue(1).ToString.Replace("(", "")
-                desc = desc.Replace(")", "")
-                oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe4.Text)
-                listofe.Add(oferta)
-                '///////////Prod5
-                conjunto = ComboProd5.Text
-                palabras = conjunto.Split(New Char() {" "c})
-                nombre = palabras.GetValue(0).ToString
-                desc = palabras.GetValue(1).ToString.Replace("(", "")
-                desc = desc.Replace(")", "")
-                oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe5.Text)
-                listofe.Add(oferta)
+        If val.VerificarCampos(Me) Then
+
+            Select Case MsgBox("Desea actualizar las ofertas web ?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                Case MsgBoxResult.Yes
+                    Dim listofe As New List(Of clsEOfertaWeb)
+                    Dim oferta As New clsEOfertaWeb
+                    '///////////Prod1
+                    Dim conjunto As String = ComboProd1.Text
+                    Dim palabras As String() = conjunto.Split(New Char() {" "c})
+                    Dim nombre As String = palabras.GetValue(0).ToString
+                    Dim desc As String = palabras.GetValue(1).ToString.Replace("(", "")
+                    desc = desc.Replace(")", "")
+                    oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe1.Text)
+                    listofe.Add(oferta)
+                    '///////////Prod2
+                    conjunto = ComboProd2.Text
+                    palabras = conjunto.Split(New Char() {" "c})
+                    nombre = palabras.GetValue(0).ToString
+                    desc = palabras.GetValue(1).ToString.Replace("(", "")
+                    desc = desc.Replace(")", "")
+                    oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe2.Text)
+                    listofe.Add(oferta)
+                    '///////////Prod3
+                    conjunto = ComboProd3.Text
+                    palabras = conjunto.Split(New Char() {" "c})
+                    nombre = palabras.GetValue(0).ToString
+                    desc = palabras.GetValue(1).ToString.Replace("(", "")
+                    desc = desc.Replace(")", "")
+                    oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe3.Text)
+                    listofe.Add(oferta)
+                    '///////////Prod4
+                    conjunto = ComboProd4.Text
+                    palabras = conjunto.Split(New Char() {" "c})
+                    nombre = palabras.GetValue(0).ToString
+                    desc = palabras.GetValue(1).ToString.Replace("(", "")
+                    desc = desc.Replace(")", "")
+                    oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe4.Text)
+                    listofe.Add(oferta)
+                    '///////////Prod5
+                    conjunto = ComboProd5.Text
+                    palabras = conjunto.Split(New Char() {" "c})
+                    nombre = palabras.GetValue(0).ToString
+                    desc = palabras.GetValue(1).ToString.Replace("(", "")
+                    desc = desc.Replace(")", "")
+                    oferta = crearOfe(GetCodProd(nombre, desc), txtPreOfe5.Text)
+                    listofe.Add(oferta)
 
 
 
 
 
-                Dim unaC As New clsControladora
-                If unaC.ModificarOfertaWeb(listofe) Then
-                    MsgBox("Oferta Web actualizada correctamente")
-                Else
-                    MsgBox("Ocurrio un error al actualizar la oferta web")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+                    Dim unaC As New clsControladora
+                    If unaC.ModificarOfertaWeb(listofe) Then
+                        MsgBox("Oferta Web actualizada correctamente")
+                    Else
+                        MsgBox("Ocurrio un error al actualizar la oferta web")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+
+        Else
+            MsgBox("Hay Campos Vacios")
+        End If
+
+
+
 
 
     End Sub
 
-    Private Function crearOfe(prod As Integer, preofe As Integer) As clsEOfertaWeb
+    Private Function crearOfe(prod As String, preofe As Integer) As clsEOfertaWeb
         Dim ofe As New clsEOfertaWeb
         ofe.Proucto = prod
         ofe.PrecioOferta = preofe
@@ -163,6 +174,11 @@ Public Class frmOfertaWeb
         Return ofe
 
     End Function
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        Dim limp As New clsLimpiar
+        limp.Limpiar(Me)
+    End Sub
 
     ' Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
     'Select Case MsgBox("Desea actualizar el producto " & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")

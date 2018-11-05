@@ -65,6 +65,7 @@ Partial Class frmOfertaWeb
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtPreIni1
@@ -72,42 +73,42 @@ Partial Class frmOfertaWeb
         Me.txtPreIni1.Location = New System.Drawing.Point(162, 166)
         Me.txtPreIni1.Name = "txtPreIni1"
         Me.txtPreIni1.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreIni1.TabIndex = 1
+        Me.txtPreIni1.TabIndex = 2
         '
         'txtPreOfe1
         '
         Me.txtPreOfe1.Location = New System.Drawing.Point(162, 192)
         Me.txtPreOfe1.Name = "txtPreOfe1"
         Me.txtPreOfe1.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreOfe1.TabIndex = 2
+        Me.txtPreOfe1.TabIndex = 3
         '
         'txtPreIni2
         '
         Me.txtPreIni2.Location = New System.Drawing.Point(460, 166)
         Me.txtPreIni2.Name = "txtPreIni2"
         Me.txtPreIni2.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreIni2.TabIndex = 4
+        Me.txtPreIni2.TabIndex = 5
         '
         'txtPreOfe2
         '
         Me.txtPreOfe2.Location = New System.Drawing.Point(460, 192)
         Me.txtPreOfe2.Name = "txtPreOfe2"
         Me.txtPreOfe2.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreOfe2.TabIndex = 5
+        Me.txtPreOfe2.TabIndex = 6
         '
         'txtPreIni3
         '
         Me.txtPreIni3.Location = New System.Drawing.Point(757, 166)
         Me.txtPreIni3.Name = "txtPreIni3"
         Me.txtPreIni3.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreIni3.TabIndex = 7
+        Me.txtPreIni3.TabIndex = 8
         '
         'txtPreOfe3
         '
         Me.txtPreOfe3.Location = New System.Drawing.Point(757, 192)
         Me.txtPreOfe3.Name = "txtPreOfe3"
         Me.txtPreOfe3.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreOfe3.TabIndex = 8
+        Me.txtPreOfe3.TabIndex = 9
         '
         'Label1
         '
@@ -123,28 +124,28 @@ Partial Class frmOfertaWeb
         Me.txtPreIni4.Location = New System.Drawing.Point(292, 317)
         Me.txtPreIni4.Name = "txtPreIni4"
         Me.txtPreIni4.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreIni4.TabIndex = 11
+        Me.txtPreIni4.TabIndex = 12
         '
         'txtPreOfe4
         '
         Me.txtPreOfe4.Location = New System.Drawing.Point(292, 343)
         Me.txtPreOfe4.Name = "txtPreOfe4"
         Me.txtPreOfe4.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreOfe4.TabIndex = 12
+        Me.txtPreOfe4.TabIndex = 13
         '
         'txtPreIni5
         '
         Me.txtPreIni5.Location = New System.Drawing.Point(597, 317)
         Me.txtPreIni5.Name = "txtPreIni5"
         Me.txtPreIni5.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreIni5.TabIndex = 14
+        Me.txtPreIni5.TabIndex = 15
         '
         'txtPreOfe5
         '
         Me.txtPreOfe5.Location = New System.Drawing.Point(597, 343)
         Me.txtPreOfe5.Name = "txtPreOfe5"
         Me.txtPreOfe5.Size = New System.Drawing.Size(108, 20)
-        Me.txtPreOfe5.TabIndex = 15
+        Me.txtPreOfe5.TabIndex = 16
         '
         'Label2
         '
@@ -333,7 +334,7 @@ Partial Class frmOfertaWeb
         Me.ButtonActualizar.Location = New System.Drawing.Point(348, 418)
         Me.ButtonActualizar.Name = "ButtonActualizar"
         Me.ButtonActualizar.Size = New System.Drawing.Size(175, 40)
-        Me.ButtonActualizar.TabIndex = 35
+        Me.ButtonActualizar.TabIndex = 17
         Me.ButtonActualizar.Text = "Actualizar"
         Me.ButtonActualizar.UseVisualStyleBackColor = False
         '
@@ -355,7 +356,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd1.Location = New System.Drawing.Point(127, 139)
         Me.ComboProd1.Name = "ComboProd1"
         Me.ComboProd1.Size = New System.Drawing.Size(143, 21)
-        Me.ComboProd1.TabIndex = 38
+        Me.ComboProd1.TabIndex = 1
         '
         'ComboProd2
         '
@@ -365,7 +366,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd2.Location = New System.Drawing.Point(425, 139)
         Me.ComboProd2.Name = "ComboProd2"
         Me.ComboProd2.Size = New System.Drawing.Size(143, 21)
-        Me.ComboProd2.TabIndex = 38
+        Me.ComboProd2.TabIndex = 4
         '
         'ComboProd3
         '
@@ -375,7 +376,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd3.Location = New System.Drawing.Point(722, 139)
         Me.ComboProd3.Name = "ComboProd3"
         Me.ComboProd3.Size = New System.Drawing.Size(143, 21)
-        Me.ComboProd3.TabIndex = 38
+        Me.ComboProd3.TabIndex = 7
         '
         'ComboProd4
         '
@@ -385,7 +386,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd4.Location = New System.Drawing.Point(257, 290)
         Me.ComboProd4.Name = "ComboProd4"
         Me.ComboProd4.Size = New System.Drawing.Size(143, 21)
-        Me.ComboProd4.TabIndex = 38
+        Me.ComboProd4.TabIndex = 10
         '
         'ComboProd5
         '
@@ -395,7 +396,7 @@ Partial Class frmOfertaWeb
         Me.ComboProd5.Location = New System.Drawing.Point(562, 290)
         Me.ComboProd5.Name = "ComboProd5"
         Me.ComboProd5.Size = New System.Drawing.Size(143, 21)
-        Me.ComboProd5.TabIndex = 38
+        Me.ComboProd5.TabIndex = 14
         '
         'Panel1
         '
@@ -445,12 +446,28 @@ Partial Class frmOfertaWeb
         Me.Panel6.Size = New System.Drawing.Size(872, 10)
         Me.Panel6.TabIndex = 44
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnLimpiar.FlatAppearance.BorderSize = 0
+        Me.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpiar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnLimpiar.Location = New System.Drawing.Point(762, 449)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(128, 34)
+        Me.btnLimpiar.TabIndex = 18
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
+        '
         'frmOfertaWeb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(896, 495)
+        Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.ComboProd5)
         Me.Controls.Add(Me.ComboProd4)
         Me.Controls.Add(Me.ComboProd3)
@@ -544,4 +561,5 @@ Partial Class frmOfertaWeb
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
+    Friend WithEvents btnLimpiar As Button
 End Class

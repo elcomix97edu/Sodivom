@@ -169,7 +169,7 @@ Partial Class frmCliente
         Me.btnIngresar.Location = New System.Drawing.Point(12, 387)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
-        Me.btnIngresar.TabIndex = 7
+        Me.btnIngresar.TabIndex = 9
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
@@ -184,7 +184,7 @@ Partial Class frmCliente
         Me.btnEliminar.Location = New System.Drawing.Point(193, 387)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(175, 40)
-        Me.btnEliminar.TabIndex = 8
+        Me.btnEliminar.TabIndex = 10
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
@@ -199,7 +199,7 @@ Partial Class frmCliente
         Me.btnModificar.Location = New System.Drawing.Point(12, 433)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(175, 40)
-        Me.btnModificar.TabIndex = 9
+        Me.btnModificar.TabIndex = 11
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -214,7 +214,7 @@ Partial Class frmCliente
         Me.btnListar.Location = New System.Drawing.Point(193, 433)
         Me.btnListar.Name = "btnListar"
         Me.btnListar.Size = New System.Drawing.Size(175, 40)
-        Me.btnListar.TabIndex = 10
+        Me.btnListar.TabIndex = 12
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = False
         '
@@ -229,7 +229,7 @@ Partial Class frmCliente
         Me.dgvCliente.Name = "dgvCliente"
         Me.dgvCliente.ReadOnly = True
         Me.dgvCliente.Size = New System.Drawing.Size(499, 279)
-        Me.dgvCliente.TabIndex = 11
+        Me.dgvCliente.TabIndex = 14
         '
         'Ci
         '
@@ -274,7 +274,7 @@ Partial Class frmCliente
         Me.rdbApellido.Location = New System.Drawing.Point(148, 341)
         Me.rdbApellido.Name = "rdbApellido"
         Me.rdbApellido.Size = New System.Drawing.Size(77, 22)
-        Me.rdbApellido.TabIndex = 13
+        Me.rdbApellido.TabIndex = 8
         Me.rdbApellido.TabStop = True
         Me.rdbApellido.Text = "Apellido"
         Me.rdbApellido.UseVisualStyleBackColor = True
@@ -300,7 +300,7 @@ Partial Class frmCliente
         Me.btnLimpiar.Location = New System.Drawing.Point(756, 387)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(128, 34)
-        Me.btnLimpiar.TabIndex = 15
+        Me.btnLimpiar.TabIndex = 13
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -320,7 +320,7 @@ Partial Class frmCliente
         Me.rdbCi.Location = New System.Drawing.Point(148, 313)
         Me.rdbCi.Name = "rdbCi"
         Me.rdbCi.Size = New System.Drawing.Size(40, 22)
-        Me.rdbCi.TabIndex = 13
+        Me.rdbCi.TabIndex = 7
         Me.rdbCi.TabStop = True
         Me.rdbCi.Text = "Ci"
         Me.rdbCi.UseVisualStyleBackColor = True

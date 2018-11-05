@@ -11,7 +11,7 @@ Public Class clsDProducto
         Return unPc.listarProducto(parametro, busqueda)
     End Function
 
-    Public Function EliminarProducto(codigo As Integer) As Boolean
+    Public Function EliminarProducto(codigo As String) As Boolean
         Dim unPc As New clsPProducto
         Return unPc.eliminarproducto(codigo)
     End Function
@@ -21,13 +21,18 @@ Public Class clsDProducto
         Return unPC.modificarProducto(producto)
     End Function
 
-    Public Function ExisteProducto(codigo As Integer) As Boolean
+    Public Function ExisteProducto(codigo As String) As Boolean
         Dim per As New clsPProducto
         Return per.existe(codigo)
     End Function
 
-    Public Function GetMinStock(codigo As Integer) As Integer
+    Public Function GetMinStock(codigo As String) As Integer
         Dim unPP As New clsPProducto
         Return unPP.GetMinStock(codigo)
+    End Function
+
+    Public Function EnUso(codigo As String) As Boolean
+        Dim unPP As New clsPProducto
+        Return unPP.EnUso(codigo)
     End Function
 End Class

@@ -12,14 +12,23 @@ Public Class frmCliente
             If val.VerificarCI(CInt(mskCi.Text)) Then
                 If unacon.ExisteCliente(CInt(mskCi.Text)) = False Then
 
-                    'Lo que realmente estas buscando
-                    Dim cli As New clsECliente(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtEmail.Text)
-                    Dim dcli As New clsDCliente
-                    If dcli.AgregarCliente(cli) Then
-                        MsgBox("Cliente agregado Correctamente")
+                    If unacon.ExistePersona(mskCi.Text) = False Then
+
+
+                        'Lo que realmente estas buscando
+                        Dim cli As New clsECliente(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtEmail.Text)
+                        Dim dcli As New clsDCliente
+                        If dcli.AgregarCliente(cli) Then
+                            MsgBox("Cliente agregado Correctamente")
+                        Else
+                            MsgBox("Hubo un error al agregar el cliente")
+                        End If
+
                     Else
-                        MsgBox("Hubo un error al agregar el cliente")
+
+                        MsgBox("Persona registrada como Empleado")
                     End If
+
 
 
                 Else

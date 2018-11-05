@@ -97,7 +97,7 @@ Public Class frmDistribuidor
         'validaciones
         If val.VerificarCampos(Me) Then
 
-            If unaCon.ExisteDistribuidor(CInt(txtId.Text)) = False Then
+            If unaCon.ExisteDistribuidor(txtId.Text) = False Then
 
                 'Lo que realmente estas buscando
                 'Dim cli As New clsEEmpleado(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
@@ -106,7 +106,7 @@ Public Class frmDistribuidor
                 dis.nombre = txtNombre.Text
                 dis.descripcion = txtDescripcion.Text
                 dis.email = txtEmail.Text
-                dis.Telefono = txtTelefono.Text
+                dis.telefono = txtTelefono.Text
 
                 If unaCon.AgregarDistribuidor(dis) Then
                     MsgBox("Distribuidor agregado Correctamente")
@@ -178,9 +178,9 @@ Public Class frmDistribuidor
 
         If val.VerificarCampos(Me) Then
 
-            Dim id As Integer
+            Dim id As String
             Dim nombre As String
-            id = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
+            id = dgvDatos.CurrentRow.Cells(0).Value.ToString
             nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
 
 
@@ -193,7 +193,7 @@ Public Class frmDistribuidor
                     undis.nombre = txtNombre.Text
                     undis.descripcion = txtDescripcion.Text
                     undis.email = txtEmail.Text
-                    undis.telefono = txtEmail.Text
+                    undis.telefono = txtTelefono.Text
 
                     Dim unaC As New clsControladora
                     If unaC.ModificarDistribuidor(undis) Then
@@ -215,7 +215,7 @@ Public Class frmDistribuidor
 
     End Sub
 
-    Private Sub txtId_TextChanged(sender As Object, e As EventArgs) Handles txtId.TextChanged
+    Private Sub txtId_TextChanged(sender As Object, e As EventArgs)
         If Not IsNumeric(txtId.Text) And txtId.Text <> "" Then
             MsgBox("Se ingresaron caracteres no esperados")
 
@@ -227,5 +227,9 @@ Public Class frmDistribuidor
             MsgBox("Se ingresaron caracteres no esperados")
 
         End If
+    End Sub
+
+    Private Sub txtId_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtId.MaskInputRejected
+        txtId.Select(0, 0)
     End Sub
 End Class

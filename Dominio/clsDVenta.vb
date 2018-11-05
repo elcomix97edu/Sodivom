@@ -7,7 +7,7 @@ Public Class clsDVenta
         Return unPV.AltaVenta(fecha, importe, empl)
     End Function
 
-    Public Function AltaVentaProducto(idventa As Integer, idprod As Integer, cantidad As Integer) As Boolean
+    Public Function AltaVentaProducto(idventa As Integer, idprod As String, cantidad As Integer) As Boolean
         Return unPV.AltaVentaProducto(idventa, idprod, cantidad)
     End Function
 

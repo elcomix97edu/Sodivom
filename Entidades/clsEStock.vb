@@ -1,15 +1,15 @@
 ﻿Public Class clsEStock
-    Private mcodigo As Integer
+    Private mcodigo As String
     Private mstock As Integer
     Private mfechaing As Date
     Private mfechaven As Date
     Private mid As Integer
 
-    Public Property codigoprod As Integer
+    Public Property codigoprod As String
         Get
             Return mcodigo
         End Get
-        Set(value As Integer)
+        Set(value As String)
             mcodigo = value
         End Set
     End Property

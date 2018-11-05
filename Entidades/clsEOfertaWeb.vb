@@ -1,13 +1,13 @@
 ﻿Public Class clsEOfertaWeb
-    Private eProucto As Integer
+    Private eProucto As String
     Private ePrecioOrig As Integer
     Private ePrecioOferta As Integer
 
-    Public Property Proucto As Integer
+    Public Property Proucto As String
         Get
             Return eProucto
         End Get
-        Set(value As Integer)
+        Set(value As String)
             eProucto = value
         End Set
     End Property

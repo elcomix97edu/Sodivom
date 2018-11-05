@@ -39,7 +39,6 @@ Partial Class frmDistribuidor
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.txtId = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
@@ -49,6 +48,7 @@ Partial Class frmDistribuidor
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtId = New System.Windows.Forms.MaskedTextBox()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,7 +63,7 @@ Partial Class frmDistribuidor
         Me.btnLimpiar.Location = New System.Drawing.Point(756, 387)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(128, 34)
-        Me.btnLimpiar.TabIndex = 57
+        Me.btnLimpiar.TabIndex = 12
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -83,7 +83,7 @@ Partial Class frmDistribuidor
         Me.rdbNombre.Location = New System.Drawing.Point(159, 323)
         Me.rdbNombre.Name = "rdbNombre"
         Me.rdbNombre.Size = New System.Drawing.Size(62, 17)
-        Me.rdbNombre.TabIndex = 54
+        Me.rdbNombre.TabIndex = 7
         Me.rdbNombre.TabStop = True
         Me.rdbNombre.Text = "Nombre"
         Me.rdbNombre.UseVisualStyleBackColor = True
@@ -94,7 +94,7 @@ Partial Class frmDistribuidor
         Me.rdbTodo.Location = New System.Drawing.Point(159, 300)
         Me.rdbTodo.Name = "rdbTodo"
         Me.rdbTodo.Size = New System.Drawing.Size(50, 17)
-        Me.rdbTodo.TabIndex = 53
+        Me.rdbTodo.TabIndex = 6
         Me.rdbTodo.TabStop = True
         Me.rdbTodo.Text = "Todo"
         Me.rdbTodo.UseVisualStyleBackColor = True
@@ -120,7 +120,7 @@ Partial Class frmDistribuidor
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(499, 279)
-        Me.dgvDatos.TabIndex = 51
+        Me.dgvDatos.TabIndex = 13
         '
         'Id
         '
@@ -163,7 +163,7 @@ Partial Class frmDistribuidor
         Me.btnListar.Location = New System.Drawing.Point(193, 433)
         Me.btnListar.Name = "btnListar"
         Me.btnListar.Size = New System.Drawing.Size(175, 40)
-        Me.btnListar.TabIndex = 50
+        Me.btnListar.TabIndex = 11
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = False
         '
@@ -178,7 +178,7 @@ Partial Class frmDistribuidor
         Me.btnModificar.Location = New System.Drawing.Point(12, 433)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(175, 40)
-        Me.btnModificar.TabIndex = 49
+        Me.btnModificar.TabIndex = 10
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -193,7 +193,7 @@ Partial Class frmDistribuidor
         Me.btnEliminar.Location = New System.Drawing.Point(193, 387)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(175, 40)
-        Me.btnEliminar.TabIndex = 48
+        Me.btnEliminar.TabIndex = 9
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
@@ -208,7 +208,7 @@ Partial Class frmDistribuidor
         Me.btnIngresar.Location = New System.Drawing.Point(12, 387)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
-        Me.btnIngresar.TabIndex = 47
+        Me.btnIngresar.TabIndex = 8
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
@@ -217,28 +217,21 @@ Partial Class frmDistribuidor
         Me.txtEmail.Location = New System.Drawing.Point(145, 203)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(149, 20)
-        Me.txtEmail.TabIndex = 46
+        Me.txtEmail.TabIndex = 4
         '
         'txtDescripcion
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(145, 169)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(149, 20)
-        Me.txtDescripcion.TabIndex = 45
-        '
-        'txtId
-        '
-        Me.txtId.Location = New System.Drawing.Point(145, 109)
-        Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(149, 20)
-        Me.txtId.TabIndex = 44
+        Me.txtDescripcion.TabIndex = 3
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(145, 140)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(149, 20)
-        Me.txtNombre.TabIndex = 43
+        Me.txtNombre.TabIndex = 2
         '
         'lblDescripcion
         '
@@ -295,7 +288,7 @@ Partial Class frmDistribuidor
         Me.txtTelefono.Location = New System.Drawing.Point(145, 235)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(149, 20)
-        Me.txtTelefono.TabIndex = 59
+        Me.txtTelefono.TabIndex = 5
         '
         'Panel1
         '
@@ -313,12 +306,21 @@ Partial Class frmDistribuidor
         Me.Panel2.Size = New System.Drawing.Size(356, 62)
         Me.Panel2.TabIndex = 61
         '
+        'txtId
+        '
+        Me.txtId.Location = New System.Drawing.Point(145, 109)
+        Me.txtId.Mask = "000000000000"
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(149, 20)
+        Me.txtId.TabIndex = 1
+        '
         'frmDistribuidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(896, 495)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.lblTelefono)
         Me.Controls.Add(Me.btnLimpiar)
@@ -333,7 +335,6 @@ Partial Class frmDistribuidor
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtDescripcion)
-        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.lblDescripcion)
         Me.Controls.Add(Me.lblEmail)
@@ -362,7 +363,6 @@ Partial Class frmDistribuidor
     Friend WithEvents btnIngresar As Button
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents txtDescripcion As TextBox
-    Friend WithEvents txtId As TextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents lblDescripcion As Label
     Friend WithEvents lblEmail As Label
@@ -377,4 +377,5 @@ Partial Class frmDistribuidor
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents txtId As MaskedTextBox
 End Class

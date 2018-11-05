@@ -1,15 +1,15 @@
 ﻿Public Class clsEProducto
-    Private mcodigo As Integer
+    Private mcodigo As String
     Private mnombre As String
     Private mdescripcion As String
     Private mprecio As Integer
     Private mminstock As Integer
 
-    Public Property codigo As Integer
+    Public Property codigo As String
         Get
             Return mcodigo
         End Get
-        Set(value As Integer)
+        Set(value As String)
             mcodigo = value
         End Set
     End Property

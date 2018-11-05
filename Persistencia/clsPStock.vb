@@ -6,7 +6,7 @@ Public Class clsPStock
 
     Public Function AltaStock(unstock As clsEStock) As Boolean
         Dim consulta As String
-        consulta = "INSERT INTO stock (idproducto,stock,fechaing,fechaven) VALUES (" & unstock.codigoprod & ",'" & unstock.stock & "','" & unstock.fechaing.ToString("yyyy-MM-dd") & "','" & unstock.fechaven.ToString("yyyy-MM-dd") & "')"
+        consulta = "INSERT INTO stock (idproducto,stock,fechaing,fechaven) VALUES ('" & unstock.codigoprod & "','" & unstock.stock & "','" & unstock.fechaing.ToString("yyyy-MM-dd") & "','" & unstock.fechaven.ToString("yyyy-MM-dd") & "')"
 
         Return ejecutarSQL(consulta)
     End Function
@@ -25,7 +25,7 @@ Public Class clsPStock
 
     Public Function crearStock(ByVal datos As MySqlDataReader) As clsEStock
         Dim unStock As New clsEStock
-        unStock.codigoprod = CInt(datos.Item("idproducto").ToString)
+        unStock.codigoprod = datos.Item("idproducto").ToString
         unStock.stock = CInt(datos.Item("stock").ToString)
         unStock.fechaing = datos.Item("fechaing").ToString
         unStock.fechaven = datos.Item("fechaven").ToString
@@ -67,9 +67,9 @@ Public Class clsPStock
         Return ejecutarSQL(consulta)
     End Function
 
-    Public Function GetStocksProd(idprod As Integer) As List(Of clsEStock)
+    Public Function GetStocksProd(idprod As String) As List(Of clsEStock)
         Dim consulta As String
-        consulta = "SELECT * FROM stock WHERE idproducto = " & idprod & " ORDER BY fechaing ASC LIMIT 2"
+        consulta = "SELECT * FROM stock WHERE idproducto = '" & idprod & "' ORDER BY fechaing ASC LIMIT 2"
         Dim datos As MySqlDataReader
         datos = ejecutarYdevolver(consulta)
 
@@ -84,7 +84,7 @@ Public Class clsPStock
 
     Public Function SumStock(codprod As String) As Integer
         Dim consulta As String
-        consulta = "SELECT SUM(stock) FROM stock WHERE idproducto = " & codprod & ""
+        consulta = "SELECT SUM(stock) FROM stock WHERE idproducto = '" & codprod & "'"
         Dim datos = ejecutarYdevolver(consulta)
         datos.Read()
         Return CInt(datos.Item("SUM(stock)").ToString)

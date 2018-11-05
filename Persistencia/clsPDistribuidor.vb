@@ -28,7 +28,7 @@ Public Class clsPDistribuidor
         Dim unDistribuidor As New clsEDistribuidor
 
         unDistribuidor.telefono = datos.Item("telefono").ToString
-        unDistribuidor.id = CInt(datos.Item("id").ToString)
+        unDistribuidor.id = datos.Item("id").ToString
         unDistribuidor.email = datos.Item("email").ToString
         unDistribuidor.descripcion = datos.Item("descripcion").ToString
         unDistribuidor.nombre = datos.Item("nombre").ToString

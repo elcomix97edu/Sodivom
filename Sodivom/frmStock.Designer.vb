@@ -64,7 +64,7 @@ Partial Class frmStock
         Me.btnLimpiar.Location = New System.Drawing.Point(756, 387)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(128, 34)
-        Me.btnLimpiar.TabIndex = 57
+        Me.btnLimpiar.TabIndex = 12
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
@@ -85,7 +85,7 @@ Partial Class frmStock
         Me.rdbProducto.Location = New System.Drawing.Point(137, 342)
         Me.rdbProducto.Name = "rdbProducto"
         Me.rdbProducto.Size = New System.Drawing.Size(87, 22)
-        Me.rdbProducto.TabIndex = 54
+        Me.rdbProducto.TabIndex = 7
         Me.rdbProducto.TabStop = True
         Me.rdbProducto.Text = "Producto"
         Me.rdbProducto.UseVisualStyleBackColor = True
@@ -97,7 +97,7 @@ Partial Class frmStock
         Me.rdbTodo.Location = New System.Drawing.Point(137, 314)
         Me.rdbTodo.Name = "rdbTodo"
         Me.rdbTodo.Size = New System.Drawing.Size(61, 22)
-        Me.rdbTodo.TabIndex = 53
+        Me.rdbTodo.TabIndex = 6
         Me.rdbTodo.TabStop = True
         Me.rdbTodo.Text = "Todo"
         Me.rdbTodo.UseVisualStyleBackColor = True
@@ -123,7 +123,7 @@ Partial Class frmStock
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(508, 283)
-        Me.dgvDatos.TabIndex = 51
+        Me.dgvDatos.TabIndex = 13
         '
         'Producto
         '
@@ -173,7 +173,7 @@ Partial Class frmStock
         Me.btnListar.Location = New System.Drawing.Point(193, 433)
         Me.btnListar.Name = "btnListar"
         Me.btnListar.Size = New System.Drawing.Size(175, 40)
-        Me.btnListar.TabIndex = 50
+        Me.btnListar.TabIndex = 11
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = False
         '
@@ -188,7 +188,7 @@ Partial Class frmStock
         Me.btnModificar.Location = New System.Drawing.Point(12, 433)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(175, 40)
-        Me.btnModificar.TabIndex = 49
+        Me.btnModificar.TabIndex = 10
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -203,7 +203,7 @@ Partial Class frmStock
         Me.btnEliminar.Location = New System.Drawing.Point(193, 387)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(175, 40)
-        Me.btnEliminar.TabIndex = 48
+        Me.btnEliminar.TabIndex = 9
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
@@ -218,7 +218,7 @@ Partial Class frmStock
         Me.btnIngresar.Location = New System.Drawing.Point(12, 387)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(175, 40)
-        Me.btnIngresar.TabIndex = 47
+        Me.btnIngresar.TabIndex = 8
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
@@ -227,14 +227,14 @@ Partial Class frmStock
         Me.txtFechaIng.Location = New System.Drawing.Point(205, 177)
         Me.txtFechaIng.Name = "txtFechaIng"
         Me.txtFechaIng.Size = New System.Drawing.Size(127, 20)
-        Me.txtFechaIng.TabIndex = 45
+        Me.txtFechaIng.TabIndex = 3
         '
         'txtStock
         '
         Me.txtStock.Location = New System.Drawing.Point(205, 150)
         Me.txtStock.Name = "txtStock"
         Me.txtStock.Size = New System.Drawing.Size(127, 20)
-        Me.txtStock.TabIndex = 43
+        Me.txtStock.TabIndex = 2
         '
         'lblFechaIng
         '
@@ -282,6 +282,7 @@ Partial Class frmStock
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(127, 20)
         Me.txtId.TabIndex = 58
+        Me.txtId.TabStop = False
         Me.txtId.Text = "0"
         Me.txtId.Visible = False
         '
@@ -293,14 +294,14 @@ Partial Class frmStock
         Me.comboProducto.Location = New System.Drawing.Point(205, 117)
         Me.comboProducto.Name = "comboProducto"
         Me.comboProducto.Size = New System.Drawing.Size(127, 21)
-        Me.comboProducto.TabIndex = 59
+        Me.comboProducto.TabIndex = 1
         '
         'DtpFechaVen
         '
         Me.DtpFechaVen.Location = New System.Drawing.Point(205, 211)
         Me.DtpFechaVen.Name = "DtpFechaVen"
         Me.DtpFechaVen.Size = New System.Drawing.Size(127, 20)
-        Me.DtpFechaVen.TabIndex = 60
+        Me.DtpFechaVen.TabIndex = 4
         '
         'ChkNoVence
         '
@@ -309,7 +310,7 @@ Partial Class frmStock
         Me.ChkNoVence.Location = New System.Drawing.Point(205, 237)
         Me.ChkNoVence.Name = "ChkNoVence"
         Me.ChkNoVence.Size = New System.Drawing.Size(90, 22)
-        Me.ChkNoVence.TabIndex = 61
+        Me.ChkNoVence.TabIndex = 5
         Me.ChkNoVence.Text = "No vence"
         Me.ChkNoVence.UseVisualStyleBackColor = True
         '

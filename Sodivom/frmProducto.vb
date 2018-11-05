@@ -118,7 +118,7 @@ Public Class frmProducto
         'validaciones
         If val.VerificarCampos(Me) Then
 
-            If unaCon.ExisteProducto(CInt(txtCodigo.Text)) = False Then
+            If unaCon.ExisteProducto(txtCodigo.Text) = False Then
                 If InStr(txtNombre.Text, " ") > 0 Then
                     MsgBox("El nombre del producto contiene espacios, reemplazelos con guion bajo")
                 Else
@@ -172,23 +172,31 @@ Public Class frmProducto
 
         If val.VerificarCampos(Me) Then
 
-            Dim codigo As Integer
-            codigo = CInt(txtCodigo.Text)
+            Dim codigo As String
+            codigo = txtCodigo.Text
+
+            If unaCon.EnUso(codigo) = False Then
+
+                Select Case MsgBox("Desea quitar el producto " & txtNombre.Text & " " & txtDescripcion.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                    Case MsgBoxResult.Yes
+                        Dim unaC As New clsControladora
+                        If unaC.EliminarProducto(codigo) Then
+                            MsgBox("Producto Eliminado Correctamente")
+                            Listar()
+                        Else
+                            MsgBox("Ocurrio un error al eliminar el Producto")
+                        End If
+                        'Case MsgBoxResult.No
+                        '    MessageBox.Show("NO button")
+                End Select
+
+            Else
+                MsgBox("No se puede eliminar este producto porque existen ventas que lo contienen")
+            End If
 
 
 
-            Select Case MsgBox("Desea quitar el producto " & txtNombre.Text & " " & txtDescripcion.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-                Case MsgBoxResult.Yes
-                    Dim unaC As New clsControladora
-                    If unaC.EliminarProducto(codigo) Then
-                        MsgBox("Producto Eliminado Correctamente")
-                        Listar()
-                    Else
-                        MsgBox("Ocurrio un error al eliminar el Producto")
-                    End If
-                    'Case MsgBoxResult.No
-                    '    MessageBox.Show("NO button")
-            End Select
+
 
         Else
             MsgBox("Hay Campos Vacios")

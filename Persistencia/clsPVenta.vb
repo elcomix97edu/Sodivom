@@ -10,9 +10,9 @@ Public Class clsPVenta
         Return ejecutarSQL(consulta)
     End Function
 
-    Public Function AltaVentaProducto(idventa As Integer, idprod As Integer, cantidad As Integer) As Boolean
+    Public Function AltaVentaProducto(idventa As Integer, idprod As String, cantidad As Integer) As Boolean
         Dim consulta As String
-        consulta = "INSERT INTO ventaproducto (idventa,codigoproducto,cantidadproducto) VALUES (" & idventa & "," & idprod & "," & cantidad & ")"
+        consulta = "INSERT INTO ventaproducto (idventa,codigoproducto,cantidadproducto) VALUES (" & idventa & ",'" & idprod & "'," & cantidad & ")"
         Return ejecutarSQL(consulta)
     End Function
 

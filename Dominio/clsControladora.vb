@@ -68,6 +68,11 @@ Public Class clsControladora
         Return unPE.AgregarEmpleado(unempl)
     End Function
 
+    Public Function ExistePersona(ci As Integer) As Boolean
+        Dim unPE As New clsDEmpleado
+        Return unPE.ExisteEmpleado(ci)
+    End Function
+
     Public Function ListarEmpleado(parametro As String, busqueda As Integer) As List(Of clsEEmpleado)
         Dim unPE As New clsDEmpleado
         Return unPE.listarEmpleado(parametro, busqueda)
@@ -101,7 +106,7 @@ Public Class clsControladora
         Return unPc.ListarProducto(parametro, busqueda)
     End Function
 
-    Public Function EliminarProducto(codigo As Integer) As Boolean
+    Public Function EliminarProducto(codigo As String) As Boolean
         Dim unPc As New clsDProducto
         Return unPc.EliminarProducto(codigo)
     End Function
@@ -111,14 +116,19 @@ Public Class clsControladora
         Return unPC.ModificarProducto(producto)
     End Function
 
-    Public Function ExisteProducto(codigo As Integer) As Boolean
+    Public Function ExisteProducto(codigo As String) As Boolean
         Dim per As New clsDProducto
         Return per.ExisteProducto(codigo)
     End Function
 
-    Public Function GetMinStock(codigo As Integer) As Integer
+    Public Function GetMinStock(codigo As String) As Integer
         Dim unDP As New clsDProducto
         Return unDP.GetMinStock(codigo)
+    End Function
+
+    Public Function EnUso(codigo As String) As Boolean
+        Dim per As New clsDProducto
+        Return per.EnUso(codigo)
     End Function
 
 
@@ -149,7 +159,7 @@ Public Class clsControladora
         Return per.ExisteStock(stock)
     End Function
 
-    Public Function GetStocksProd(idprod As Integer) As List(Of clsEStock)
+    Public Function GetStocksProd(idprod As String) As List(Of clsEStock)
         Dim unSt As New clsDStock
         Return unSt.GetStocksProd(idprod)
     End Function
@@ -166,7 +176,7 @@ Public Class clsControladora
         Return unDV.AltaVenta(fecha, importe, empl)
     End Function
 
-    Public Function AltaVentaProducto(idventa As Integer, idprod As Integer, cantidad As Integer) As Boolean
+    Public Function AltaVentaProducto(idventa As Integer, idprod As String, cantidad As Integer) As Boolean
         Return unDV.AltaVentaProducto(idventa, idprod, cantidad)
     End Function
 
@@ -203,7 +213,7 @@ Public Class clsControladora
         Return unPC.ModificarDistribuidor(distribuidor)
     End Function
 
-    Public Function ExisteDistribuidor(id As Integer) As Boolean
+    Public Function ExisteDistribuidor(id As String) As Boolean
         Dim per As New clsDDistribuidor
         Return per.ExisteDistribuidor(id)
     End Function
