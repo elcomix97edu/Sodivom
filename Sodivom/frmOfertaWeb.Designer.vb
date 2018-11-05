@@ -22,17 +22,17 @@ Partial Class frmOfertaWeb
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtPreIni1 = New System.Windows.Forms.TextBox()
+        Me.txtPreOfe1 = New System.Windows.Forms.TextBox()
+        Me.txtPreIni2 = New System.Windows.Forms.TextBox()
+        Me.txtPreOfe2 = New System.Windows.Forms.TextBox()
+        Me.txtPreIni3 = New System.Windows.Forms.TextBox()
+        Me.txtPreOfe3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.txtPreIni4 = New System.Windows.Forms.TextBox()
+        Me.txtPreOfe4 = New System.Windows.Forms.TextBox()
+        Me.txtPreIni5 = New System.Windows.Forms.TextBox()
+        Me.txtPreOfe5 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -67,47 +67,47 @@ Partial Class frmOfertaWeb
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
-        'TextBox2
+        'txtPreIni1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(162, 166)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.txtPreIni1.Location = New System.Drawing.Point(162, 166)
+        Me.txtPreIni1.Name = "txtPreIni1"
+        Me.txtPreIni1.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreIni1.TabIndex = 1
         '
-        'TextBox3
+        'txtPreOfe1
         '
-        Me.TextBox3.Location = New System.Drawing.Point(162, 192)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox3.TabIndex = 2
+        Me.txtPreOfe1.Location = New System.Drawing.Point(162, 192)
+        Me.txtPreOfe1.Name = "txtPreOfe1"
+        Me.txtPreOfe1.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreOfe1.TabIndex = 2
         '
-        'TextBox5
+        'txtPreIni2
         '
-        Me.TextBox5.Location = New System.Drawing.Point(460, 166)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox5.TabIndex = 4
+        Me.txtPreIni2.Location = New System.Drawing.Point(460, 166)
+        Me.txtPreIni2.Name = "txtPreIni2"
+        Me.txtPreIni2.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreIni2.TabIndex = 4
         '
-        'TextBox6
+        'txtPreOfe2
         '
-        Me.TextBox6.Location = New System.Drawing.Point(460, 192)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox6.TabIndex = 5
+        Me.txtPreOfe2.Location = New System.Drawing.Point(460, 192)
+        Me.txtPreOfe2.Name = "txtPreOfe2"
+        Me.txtPreOfe2.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreOfe2.TabIndex = 5
         '
-        'TextBox8
+        'txtPreIni3
         '
-        Me.TextBox8.Location = New System.Drawing.Point(757, 166)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox8.TabIndex = 7
+        Me.txtPreIni3.Location = New System.Drawing.Point(757, 166)
+        Me.txtPreIni3.Name = "txtPreIni3"
+        Me.txtPreIni3.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreIni3.TabIndex = 7
         '
-        'TextBox9
+        'txtPreOfe3
         '
-        Me.TextBox9.Location = New System.Drawing.Point(757, 192)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox9.TabIndex = 8
+        Me.txtPreOfe3.Location = New System.Drawing.Point(757, 192)
+        Me.txtPreOfe3.Name = "txtPreOfe3"
+        Me.txtPreOfe3.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreOfe3.TabIndex = 8
         '
         'Label1
         '
@@ -118,33 +118,33 @@ Partial Class frmOfertaWeb
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Nombre"
         '
-        'TextBox11
+        'txtPreIni4
         '
-        Me.TextBox11.Location = New System.Drawing.Point(292, 317)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox11.TabIndex = 11
+        Me.txtPreIni4.Location = New System.Drawing.Point(292, 317)
+        Me.txtPreIni4.Name = "txtPreIni4"
+        Me.txtPreIni4.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreIni4.TabIndex = 11
         '
-        'TextBox12
+        'txtPreOfe4
         '
-        Me.TextBox12.Location = New System.Drawing.Point(292, 343)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox12.TabIndex = 12
+        Me.txtPreOfe4.Location = New System.Drawing.Point(292, 343)
+        Me.txtPreOfe4.Name = "txtPreOfe4"
+        Me.txtPreOfe4.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreOfe4.TabIndex = 12
         '
-        'TextBox14
+        'txtPreIni5
         '
-        Me.TextBox14.Location = New System.Drawing.Point(597, 317)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox14.TabIndex = 14
+        Me.txtPreIni5.Location = New System.Drawing.Point(597, 317)
+        Me.txtPreIni5.Name = "txtPreIni5"
+        Me.txtPreIni5.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreIni5.TabIndex = 14
         '
-        'TextBox15
+        'txtPreOfe5
         '
-        Me.TextBox15.Location = New System.Drawing.Point(597, 343)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox15.TabIndex = 15
+        Me.txtPreOfe5.Location = New System.Drawing.Point(597, 343)
+        Me.txtPreOfe5.Name = "txtPreOfe5"
+        Me.txtPreOfe5.Size = New System.Drawing.Size(108, 20)
+        Me.txtPreOfe5.TabIndex = 15
         '
         'Label2
         '
@@ -477,17 +477,17 @@ Partial Class frmOfertaWeb
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox15)
-        Me.Controls.Add(Me.TextBox14)
-        Me.Controls.Add(Me.TextBox12)
-        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.txtPreOfe5)
+        Me.Controls.Add(Me.txtPreIni5)
+        Me.Controls.Add(Me.txtPreOfe4)
+        Me.Controls.Add(Me.txtPreIni4)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtPreOfe3)
+        Me.Controls.Add(Me.txtPreIni3)
+        Me.Controls.Add(Me.txtPreOfe2)
+        Me.Controls.Add(Me.txtPreIni2)
+        Me.Controls.Add(Me.txtPreOfe1)
+        Me.Controls.Add(Me.txtPreIni1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
@@ -501,17 +501,17 @@ Partial Class frmOfertaWeb
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtPreIni1 As TextBox
+    Friend WithEvents txtPreOfe1 As TextBox
+    Friend WithEvents txtPreIni2 As TextBox
+    Friend WithEvents txtPreOfe2 As TextBox
+    Friend WithEvents txtPreIni3 As TextBox
+    Friend WithEvents txtPreOfe3 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents txtPreIni4 As TextBox
+    Friend WithEvents txtPreOfe4 As TextBox
+    Friend WithEvents txtPreIni5 As TextBox
+    Friend WithEvents txtPreOfe5 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label

@@ -6,6 +6,8 @@ Public Class clsEVenta
     Dim ecliente As String
     Dim etotal As String
     Dim elistpord As List(Of clsEStock)
+    Dim edir As String
+
 
     Public Property Cajero As String
         Get
@@ -43,7 +45,7 @@ Public Class clsEVenta
         End Set
     End Property
 
-    Public Property listpord As List(Of clsEStock)
+    Public Property listprod As List(Of clsEStock)
         Get
             Return elistpord
         End Get
@@ -51,12 +53,14 @@ Public Class clsEVenta
             elistpord = value
         End Set
     End Property
+
+    Public Property dir As String
+        Get
+            Return edir
+        End Get
+        Set(value As String)
+            edir = value
+        End Set
+    End Property
 End Class
-'Public Property listreparto As List(Of clsEVenta)
-'Get
-'Return elistreparto
-'End Get
-'Set(value As List(Of clsEVenta))
-'elistreparto = value
-'End Set
-'End Property
+

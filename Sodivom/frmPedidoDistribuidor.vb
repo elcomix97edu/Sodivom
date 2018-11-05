@@ -18,6 +18,7 @@ Public Class frmPedidodistribuidor
             txtDescripcion.Text = dgvDatos.CurrentRow.Cells(1).Value.ToString
             txtFecha.Text = dgvDatos.CurrentRow.Cells(2).Value.ToString
             txtImporte.Text = dgvDatos.CurrentRow.Cells(3).Value.ToString
+            TxtId.Enabled = False
 
         End If
     End Sub
@@ -101,7 +102,9 @@ Public Class frmPedidodistribuidor
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Dim val As New clsValidar
 
+
         If val.VerificarCampos(Me) Then
+
 
 
             Dim pedido As New clsEPedido
@@ -146,27 +149,35 @@ Public Class frmPedidodistribuidor
 
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Select Case MsgBox("Desea actualizar el pedido?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
+                Case MsgBoxResult.Yes
+                    'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
+                    Dim unpedido As New clsEPedido  'Crea el empleado
+                    unpedido.id = TxtId.Text 'Carga los datos del empleado
+                    unpedido.descripcion = txtDescripcion.Text
+                    unpedido.fecha = txtFecha.Text
+                    unpedido.importe = txtImporte.Text
+
+                    Dim unaC As New clsControladora
+                    If unaC.ModificarPedido(unpedido) Then
+                        MsgBox("Pedido Actualizado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al actualizar el pedido")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+        End If
 
 
-        Select Case MsgBox("Desea actualizar el pedido?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
-            Case MsgBoxResult.Yes
-                'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
-                Dim unpedido As New clsEPedido  'Crea el empleado
-                unpedido.id = txtId.Text 'Carga los datos del empleado
-                unpedido.descripcion = txtDescripcion.Text
-                unpedido.fecha = txtFecha.Text
-                unpedido.importe = txtImporte.Text
-
-                Dim unaC As New clsControladora
-                If unaC.ModificarPedido(unpedido) Then
-                    MsgBox("Pedido Actualizado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al actualizar el pedido")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
 
     End Sub
 
@@ -175,24 +186,48 @@ Public Class frmPedidodistribuidor
     End Sub
 
     Private Sub btnEliminar_Click_1(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim val As New clsValidar
 
-        Dim id As Integer
-        id = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
+        If val.VerificarCampos(Me) Then
+
+            Dim id As Integer
+            id = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
 
 
-        Select Case MsgBox("Desea quitar el pedido del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
-            Case MsgBoxResult.Yes
-                Dim unaC As New clsControladora
-                If unaC.EliminarPedido(id) Then
-                    MsgBox("Pedido Eliminado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al eliminar el Pedido")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+            Select Case MsgBox("Desea quitar el pedido del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
+                Case MsgBoxResult.Yes
+                    Dim unaC As New clsControladora
+                    If unaC.EliminarPedido(id) Then
+                        MsgBox("Pedido Eliminado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al eliminar el Pedido")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
+
+
     End Sub
 
+    Private Sub TxtId_TextChanged(sender As Object, e As EventArgs) Handles TxtId.TextChanged
+        If Not IsNumeric(TxtId.Text) And TxtId.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
 
+        End If
+
+
+    End Sub
+
+    Private Sub txtImporte_TextChanged(sender As Object, e As EventArgs) Handles txtImporte.TextChanged
+        If Not IsNumeric(txtImporte.Text) And txtImporte.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
 End Class

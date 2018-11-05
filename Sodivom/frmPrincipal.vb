@@ -1,4 +1,7 @@
 ﻿Imports System.ComponentModel
+Imports System.IO
+Imports System.Net
+Imports System.Text.RegularExpressions
 Imports Dominio
 Imports Entidades
 
@@ -35,9 +38,11 @@ Public Class Inicio
         If (Not activeChild Is Nothing) Then
             lblBienvenida.SendToBack()
             GroupAlertas.SendToBack()
+            GroupBox1.SendToBack()
         Else
             lblBienvenida.BringToFront()
             GroupAlertas.BringToFront()
+            GroupBox1.BringToFront()
         End If
     End Sub
 
@@ -50,12 +55,15 @@ Public Class Inicio
 
 
 
+
+
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles Me.Load
-        lblBienvenida.Text = "Bienvenido " & empleado.nombre & "" 'Carga el nombre del empleado en la etiqueta de bienvenida
+        lblBienvenida.Text = "Bienvenid@ " & empleado.nombre & "" 'Carga el nombre del empleado en la etiqueta de bienvenida
 
         AlertaBajoStock()
-        'AlertaCaducidad()
         AlertaFechaVencimiento()
+
+
 
         Select Case empleado.tipoEmpleado
             Case 1 'Administrador
@@ -177,6 +185,7 @@ Public Class Inicio
         YABASTAToolStripMenuItem.Visible = True
         Timer1.Enabled = True
         lblBienvenida.Text = "SKEREEEEEE!!!!!!!"
+        MsgBox("Agradesco al trapsito por permitirme culminar este programa :D")
 
         Dim song_path As String = My.Computer.FileSystem.GetTempFileName
         Dim bytes(CInt(My.Resources.Skere2.Length - 1)) As Byte
@@ -194,6 +203,7 @@ Public Class Inicio
 
     Private Sub YABASTAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YABASTAToolStripMenuItem.Click
         My.Computer.Audio.Stop()
+        lblBienvenida.Location = New Point(284, 555)
         lblBienvenida.Text = "Bienvenid@ " & empleado.nombre & ""
         Timer1.Enabled = False
         TimerSkere.Enabled = False
@@ -276,6 +286,7 @@ Public Class Inicio
                 Dim lista As ListViewItem = New ListViewItem(aviso)
                 ListView1.Items.Add(lista)
             End If
+            stock = 0
 
         Next
     End Sub
@@ -286,20 +297,22 @@ Public Class Inicio
 
         For Each prod In ListaProd
             Dim stocksPord = con.GetStocksProd(prod.codigo) 'Stocks del mismo producto
-            Dim stock As Integer
-            Dim hoy As Date
-            hoy = Date.Now
             Dim fechacomparacion As Date = Date.Now
             fechacomparacion = fechacomparacion.AddDays(15)
             Dim aviso As String
+            Dim novence As Date
+            novence = CDate("1/1/1920")
 
 
             For Each lote In stocksPord
-                If lote.fechaven < fechacomparacion Then
+                If lote.fechaven <> novence Then
 
-                    aviso = "La fecha de caducidad de " & prod.nombre & " se acerca, se vence el " & lote.fechaven & "."
-                    Dim lista As ListViewItem = New ListViewItem(aviso)
-                    ListView1.Items.Add(lista)
+                    If lote.fechaven < fechacomparacion Then
+
+                        aviso = "La fecha de caducidad de " & prod.nombre & " se acerca, se vence el" & lote.fechaven & "."
+                        Dim lista As ListViewItem = New ListViewItem(aviso)
+                        ListView1.Items.Add(lista)
+                    End If
                 End If
 
 
@@ -310,31 +323,11 @@ Public Class Inicio
         Next
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
-
-    End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        For Each frm As Form In Me.MdiChildren
+        For Each frm In Me.MdiChildren
             frm.Close()
         Next
-
-    End Sub
-
-    Private Sub lblBienvenida_Click(sender As Object, e As EventArgs) Handles lblBienvenida.Click
-
     End Sub
 End Class
 

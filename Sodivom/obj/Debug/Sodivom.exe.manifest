@@ -42,26 +42,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Dominio.dll" size="18432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Dominio.dll" size="18944">
       <assemblyIdentity name="Dominio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>w841HTrLGVFKqFT9SgYe4GZRqyYN7ecs9la1sKeesuA=</dsig:DigestValue>
+        <dsig:DigestValue>bUoFJHsRFQ2z2dW60b2po2MIwAEKYJmnDtnZDbE0zX8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Entidades.dll" size="13312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Entidades.dll" size="13824">
       <assemblyIdentity name="Entidades" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Lp/AvPXI3Cp5FLu9EvVwUkqATU20K3O/s3pxGwgK8pg=</dsig:DigestValue>
+        <dsig:DigestValue>4imPzjboeSdv3EHu+Lwn5csoi6SlZuSEuKr43hpXaDQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Protobuf.dll" size="294400">
+      <assemblyIdentity name="Google.Protobuf" version="3.5.1.0" publicKeyToken="A7D26565BAC4D604" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kmmLSyM9YCkmP+X33YMDTg/6sJlFHUuInLwRv1o/LXM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,26 +90,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Persistencia.dll" size="27648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Persistencia.dll" size="28160">
       <assemblyIdentity name="Persistencia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zPXm6xTdwPpFsk1VoojFfkvCDFXobbOXKLU8iVE/Z2A=</dsig:DigestValue>
+        <dsig:DigestValue>JsYu+zsQSTizzF6DIk9Dzdej1hDh5gNWZO6Rue7WcAc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sodivom.exe" size="3764192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sodivom.exe" size="3754464">
       <assemblyIdentity name="Sodivom" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GrWaoC2nyyDyY+1XV27qA8FrOeGpBpSOnYkrehz/7yM=</dsig:DigestValue>
+        <dsig:DigestValue>L764erRM1bwqiIQdmBk471zU5JwlNdKVI6TUl82IvKc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -66,6 +66,7 @@
     <Compile Include="clsECliente.vb" />
     <Compile Include="clsEDistribuidor.vb" />
     <Compile Include="clsEEmpleado.vb" />
+    <Compile Include="clsEOfertaWeb.vb" />
     <Compile Include="clsEPedido.vb" />
     <Compile Include="clsEPersona.vb" />
     <Compile Include="clsEProducto.vb" />

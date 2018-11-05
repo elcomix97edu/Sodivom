@@ -1,20 +1,10 @@
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.dll
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.pdb
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.xml
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.Resources.resources
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.dll
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.xml
-C:\Users\Juancito\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.pdb
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\bin\Debug\Entidades.dll
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\bin\Debug\Entidades.pdb
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\bin\Debug\Entidades.xml
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.Resources.resources
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.dll
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.xml
-C:\Users\Paola Romay\Documents\gitproyectos\Sodivom\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.dll
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\bin\Debug\Entidades.xml
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.Resources.resources
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.dll
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.xml
+C:\Users\Admin.PORTABLE\Documents\GitProyecto\Sodivom\Entidades\obj\Debug\Entidades.pdb

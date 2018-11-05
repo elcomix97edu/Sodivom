@@ -25,6 +25,8 @@ Partial Class frmTipoEmpleado
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTipoEmpleado))
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoEmpleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnListar = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
@@ -32,8 +34,6 @@ Partial Class frmTipoEmpleado
         Me.txtTipo = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoEmpleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,6 +60,18 @@ Partial Class frmTipoEmpleado
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(243, 294)
         Me.dgvDatos.TabIndex = 58
+        '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        '
+        'TipoEmpleado
+        '
+        Me.TipoEmpleado.HeaderText = "Cargo"
+        Me.TipoEmpleado.Name = "TipoEmpleado"
+        Me.TipoEmpleado.ReadOnly = True
         '
         'btnListar
         '
@@ -118,7 +130,7 @@ Partial Class frmTipoEmpleado
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(157, 141)
+        Me.txtTipo.Location = New System.Drawing.Point(85, 141)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(208, 20)
         Me.txtTipo.TabIndex = 64
@@ -140,18 +152,6 @@ Partial Class frmTipoEmpleado
         Me.PictureBox1.Size = New System.Drawing.Size(25, 25)
         Me.PictureBox1.TabIndex = 66
         Me.PictureBox1.TabStop = False
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "Id"
-        Me.Id.Name = "Id"
-        Me.Id.ReadOnly = True
-        '
-        'TipoEmpleado
-        '
-        Me.TipoEmpleado.HeaderText = "Cargo"
-        Me.TipoEmpleado.Name = "TipoEmpleado"
-        Me.TipoEmpleado.ReadOnly = True
         '
         'frmTipoEmpleado
         '

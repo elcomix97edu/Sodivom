@@ -48,7 +48,6 @@ Partial Class frmCliente
         Me.rdbApellido = New System.Windows.Forms.RadioButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.chkRUT = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.rdbCi = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -62,9 +61,9 @@ Partial Class frmCliente
         Me.lblCi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCi.Location = New System.Drawing.Point(36, 115)
         Me.lblCi.Name = "lblCi"
-        Me.lblCi.Size = New System.Drawing.Size(23, 20)
+        Me.lblCi.Size = New System.Drawing.Size(25, 20)
         Me.lblCi.TabIndex = 0
-        Me.lblCi.Text = "Ci"
+        Me.lblCi.Text = "CI"
         '
         'mskCi
         '
@@ -305,16 +304,6 @@ Partial Class frmCliente
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
-        'chkRUT
-        '
-        Me.chkRUT.AutoSize = True
-        Me.chkRUT.Location = New System.Drawing.Point(301, 118)
-        Me.chkRUT.Name = "chkRUT"
-        Me.chkRUT.Size = New System.Drawing.Size(49, 17)
-        Me.chkRUT.TabIndex = 16
-        Me.chkRUT.Text = "RUT"
-        Me.chkRUT.UseVisualStyleBackColor = True
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
@@ -362,7 +351,6 @@ Partial Class frmCliente
         Me.ClientSize = New System.Drawing.Size(896, 495)
         Me.Controls.Add(Me.rdbApellido)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.chkRUT)
         Me.Controls.Add(Me.rdbCi)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.Label8)
@@ -420,7 +408,6 @@ Partial Class frmCliente
     Friend WithEvents rdbApellido As RadioButton
     Friend WithEvents Label8 As Label
     Friend WithEvents btnLimpiar As Button
-    Friend WithEvents chkRUT As CheckBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents rdbCi As RadioButton
     Friend WithEvents Label7 As Label

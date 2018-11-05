@@ -72,6 +72,14 @@ Partial Class Inicio
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.txtPrecioDolar = New System.Windows.Forms.Label()
+        Me.txtPrecioEuro = New System.Windows.Forms.Label()
+        Me.txtPrecioArg = New System.Windows.Forms.Label()
+        Me.txtPrecioBr = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupAlertas.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +87,7 @@ Partial Class Inicio
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,7 +148,7 @@ Partial Class Inicio
         '
         'lblBienvenida
         '
-        Me.lblBienvenida.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.lblBienvenida.BackColor = System.Drawing.Color.Black
         Me.lblBienvenida.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBienvenida.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblBienvenida.Location = New System.Drawing.Point(250, 528)
@@ -481,6 +490,14 @@ Partial Class Inicio
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.txtPrecioDolar, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtPrecioEuro, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtPrecioArg, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtPrecioBr, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label11, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label13, 0, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(110, 75)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
@@ -571,6 +588,86 @@ Partial Class Inicio
         Me.PictureBox8.TabIndex = 20
         Me.PictureBox8.TabStop = False
         '
+        'txtPrecioDolar
+        '
+        Me.txtPrecioDolar.AutoSize = True
+        Me.txtPrecioDolar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.txtPrecioDolar.Location = New System.Drawing.Point(78, 19)
+        Me.txtPrecioDolar.Name = "txtPrecioDolar"
+        Me.txtPrecioDolar.Size = New System.Drawing.Size(45, 21)
+        Me.txtPrecioDolar.TabIndex = 0
+        Me.txtPrecioDolar.Text = "33.54 "
+        '
+        'txtPrecioEuro
+        '
+        Me.txtPrecioEuro.AutoSize = True
+        Me.txtPrecioEuro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.txtPrecioEuro.Location = New System.Drawing.Point(78, 85)
+        Me.txtPrecioEuro.Name = "txtPrecioEuro"
+        Me.txtPrecioEuro.Size = New System.Drawing.Size(45, 21)
+        Me.txtPrecioEuro.TabIndex = 0
+        Me.txtPrecioEuro.Text = "39.26"
+        '
+        'txtPrecioArg
+        '
+        Me.txtPrecioArg.AutoSize = True
+        Me.txtPrecioArg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.txtPrecioArg.Location = New System.Drawing.Point(78, 156)
+        Me.txtPrecioArg.Name = "txtPrecioArg"
+        Me.txtPrecioArg.Size = New System.Drawing.Size(45, 21)
+        Me.txtPrecioArg.TabIndex = 0
+        Me.txtPrecioArg.Text = "1.23"
+        '
+        'txtPrecioBr
+        '
+        Me.txtPrecioBr.AutoSize = True
+        Me.txtPrecioBr.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.txtPrecioBr.Location = New System.Drawing.Point(78, 228)
+        Me.txtPrecioBr.Name = "txtPrecioBr"
+        Me.txtPrecioBr.Size = New System.Drawing.Size(45, 21)
+        Me.txtPrecioBr.TabIndex = 0
+        Me.txtPrecioBr.Text = "9.36"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label10.Location = New System.Drawing.Point(15, 228)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(45, 21)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "8.26"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label11.Location = New System.Drawing.Point(13, 159)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(45, 21)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "0.63"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label12.Location = New System.Drawing.Point(14, 85)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(45, 21)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "35.61"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label13.Location = New System.Drawing.Point(14, 21)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(45, 21)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "32.08 "
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -603,6 +700,8 @@ Partial Class Inicio
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -659,4 +758,12 @@ Partial Class Inicio
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents txtPrecioDolar As Label
+    Friend WithEvents txtPrecioEuro As Label
+    Friend WithEvents txtPrecioArg As Label
+    Friend WithEvents txtPrecioBr As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
 End Class

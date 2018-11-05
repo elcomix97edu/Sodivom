@@ -3,16 +3,25 @@ Public Class frmTipoEmpleado
     Dim unaControladora As New clsControladora
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        If unaControladora.ExisteTipoEmpleado(txtTipo.Text) Then
-            MsgBox("TipoEmpleado Existente")
-        Else
-            If unaControladora.AltaTipoEmpleado(txtTipo.Text) Then
-                MsgBox("TipoEmpleado Agregado Correctamente")
-                listar()
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            If unaControladora.ExisteTipoEmpleado(txtTipo.Text) Then
+                MsgBox("TipoEmpleado Existente")
             Else
-                MsgBox("Error al agregar TipoEmpleado")
+                If unaControladora.AltaTipoEmpleado(txtTipo.Text) Then
+                    MsgBox("TipoEmpleado Agregado Correctamente")
+                    listar()
+                Else
+                    MsgBox("Error al agregar TipoEmpleado")
+                End If
             End If
+
+        Else
+            MsgBox("Hay Campos Vacios")
         End If
+
 
     End Sub
 
@@ -50,12 +59,22 @@ Public Class frmTipoEmpleado
 
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Select Case MsgBox("Desea eliminar el TipoEmpleado " & txtTipo.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "TipoEmpleado")
-            Case MsgBoxResult.Yes
-                unaControladora.BajaTipoEmpleado(txtTipo.Text)
-                MsgBox("Tipo Empleado Eliminado Correctamente")
-                listar()
-        End Select
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Select Case MsgBox("Desea eliminar el TipoEmpleado " & txtTipo.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "TipoEmpleado")
+                Case MsgBoxResult.Yes
+                    unaControladora.BajaTipoEmpleado(txtTipo.Text)
+                    MsgBox("Tipo Empleado Eliminado Correctamente")
+                    listar()
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+        End If
+
+
 
     End Sub
 

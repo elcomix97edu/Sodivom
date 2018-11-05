@@ -206,30 +206,43 @@ Public Class frmStock
 
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        Dim codigo As Integer
-        codigo = GetCodProd(dgvDatos.CurrentRow.Cells(0).Value.ToString, dgvDatos.CurrentRow.Cells(1).Value.ToString)
-
-        Select Case MsgBox("Desea actualizar el stock del producto " & comboProducto.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
-            Case MsgBoxResult.Yes
-                'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
-                Dim unstock As New clsEStock  'Crea el empleado
-                unstock.codigoprod = codigo 'Carga los datos del empleado
-                unstock.stock = txtStock.Text
-                unstock.fechaing = txtFechaIng.Text
-                unstock.fechaven = DtpFechaVen.Text
-                unstock.id = txtId.Text
+        Dim val As New clsValidar
 
 
-                Dim unaC As New clsControladora
-                If unaC.ModificarStock(unstock) Then
-                    MsgBox("Stock Actualizado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al actualizar el stock")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+        If val.VerificarCampos(Me) Then
+
+            Dim codigo As Integer
+            codigo = GetCodProd(dgvDatos.CurrentRow.Cells(0).Value.ToString, dgvDatos.CurrentRow.Cells(1).Value.ToString)
+
+            Select Case MsgBox("Desea actualizar el stock del producto " & comboProducto.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
+                Case MsgBoxResult.Yes
+                    'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
+                    Dim unstock As New clsEStock  'Crea el empleado
+                    unstock.codigoprod = codigo 'Carga los datos del empleado
+                    unstock.stock = txtStock.Text
+                    unstock.fechaing = txtFechaIng.Text
+                    unstock.fechaven = DtpFechaVen.Text
+                    unstock.id = txtId.Text
+
+
+                    Dim unaC As New clsControladora
+                    If unaC.ModificarStock(unstock) Then
+                        MsgBox("Stock Actualizado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al actualizar el stock")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
+
+
+
 
     End Sub
 
@@ -238,28 +251,35 @@ Public Class frmStock
     End Sub
 
     Private Sub btnEliminar_Click_1(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim val As New clsValidar
 
-        Dim id As Integer
-        id = CInt(dgvDatos.CurrentRow.Cells(5).Value.ToString)
+        If val.VerificarCampos(Me) Then
+
+            Dim id As Integer
+            id = CInt(dgvDatos.CurrentRow.Cells(5).Value.ToString)
 
 
-        Select Case MsgBox("Desea quitar el stock del producto" & comboProducto.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
-            Case MsgBoxResult.Yes
-                Dim unaC As New clsControladora
-                If unaC.EliminarStock(Id) Then
-                    MsgBox("Stock Eliminado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al eliminar el stock")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+            Select Case MsgBox("Desea quitar el stock del producto" & comboProducto.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical,)
+                Case MsgBoxResult.Yes
+                    Dim unaC As New clsControladora
+                    If unaC.EliminarStock(id) Then
+                        MsgBox("Stock Eliminado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al eliminar el stock")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
+
+
     End Sub
 
-    Private Sub txtFechaVen_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ChkNoVence.CheckedChanged
         If ChkNoVence.Checked Then
@@ -269,11 +289,11 @@ Public Class frmStock
         End If
     End Sub
 
-    Private Sub lbltituloStock_Click(sender As Object, e As EventArgs) Handles lbltituloStock.Click
 
-    End Sub
+    Private Sub txtStock_TextChanged(sender As Object, e As EventArgs) Handles txtStock.TextChanged
+        If Not IsNumeric(txtStock.Text) And txtStock.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
 
-    Private Sub dgvDatos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellContentClick
-
+        End If
     End Sub
 End Class

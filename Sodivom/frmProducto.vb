@@ -4,14 +4,14 @@ Imports Entidades
 
 Public Class frmProducto
     Dim unaCon As New clsControladora
-    Dim munempleado As New clsEEmpleado
+    Dim eunempleado As New clsEEmpleado
 
     Public Property Unempleado As clsEEmpleado
         Get
-            Return munempleado
+            Return eunempleado
         End Get
         Set(value As clsEEmpleado)
-            munempleado = value
+            eunempleado = value
         End Set
     End Property
 
@@ -119,22 +119,27 @@ Public Class frmProducto
         If val.VerificarCampos(Me) Then
 
             If unaCon.ExisteProducto(CInt(txtCodigo.Text)) = False Then
-
-                'Lo que realmente estas buscando
-                'Dim cli As New clsEEmpleado(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
-                Dim prod As New clsEProducto
-                prod.codigo = txtCodigo.Text
-                prod.nombre = txtNombre.Text
-                prod.descripcion = txtDescripcion.Text
-                prod.precio = txtPrecio.Text
-                prod.minstock = txtMinStock.Text
-
-
-                If unaCon.AgregarProducto(prod) Then
-                    MsgBox("Producto agregado Correctamente")
+                If InStr(txtNombre.Text, " ") > 0 Then
+                    MsgBox("El nombre del producto contiene espacios, reemplazelos con guion bajo")
                 Else
-                    MsgBox("Hubo un error al agregar el producto")
+                    'Lo que realmente estas buscando
+                    'Dim cli As New clsEEmpleado(CInt(mskCi.Text), txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
+                    Dim prod As New clsEProducto
+                    prod.codigo = txtCodigo.Text
+                    prod.nombre = txtNombre.Text
+                    prod.descripcion = txtDescripcion.Text
+                    prod.precio = txtPrecio.Text
+                    prod.minstock = txtMinStock.Text
+
+
+                    If unaCon.AgregarProducto(prod) Then
+                        MsgBox("Producto agregado Correctamente")
+                    Else
+                        MsgBox("Hubo un error al agregar el producto")
+                    End If
                 End If
+
+
 
 
             Else
@@ -163,64 +168,95 @@ Public Class frmProducto
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim codigo As Integer
-        codigo = CInt(txtCodigo.Text)
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Dim codigo As Integer
+            codigo = CInt(txtCodigo.Text)
 
 
 
-        Select Case MsgBox("Desea quitar el producto " & txtNombre.Text & " " & txtDescripcion.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-            Case MsgBoxResult.Yes
-                Dim unaC As New clsControladora
-                If unaC.EliminarProducto(codigo) Then
-                    MsgBox("Producto Eliminado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al eliminar el Producto")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+            Select Case MsgBox("Desea quitar el producto " & txtNombre.Text & " " & txtDescripcion.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                Case MsgBoxResult.Yes
+                    Dim unaC As New clsControladora
+                    If unaC.EliminarProducto(codigo) Then
+                        MsgBox("Producto Eliminado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al eliminar el Producto")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
+
+
 
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Select Case MsgBox("Desea actualizar el producto " & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                Case MsgBoxResult.Yes
+                    'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
+                    Dim unprod As New clsEProducto 'Crea el empleado
+                    unprod.codigo = txtCodigo.Text 'Carga los datos del empleado
+                    unprod.nombre = txtNombre.Text
+                    unprod.descripcion = txtDescripcion.Text
+                    unprod.precio = txtPrecio.Text
+                    unprod.minstock = txtMinStock.Text
+
+
+                    Dim unaC As New clsControladora
+                    If unaC.ModificarProducto(unprod) Then
+                        MsgBox("Producto actualizado correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al actualizar el producto")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
 
 
 
 
-        Select Case MsgBox("Desea actualizar el producto " & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-            Case MsgBoxResult.Yes
-                'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
-                Dim unprod As New clsEProducto 'Crea el empleado
-                unprod.codigo = txtCodigo.Text 'Carga los datos del empleado
-                unprod.nombre = txtNombre.Text
-                unprod.descripcion = txtDescripcion.Text
-                unprod.precio = txtPrecio.Text
-                unprod.minstock = txtMinStock.Text
-
-
-                Dim unaC As New clsControladora
-                If unaC.ModificarProducto(unprod) Then
-                    MsgBox("Producto actualizado correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al actualizar el producto")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
-
-    End Sub
-
-    Private Sub rdbTodo_CheckedChanged(sender As Object, e As EventArgs) Handles rdbTodo.CheckedChanged
-
-    End Sub
-
-    Private Sub rdbNombre_CheckedChanged(sender As Object, e As EventArgs) Handles rdbNombre.CheckedChanged
-
-    End Sub
-
-    Private Sub rbdCodigo_CheckedChanged(sender As Object, e As EventArgs) Handles rbdCodigo.CheckedChanged
 
     End Sub
+
+
+    Private Sub txtCodigo_TextChanged(sender As Object, e As EventArgs) Handles txtCodigo.TextChanged
+        If Not IsNumeric(txtCodigo.Text) And txtCodigo.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPrecio_TextChanged(sender As Object, e As EventArgs) Handles txtPrecio.TextChanged
+        If Not IsNumeric(txtPrecio.Text) And txtPrecio.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtMinStock_TextChanged(sender As Object, e As EventArgs) Handles txtMinStock.TextChanged
+        If Not IsNumeric(txtMinStock.Text) And txtMinStock.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
 End Class

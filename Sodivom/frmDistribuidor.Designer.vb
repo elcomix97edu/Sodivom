@@ -276,9 +276,9 @@ Partial Class frmDistribuidor
         Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblId.Location = New System.Drawing.Point(47, 107)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(23, 20)
+        Me.lblId.Size = New System.Drawing.Size(42, 20)
         Me.lblId.TabIndex = 39
-        Me.lblId.Text = "Id"
+        Me.lblId.Text = "RUT"
         '
         'lblTelefono
         '

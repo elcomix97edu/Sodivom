@@ -50,14 +50,19 @@ Public Class clsPVenta
         datos.Read()
         unaventa.cliente = datos.Item("cicliente").ToString
         '///////Tabla VentaProducto//////////////
-        consulta = "SELECT * FROM ventaproducto WHERE idventa='" & id & "'"
+        consulta = "SELECT * FROM ventaproducto WHERE idventa=" & id & ""
         datos = ejecutarYdevolver(consulta)
         Dim list As New List(Of clsEStock)
         While datos.Read
             list.Add(crearprod(datos))
         End While
-        unaventa.listpord = list
-
+        unaventa.listprod = list
+        '///////////Tabla Reparto////////////
+        consulta = "SELECT * FROM reparto WHERE idventa='" & id & "'"
+        datos = ejecutarYdevolver(consulta)
+        If datos.Read() Then
+            unaventa.dir = datos.Item("descripcion").ToString
+        End If
 
         Return unaventa
     End Function

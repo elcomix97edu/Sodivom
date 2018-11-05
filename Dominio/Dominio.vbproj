@@ -68,6 +68,7 @@
     <Compile Include="Cliente\clsDCliente.vb" />
     <Compile Include="clsControladora.vb" />
     <Compile Include="clsDDistribuidor.vb" />
+    <Compile Include="clsDOfertaWeb.vb" />
     <Compile Include="clsDPedido.vb" />
     <Compile Include="clsDProducto.vb" />
     <Compile Include="clsDStock.vb" />

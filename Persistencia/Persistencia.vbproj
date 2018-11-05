@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="clsPCliente.vb" />
     <Compile Include="clsPDistribuidor.vb" />
+    <Compile Include="clsPOfertaWeb.vb" />
     <Compile Include="clsPPedidoDistribuidor.vb" />
     <Compile Include="clsPEmpleado.vb" />
     <Compile Include="clsPersistencia.vb" />

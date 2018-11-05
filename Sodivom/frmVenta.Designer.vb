@@ -96,7 +96,7 @@ Partial Class frmVenta
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(43, 44)
+        Me.Label7.Location = New System.Drawing.Point(16, 30)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(52, 13)
         Me.Label7.TabIndex = 27
@@ -160,7 +160,7 @@ Partial Class frmVenta
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnBuscar.Location = New System.Drawing.Point(655, 385)
+        Me.btnBuscar.Location = New System.Drawing.Point(655, 426)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(175, 40)
         Me.btnBuscar.TabIndex = 23
@@ -245,7 +245,7 @@ Partial Class frmVenta
         Me.btnRealizarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRealizarVenta.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRealizarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRealizarVenta.Location = New System.Drawing.Point(16, 392)
+        Me.btnRealizarVenta.Location = New System.Drawing.Point(16, 426)
         Me.btnRealizarVenta.Name = "btnRealizarVenta"
         Me.btnRealizarVenta.Size = New System.Drawing.Size(175, 40)
         Me.btnRealizarVenta.TabIndex = 46

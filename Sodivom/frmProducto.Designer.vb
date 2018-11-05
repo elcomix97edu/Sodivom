@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmProducto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,16 +20,16 @@ Partial Class frmProducto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.rdbNombre = New System.Windows.Forms.RadioButton()
+        Me.rdbTodo = New System.Windows.Forms.RadioButton()
         Me.btnListar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.rdbNombre = New System.Windows.Forms.RadioButton()
-        Me.rdbTodo = New System.Windows.Forms.RadioButton()
         Me.rbdCodigo = New System.Windows.Forms.RadioButton()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -62,6 +62,30 @@ Partial Class frmProducto
         Me.Label8.Size = New System.Drawing.Size(171, 31)
         Me.Label8.TabIndex = 37
         Me.Label8.Text = "PRODUCTO"
+        '
+        'rdbNombre
+        '
+        Me.rdbNombre.AutoSize = True
+        Me.rdbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbNombre.Location = New System.Drawing.Point(143, 311)
+        Me.rdbNombre.Name = "rdbNombre"
+        Me.rdbNombre.Size = New System.Drawing.Size(80, 22)
+        Me.rdbNombre.TabIndex = 36
+        Me.rdbNombre.TabStop = True
+        Me.rdbNombre.Text = "Nombre"
+        Me.rdbNombre.UseVisualStyleBackColor = True
+        '
+        'rdbTodo
+        '
+        Me.rdbTodo.AutoSize = True
+        Me.rdbTodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbTodo.Location = New System.Drawing.Point(143, 288)
+        Me.rdbTodo.Name = "rdbTodo"
+        Me.rdbTodo.Size = New System.Drawing.Size(61, 22)
+        Me.rdbTodo.TabIndex = 35
+        Me.rdbTodo.TabStop = True
+        Me.rdbTodo.Text = "Todo"
+        Me.rdbTodo.UseVisualStyleBackColor = True
         '
         'btnListar
         '
@@ -137,30 +161,6 @@ Partial Class frmProducto
         Me.btnLimpiar.TabIndex = 38
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
-        '
-        'rdbNombre
-        '
-        Me.rdbNombre.AutoSize = True
-        Me.rdbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbNombre.Location = New System.Drawing.Point(143, 311)
-        Me.rdbNombre.Name = "rdbNombre"
-        Me.rdbNombre.Size = New System.Drawing.Size(80, 22)
-        Me.rdbNombre.TabIndex = 36
-        Me.rdbNombre.TabStop = True
-        Me.rdbNombre.Text = "Nombre"
-        Me.rdbNombre.UseVisualStyleBackColor = True
-        '
-        'rdbTodo
-        '
-        Me.rdbTodo.AutoSize = True
-        Me.rdbTodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbTodo.Location = New System.Drawing.Point(143, 288)
-        Me.rdbTodo.Name = "rdbTodo"
-        Me.rdbTodo.Size = New System.Drawing.Size(61, 22)
-        Me.rdbTodo.TabIndex = 35
-        Me.rdbTodo.TabStop = True
-        Me.rdbTodo.Text = "Todo"
-        Me.rdbTodo.UseVisualStyleBackColor = True
         '
         'rbdCodigo
         '

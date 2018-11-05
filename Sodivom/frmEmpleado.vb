@@ -208,52 +208,73 @@ Public Class frmEmpleado
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim ci As Integer
-        ci = CInt(mskCi.Text)
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Dim ci As Integer
+            ci = CInt(mskCi.Text)
 
 
-        Select Case MsgBox("Desea quitar el empleado " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Empleado")
-            Case MsgBoxResult.Yes
-                Dim unaC As New clsControladora
-                If unaC.EliminarEmpleado(ci) Then
-                    MsgBox("Empleado Eliminado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al eliminar el Empleado")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+            Select Case MsgBox("Desea quitar el empleado " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Empleado")
+                Case MsgBoxResult.Yes
+                    Dim unaC As New clsControladora
+                    If unaC.EliminarEmpleado(ci) Then
+                        MsgBox("Empleado Eliminado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al eliminar el Empleado")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+
+        End If
+
+
 
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Select Case MsgBox("Desea actualizar el empleado " & txtNombre.Text & " " & txtApellido.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                Case MsgBoxResult.Yes
+                    'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
+                    Dim unempl As New clsEEmpleado 'Crea el empleado
+                    unempl.ci = mskCi.Text 'Carga los datos del empleado
+                    unempl.nombre = txtNombre.Text
+                    unempl.apellido = txtApellido.Text
+                    unempl.direccion = txtDireccion.Text
+                    unempl.email = txtEmail.Text
+                    unempl.telefono = txtTel.Text
+                    unempl.sueldo = txtSueldo.Text
+                    unempl.contrseña = txtContraseña.Text
+                    unempl.tipoEmpleado = GetIdTipoEmpl(comboCargo.Text)
+
+                    Dim unaC As New clsControladora
+                    If unaC.ModificarEmpleado(unempl) Then
+                        MsgBox("Empleado Actualizado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al actualizar el Empleado")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
 
 
-        Select Case MsgBox("Desea actualizar el empleado " & txtNombre.Text & " " & txtApellido.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-            Case MsgBoxResult.Yes
-                'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
-                Dim unempl As New clsEEmpleado 'Crea el empleado
-                unempl.ci = mskCi.Text 'Carga los datos del empleado
-                unempl.nombre = txtNombre.Text
-                unempl.apellido = txtApellido.Text
-                unempl.direccion = txtDireccion.Text
-                unempl.email = txtEmail.Text
-                unempl.telefono = txtTel.Text
-                unempl.sueldo = txtSueldo.Text
-                unempl.contrseña = txtContraseña.Text
-                unempl.tipoEmpleado = GetIdTipoEmpl(comboCargo.Text)
-
-                Dim unaC As New clsControladora
-                If unaC.ModificarEmpleado(unempl) Then
-                    MsgBox("Empleado Actualizado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al actualizar el Empleado")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
 
     End Sub
 
@@ -261,7 +282,31 @@ Public Class frmEmpleado
         mskCi.Select(0, 0)
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+        If IsNumeric(txtNombre.Text) Then
+            MsgBox("Se ingresaron caracteres no esperados")
 
+        End If
+    End Sub
+
+    Private Sub txtApellido_TextChanged(sender As Object, e As EventArgs) Handles txtApellido.TextChanged
+        If IsNumeric(txtApellido.Text) Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtTel_TextChanged(sender As Object, e As EventArgs) Handles txtTel.TextChanged
+        If Not IsNumeric(txtTel.Text) And txtTel.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtSueldo_TextChanged(sender As Object, e As EventArgs) Handles txtSueldo.TextChanged
+        If Not IsNumeric(txtSueldo.Text) And txtSueldo.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
     End Sub
 End Class

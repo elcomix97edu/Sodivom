@@ -44,43 +44,54 @@ Public Class frmCliente
         'Else
 
         'End If
+        If mskCi.Text = "" Then
+            MsgBox("Por favor, complete CI para eliminar un cliente")
+        Else
+            Dim ci As Integer
+            ci = CInt(mskCi.Text)
 
-        Dim ci As Integer
-        ci = CInt(mskCi.Text)
 
 
+            Select Case MsgBox("Desea quitar el cliente " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Cliente")
+                Case MsgBoxResult.Yes
+                    Dim unaC As New clsControladora
+                    If unaC.EliminarCliente(ci) Then
+                        MsgBox("Cliente Eliminado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al eliminar el Cliente")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+        End If
 
-        Select Case MsgBox("Desea quitar el cliente " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Cliente")
-            Case MsgBoxResult.Yes
-                Dim unaC As New clsControladora
-                If unaC.EliminarCliente(ci) Then
-                    MsgBox("Cliente Eliminado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al eliminar el Cliente")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Select Case MsgBox("Desea actualizar el cliente " & txtNombre.Text & " " & txtApellido.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                Case MsgBoxResult.Yes
+                    Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtEmail.Text)
+                    Dim unaC As New clsControladora
+                    If unaC.ModificarCliente(uncli) Then
+                        MsgBox("Cliente Actualizado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al actualizar el Cliente")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+        End If
 
 
-
-        Select Case MsgBox("Desea actualizar el cliente " & txtNombre.Text & " " & txtApellido.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-            Case MsgBoxResult.Yes
-                Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtEmail.Text)
-                Dim unaC As New clsControladora
-                If unaC.ModificarCliente(uncli) Then
-                    MsgBox("Cliente Actualizado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al actualizar el Cliente")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
 
 
     End Sub
@@ -181,5 +192,26 @@ Public Class frmCliente
 
     Private Sub mskCi_MouseClick(sender As Object, e As MouseEventArgs) Handles mskCi.MouseClick
         mskCi.Select(0, 0)
+    End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+        If IsNumeric(txtNombre.Text) Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtApellido_TextChanged(sender As Object, e As EventArgs) Handles txtApellido.TextChanged
+        If IsNumeric(txtApellido.Text) Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtTelefono_TextChanged(sender As Object, e As EventArgs) Handles txtTelefono.TextChanged
+        If Not IsNumeric(txtTelefono.Text) And txtTelefono.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
     End Sub
 End Class

@@ -173,63 +173,73 @@ Public Class frmVenta
         End If
     End Sub
 
-    Private Sub btnRealizarVenta_Click(sender As Object, e As EventArgs)
-        Dim unaCon As New clsControladora
-        Dim fecha As Date = Date.Now
-        Dim stocks As New List(Of clsEStock)
+    Private Sub btnRealizarVenta_Click(sender As Object, e As EventArgs) Handles btnRealizarVenta.Click
+        If dgvProductos.Rows.Count <> 0 Then
+
+            Dim unaCon As New clsControladora
+            Dim fecha As Date = Date.Now
+            Dim stocks As New List(Of clsEStock)
 
 
-        unaCon.AltaVenta(fecha, CInt(lblPrecioTotal.Text), unempl)
+            unaCon.AltaVenta(fecha, CInt(lblPrecioTotal.Text), unempl)
 
-        idventa = unaCon.GetIdVenta(fecha, unempl.ci)
+            idventa = unaCon.GetIdVenta(fecha, unempl.ci)
 
 
-        For i As Integer = 0 To ProdIng - 1
-            '//////////BAJA DEL STOCK///////////////
-            stocks = unaCon.GetStocksProd(CInt(dgvProductos.Rows(i).Cells(0).Value.ToString)) 'Trae de la bd los 2 stock con fecha de ingreso mas vieja
-            If stocks.ElementAt(0).stock < CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) Then 'Si la compra es mayor al stock mas viejo
-                Dim restante As Integer = CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) - stocks.ElementAt(0).stock 'Se calcula la diferencia entre la compra y el stock mas viejo
-                unaCon.EliminarStock(stocks.ElementAt(0).id) 'Se elimina el stock mas viejo
-                Dim unModStock As New clsEStock 'Genera un objeto stock para cargar los datos de otro stock para modificarlos
-                unModStock = stocks.ElementAt(1) 'Carga los datos
-                unModStock.stock = unModStock.stock - restante 'Se le resta al stock el restante de la compra
-                unaCon.ModificarStock(unModStock) 'Se envia a la bd
-            ElseIf stocks.ElementAt(0).stock = CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) Then 'Si la compra es igual al stock mas viejo
-                unaCon.EliminarStock(stocks.ElementAt(0).id) 'Se elimina el stock
-            Else 'Si la compra es menor al stock mas viejo
-                Dim unModStock As New clsEStock 'Se genera un objeto stock para cargar los datos y modificarlos
-                unModStock = stocks.ElementAt(0) 'Se cargan los datos
-                unModStock.stock = unModStock.stock - CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) 'Se le resta la cantiad de la compra al stock
-                unaCon.ModificarStock(unModStock) 'Se envia a la bd
+            For i As Integer = 0 To ProdIng - 1
+                '//////////BAJA DEL STOCK///////////////
+                stocks = unaCon.GetStocksProd(CInt(dgvProductos.Rows(i).Cells(0).Value.ToString)) 'Trae de la bd los 2 stock con fecha de ingreso mas vieja
+                If stocks.ElementAt(0).stock < CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) Then 'Si la compra es mayor al stock mas viejo
+                    Dim restante As Integer = CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) - stocks.ElementAt(0).stock 'Se calcula la diferencia entre la compra y el stock mas viejo
+                    unaCon.EliminarStock(stocks.ElementAt(0).id) 'Se elimina el stock mas viejo
+                    Dim unModStock As New clsEStock 'Genera un objeto stock para cargar los datos de otro stock para modificarlos
+                    unModStock = stocks.ElementAt(1) 'Carga los datos
+                    unModStock.stock = unModStock.stock - restante 'Se le resta al stock el restante de la compra
+                    unaCon.ModificarStock(unModStock) 'Se envia a la bd
+                ElseIf stocks.ElementAt(0).stock = CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) Then 'Si la compra es igual al stock mas viejo
+                    unaCon.EliminarStock(stocks.ElementAt(0).id) 'Se elimina el stock
+                Else 'Si la compra es menor al stock mas viejo
+                    Dim unModStock As New clsEStock 'Se genera un objeto stock para cargar los datos y modificarlos
+                    unModStock = stocks.ElementAt(0) 'Se cargan los datos
+                    unModStock.stock = unModStock.stock - CInt(dgvProductos.Rows(i).Cells(2).Value.ToString) 'Se le resta la cantiad de la compra al stock
+                    unaCon.ModificarStock(unModStock) 'Se envia a la bd
+                End If
+                '//////////////////////////////////////
+
+                unaCon.AltaVentaProducto(idventa, CInt(dgvProductos.Rows(i).Cells(0).Value.ToString), CInt(dgvProductos.Rows(i).Cells(2).Value.ToString))
+            Next
+
+
+
+            Dim conjunto As String = comboCliente.Text
+            Dim palabras As String() = conjunto.Split(New Char() {" "c}) 'profe si ves esto me arruinaste un fin de semana mejor dicho un año entero 
+
+
+            unaCon.AltaVentaDeProducto(idventa, GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString))
+
+            If CheckBoxReparto.Checked Then
+                unaCon.AltaReparto(idventa, txtDireccion.Text)
             End If
-            '//////////////////////////////////////
+            '/////////Impresion de la factura
+            PrintDialog1.Document = PrintDocument1
+            PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
+            With PrintDocument1
+                .PrinterSettings.DefaultPageSettings.Landscape = False
+                .Print()
 
-            unaCon.AltaVentaProducto(idventa, CInt(dgvProductos.Rows(i).Cells(0).Value.ToString), CInt(dgvProductos.Rows(i).Cells(2).Value.ToString))
-        Next
+            End With
+
+            '////////////////
+
+            MsgBox("Venta Realizada Correctamente")
 
 
+        Else
 
-        Dim conjunto As String = comboCliente.Text
-        Dim palabras As String() = conjunto.Split(New Char() {" "c}) 'profe si ves esto me arruinaste un fin de semana mejor dicho un año entero 
-
-
-        unaCon.AltaVentaDeProducto(idventa, GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString))
-
-        If CheckBoxReparto.Checked Then
-            unaCon.AltaReparto(idventa, txtDireccion.Text)
+            MsgBox("Para realizar una venta es necesario agregar productos")
         End If
-        '/////////Impresion de la factura
-        PrintDialog1.Document = PrintDocument1
-        PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
-        With PrintDocument1
-            .PrinterSettings.DefaultPageSettings.Landscape = False
-            .Print()
 
-        End With
 
-        '////////////////
-
-        MsgBox("Venta Realizada Correctamente")
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
@@ -243,6 +253,9 @@ Public Class frmVenta
         Else
             e.Graphics.DrawString("X", New Drawing.Font("Times New Roman", 12), Brushes.Black, 287, 153) 'Escribe X en comprador final
             e.Graphics.DrawString(comboCliente.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 125, 183) 'Nombre Cliente
+        End If
+        If CheckBoxReparto.Checked Then
+            e.Graphics.DrawString(TextReparto.Text, New Drawing.Font("Times New Roman", 12), Brushes.Black, 138, 207) 'Direccion de Reparto
         End If
         e.Graphics.DrawString(Date.Now.Day, New Drawing.Font("Times New Roman", 12), Brushes.Black, 675, 125) 'Dia
         e.Graphics.DrawString(Date.Now.Month, New Drawing.Font("Times New Roman", 12), Brushes.Black, 735, 125) 'Mes
@@ -319,11 +332,61 @@ Public Class frmVenta
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        If txtIdVenta.Text <> "" Then
+
+            Dim unaventa As New clsEVenta
+            Dim unacon As New clsControladora
+            Dim Row As DataGridViewRow
+            Dim Cell As DataGridViewCell
+
+            unaventa = unacon.TraerVenta(txtIdVenta.Text)
+
+            lblNombreCajero.Text = unaventa.Cajero
+            comboCliente.Text = GetNomCli(unaventa.cliente)
+            Dim listaprod As New List(Of clsEStock)
+            listaprod = unaventa.listprod
+            For Each prod In unaventa.listprod
+
+
+                Row = New DataGridViewRow
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = prod.codigoprod
+                Row.Cells.Add(Cell)
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = GetNomProd(prod.codigoprod)
+                Row.Cells.Add(Cell)
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = prod.stock
+                Row.Cells.Add(Cell)
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = GetPrecioProd(prod.codigoprod)
+                Row.Cells.Add(Cell)
+
+                dgvProductos.Rows.Add(Row)
+
+            Next
+
+            txtDireccion.Text = unaventa.dir
+            If txtDireccion.Text <> "" Then
+                CheckBoxReparto.Checked = True
+            End If
+            lblPrecioTotal.Text = unaventa.total
+            lblPrecioSub.Text = lblPrecioTotal.Text * 0.78
+            lblPrecioIva.Text = lblPrecioTotal.Text * 0.22
+            lblNumFecha.Text = unaventa.fecha
+
+        Else
+            MsgBox("Debe de ingresar un ID para realizar la búsqueda")
+
+        End If
+
+
+
 
     End Sub
 

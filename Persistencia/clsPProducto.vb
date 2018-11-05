@@ -6,7 +6,7 @@ Public Class clsPProducto
 
     Public Function AltaProducto(unprod As clsEProducto) As Boolean
         Dim consulta As String
-        consulta = "INSERT INTO producto (codigo,descripcion,nombre,precio,minstock) VALUES (" & unprod.codigo & ",'" & unprod.descripcion & "','" & unprod.nombre & "','" & unprod.precio & "','" & unprod.minstock & "')"
+        consulta = "INSERT INTO producto (codigo,descripcion,nombre,precio,minstock) VALUES (" & unprod.codigo & ",'" & unprod.descripcion & "','" & unprod.nombre & "','" & unprod.precio & "'," & unprod.minstock & ")"
 
         Return ejecutarSQL(consulta)
     End Function
@@ -68,7 +68,7 @@ Public Class clsPProducto
 
     Public Function modificarProducto(unprod As clsEProducto) As Boolean
         Dim consulta As String
-        consulta = "UPDATE producto SET nombre = '" & unprod.nombre & "' , descripcion = '" & unprod.descripcion & "' , precio = '" & unprod.precio & "', minstock = ,'" & unprod.minstock & "' minimostock  WHERE codigo =" & unprod.codigo & "; "
+        consulta = "UPDATE producto SET nombre = '" & unprod.nombre & "' , descripcion = '" & unprod.descripcion & "' , precio = '" & unprod.precio & "', minstock = " & unprod.minstock & "  WHERE codigo =" & unprod.codigo & "; "
         Return ejecutarSQL(consulta)
     End Function
 

@@ -141,59 +141,91 @@ Public Class frmDistribuidor
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim id As Integer
-        Dim nombre As String
-        id = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Dim id As Integer
+            Dim nombre As String
+            id = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
+            nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
 
 
-        Select Case MsgBox("Desea quitar el distribuidor " & txtNombre.Text & " " & txtDescripcion.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-            Case MsgBoxResult.Yes
-                Dim unaC As New clsControladora
-                If unaC.EliminarDistribuidor(id) Then
-                    MsgBox("Distribuidor Eliminado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al eliminar el Distribuidor")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+            Select Case MsgBox("Desea quitar el distribuidor " & txtNombre.Text & " " & txtDescripcion.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                Case MsgBoxResult.Yes
+                    Dim unaC As New clsControladora
+                    If unaC.EliminarDistribuidor(id) Then
+                        MsgBox("Distribuidor Eliminado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al eliminar el Distribuidor")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
+
+
 
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        Dim id As Integer
-        Dim nombre As String
-        Id = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
-        nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
+        Dim val As New clsValidar
+
+        If val.VerificarCampos(Me) Then
+
+            Dim id As Integer
+            Dim nombre As String
+            id = CInt(dgvDatos.CurrentRow.Cells(0).Value.ToString)
+            nombre = dgvDatos.CurrentRow.Cells(1).Value.ToString
 
 
 
-        Select Case MsgBox("Desea actualizar el distribuidor" & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
-            Case MsgBoxResult.Yes
-                'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
-                Dim undis As New clsEDistribuidor 'Crea el empleado
-                undis.id = txtId.Text 'Carga los datos del empleado
-                undis.nombre = txtNombre.Text
-                undis.descripcion = txtDescripcion.Text
-                undis.email = txtEmail.Text
-                undis.telefono = txtEmail.Text
+            Select Case MsgBox("Desea actualizar el distribuidor" & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
+                Case MsgBoxResult.Yes
+                    'Dim uncli As New clsECliente(mskCi.Text, txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTel.Text, txtEmail.Text)
+                    Dim undis As New clsEDistribuidor 'Crea el empleado
+                    undis.id = txtId.Text 'Carga los datos del empleado
+                    undis.nombre = txtNombre.Text
+                    undis.descripcion = txtDescripcion.Text
+                    undis.email = txtEmail.Text
+                    undis.telefono = txtEmail.Text
 
-                Dim unaC As New clsControladora
-                If unaC.ModificarDistribuidor(undis) Then
-                    MsgBox("Distribuidor Actualizado Correctamente")
-                    Listar()
-                Else
-                    MsgBox("Ocurrio un error al actualizar el Distribuidor")
-                End If
-                'Case MsgBoxResult.No
-                '    MessageBox.Show("NO button")
-        End Select
+                    Dim unaC As New clsControladora
+                    If unaC.ModificarDistribuidor(undis) Then
+                        MsgBox("Distribuidor Actualizado Correctamente")
+                        Listar()
+                    Else
+                        MsgBox("Ocurrio un error al actualizar el Distribuidor")
+                    End If
+                    'Case MsgBoxResult.No
+                    '    MessageBox.Show("NO button")
+            End Select
+
+        Else
+            MsgBox("Hay Campos Vacios")
+
+        End If
+
+
 
     End Sub
 
-    Private Sub frmDistribuidor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub txtId_TextChanged(sender As Object, e As EventArgs) Handles txtId.TextChanged
+        If Not IsNumeric(txtId.Text) And txtId.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
 
+        End If
+    End Sub
+
+    Private Sub txtTelefono_TextChanged(sender As Object, e As EventArgs) Handles txtTelefono.TextChanged
+        If Not IsNumeric(txtTelefono.Text) And txtTelefono.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
     End Sub
 End Class

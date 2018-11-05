@@ -178,6 +178,10 @@ Public Class clsControladora
         Return unDV.GetIdVenta(fecha, ciEmpl)
     End Function
 
+    Public Function TraerVenta(id As String) As clsEVenta
+        Return unDV.TraerVenta(id)
+    End Function
+
     'Distribuidor
     Public Function AgregarDistribuidor(undis As clsEDistribuidor) As Boolean
         Dim unDD As New clsDDistribuidor
@@ -230,12 +234,16 @@ Public Class clsControladora
         Return per.ExistePedido(id)
     End Function
 
-    Public Function TraerVenta(id As String) As clsEVenta
-        Return unDV.TraerVenta(id)
-    End Function
     'Reparto
     Public Function AltaReparto(idventa As Integer, descripcion As String) As Boolean
         Dim unLo As New clsDVenta
         Return unLo.AltaReparto(idventa, descripcion)
     End Function
+
+    'Oferta Web
+    Public Function ModificarOfertaWeb(ListaOfertas As List(Of clsEOfertaWeb)) As Boolean
+        Dim unDOW As New clsDOfertaWeb
+        Return unDOW.ModificarOfertaWeb(ListaOfertas)
+    End Function
+
 End Class
