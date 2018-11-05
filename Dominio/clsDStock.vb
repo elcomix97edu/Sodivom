@@ -11,7 +11,7 @@ Public Class clsDStock
         Return unSt.listarStock(parametro, busqueda)
     End Function
 
-    Public Function EliminarStock(codigo As Integer) As Boolean
+    Public Function EliminarStock(codigo As String) As Boolean
         Return unSt.eliminarstock(codigo)
     End Function
 

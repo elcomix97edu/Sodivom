@@ -144,7 +144,7 @@ Public Class clsControladora
         Return unSt.ListarStock(parametro, busqueda)
     End Function
 
-    Public Function EliminarStock(codigo As Integer) As Boolean
+    Public Function EliminarStock(codigo As String) As Boolean
         Dim unSt As New clsDStock
         Return unSt.EliminarStock(codigo)
     End Function

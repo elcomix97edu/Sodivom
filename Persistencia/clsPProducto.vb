@@ -73,7 +73,7 @@ Public Class clsPProducto
         Return listaproducto
     End Function
 
-    Public Function eliminarproducto(codigo As Integer) As Boolean
+    Public Function eliminarproducto(codigo As String) As Boolean
         Dim consulta As String
         consulta = "DELETE FROM producto WHERE codigo =" & codigo & ";"
         Return ejecutarSQL(consulta)

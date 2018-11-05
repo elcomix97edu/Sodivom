@@ -55,7 +55,7 @@ Public Class clsPStock
         Return listastock
     End Function
 
-    Public Function eliminarstock(id As Integer) As Boolean
+    Public Function eliminarstock(id As String) As Boolean
         Dim consulta As String
         consulta = "DELETE FROM stock WHERE id =" & id & ";"
         Return ejecutarSQL(consulta)
