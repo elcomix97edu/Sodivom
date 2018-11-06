@@ -70,7 +70,7 @@ Public Class clsControladora
 
     Public Function ExistePersona(ci As Integer) As Boolean
         Dim unPE As New clsDEmpleado
-        Return unPE.ExisteEmpleado(ci)
+        Return unPE.ExistePersona(ci)
     End Function
 
     Public Function ListarEmpleado(parametro As String, busqueda As Integer) As List(Of clsEEmpleado)
@@ -190,6 +190,10 @@ Public Class clsControladora
 
     Public Function TraerVenta(id As String) As clsEVenta
         Return unDV.TraerVenta(id)
+    End Function
+
+    Public Function existeID(id As Integer) As Boolean
+        Return unDV.existeID(id)
     End Function
 
     'Distribuidor

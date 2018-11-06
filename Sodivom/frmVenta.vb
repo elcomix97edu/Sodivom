@@ -87,65 +87,73 @@ Public Class frmVenta
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        Dim Row As DataGridViewRow
-        Dim Cell As DataGridViewCell
-        Dim a As Integer = 0
-        Dim conjunto As String = ComboProd.Text
-        Dim palabras As String() = conjunto.Split(New Char() {" "c})
-        Dim nombre As String = palabras.GetValue(0).ToString
-        Dim desc As String = palabras.GetValue(1).ToString.Replace("(", "")
-        desc = desc.Replace(")", "")
-        Dim cod As String = GetCodProd(nombre, desc)
 
-        '/////////VERIFICACION DE STOCK/////////////////
-        Dim listastock As New List(Of clsEStock)
-        Dim stockprod As Integer = 0
-        listastock = unaCon.ListarStock(cod, 2)
-        For Each stock In listastock
-            stockprod += stock.stock
-        Next
-        '//////////////////////////////////////////////
+        If ComboProd.Text <> "" And txtCantidad.Text <> "" Then
+
+            Dim Row As DataGridViewRow
+            Dim Cell As DataGridViewCell
+            Dim a As Integer = 0
+            Dim conjunto As String = ComboProd.Text
+            Dim palabras As String() = conjunto.Split(New Char() {" "c})
+            Dim nombre As String = palabras.GetValue(0).ToString
+            Dim desc As String = palabras.GetValue(1).ToString.Replace("(", "")
+            desc = desc.Replace(")", "")
+            Dim cod As String = GetCodProd(nombre, desc)
+
+            '/////////VERIFICACION DE STOCK/////////////////
+            Dim listastock As New List(Of clsEStock)
+            Dim stockprod As Integer = 0
+            listastock = unaCon.ListarStock(cod, 2)
+            For Each stock In listastock
+                stockprod += stock.stock
+            Next
+            '//////////////////////////////////////////////
 
 
-        If CInt(txtCantidad.Text) > stockprod Then
-            MsgBox("Stock insuficiente")
+            If CInt(txtCantidad.Text) > stockprod Then
+                MsgBox("Stock insuficiente")
+            Else
+
+                Row = New DataGridViewRow
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = cod
+                Row.Cells.Add(Cell)
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = nombre
+                Row.Cells.Add(Cell)
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = txtCantidad.Text
+                Row.Cells.Add(Cell)
+
+                Cell = New DataGridViewTextBoxCell
+                Cell.Value = GetPrecioProd(cod)
+                Row.Cells.Add(Cell)
+
+                dgvProductos.Rows.Add(Row)
+
+
+
+                '''''''Desglose del Precio
+                preciototal = preciototal + (CInt(dgvProductos.Rows(ProdIng).Cells(2).Value.ToString) * CInt(dgvProductos.Rows(ProdIng).Cells(3).Value.ToString))
+                lblPrecioTotal.Text = preciototal
+                lblPrecioIva.Text = preciototal * 0.22
+                lblPrecioSub.Text = preciototal * 0.78
+
+
+                ProdIng = ProdIng + 1
+
+            End If
+
+            ComboProd.Text = ""
+            txtCantidad.Text = ""
+
         Else
-
-            Row = New DataGridViewRow
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = cod
-            Row.Cells.Add(Cell)
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = nombre
-            Row.Cells.Add(Cell)
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = txtCantidad.Text
-            Row.Cells.Add(Cell)
-
-            Cell = New DataGridViewTextBoxCell
-            Cell.Value = GetPrecioProd(cod)
-            Row.Cells.Add(Cell)
-
-            dgvProductos.Rows.Add(Row)
-
-
-
-            '''''''Desglose del Precio
-            preciototal = preciototal + (CInt(dgvProductos.Rows(ProdIng).Cells(2).Value.ToString) * CInt(dgvProductos.Rows(ProdIng).Cells(3).Value.ToString))
-            lblPrecioTotal.Text = preciototal
-            lblPrecioIva.Text = preciototal * 0.22
-            lblPrecioSub.Text = preciototal * 0.78
-
-
-            ProdIng = ProdIng + 1
-
+            MsgBox("Debe de seleccionar un producto y establecer una cantidad para agregarlo")
         End If
 
-        ComboProd.Text = ""
-        txtCantidad.Text = ""
 
 
     End Sub
@@ -334,52 +342,61 @@ Public Class frmVenta
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim unacon As New clsControladora
+
         If txtIdVenta.Text <> "" Then
 
-            Dim unaventa As New clsEVenta
-            Dim unacon As New clsControladora
-            Dim Row As DataGridViewRow
-            Dim Cell As DataGridViewCell
+            If unacon.existeID(txtIdVenta.Text) Then
 
-            unaventa = unacon.TraerVenta(txtIdVenta.Text)
+                Dim unaventa As New clsEVenta
+                Dim Row As DataGridViewRow
+                Dim Cell As DataGridViewCell
 
-            lblNombreCajero.Text = unaventa.Cajero
-            comboCliente.Text = GetNomCli(unaventa.cliente)
-            Dim listaprod As New List(Of clsEStock)
-            listaprod = unaventa.listprod
-            For Each prod In unaventa.listprod
+                unaventa = unacon.TraerVenta(txtIdVenta.Text)
+
+                lblNombreCajero.Text = unaventa.Cajero
+                comboCliente.Text = GetNomCli(unaventa.cliente)
+                Dim listaprod As New List(Of clsEStock)
+                listaprod = unaventa.listprod
+                For Each prod In unaventa.listprod
 
 
-                Row = New DataGridViewRow
+                    Row = New DataGridViewRow
 
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = prod.codigoprod
-                Row.Cells.Add(Cell)
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = prod.codigoprod
+                    Row.Cells.Add(Cell)
 
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = GetNomProd(prod.codigoprod)
-                Row.Cells.Add(Cell)
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = GetNomProd(prod.codigoprod)
+                    Row.Cells.Add(Cell)
 
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = prod.stock
-                Row.Cells.Add(Cell)
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = prod.stock
+                    Row.Cells.Add(Cell)
 
-                Cell = New DataGridViewTextBoxCell
-                Cell.Value = GetPrecioProd(prod.codigoprod)
-                Row.Cells.Add(Cell)
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = GetPrecioProd(prod.codigoprod)
+                    Row.Cells.Add(Cell)
 
-                dgvProductos.Rows.Add(Row)
+                    dgvProductos.Rows.Add(Row)
 
-            Next
+                Next
 
-            txtDireccion.Text = unaventa.dir
-            If txtDireccion.Text <> "" Then
-                CheckBoxReparto.Checked = True
+                txtDireccion.Text = unaventa.dir
+                If txtDireccion.Text <> "" Then
+                    CheckBoxReparto.Checked = True
+                End If
+                lblPrecioTotal.Text = unaventa.total
+                lblPrecioSub.Text = lblPrecioTotal.Text * 0.78
+                lblPrecioIva.Text = lblPrecioTotal.Text * 0.22
+                lblNumFecha.Text = unaventa.fecha
+
+            Else
+                MsgBox("ID de venta no encontrado")
             End If
-            lblPrecioTotal.Text = unaventa.total
-            lblPrecioSub.Text = lblPrecioTotal.Text * 0.78
-            lblPrecioIva.Text = lblPrecioTotal.Text * 0.22
-            lblNumFecha.Text = unaventa.fecha
+
+
 
         Else
             MsgBox("Debe de ingresar un ID para realizar la búsqueda")
@@ -411,6 +428,11 @@ Public Class frmVenta
         Else
             chkAnonimo.Checked = False
         End If
+    End Sub
+
+
+    Private Sub mskRUT_MouseClick(sender As Object, e As MouseEventArgs) Handles mskRUT.MouseClick
+        mskRUT.Select(0, 0)
     End Sub
 
 

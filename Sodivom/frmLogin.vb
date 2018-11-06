@@ -41,7 +41,4 @@ Public Class frmLogin
         mskCi.Select(0, 0)
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
 End Class

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2018 at 11:46 PM
+-- Generation Time: Nov 06, 2018 at 04:55 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -59,7 +59,10 @@ CREATE TABLE `distribuidor` (
 --
 
 INSERT INTO `distribuidor` (`telefono`, `id`, `email`, `descripcion`, `nombre`) VALUES
-('Pepe@gmail.com', '123123123123', 'Pepe@gmail.com', 'Solo Moa', 'Mi Empresa');
+('3232', '123123123123', 'Pepe@gmail.com', 'Solo_Moa', 'Mi_Empresa'),
+('98998899', '323333333332', 'mm3@mm.com', 'Carnicero', 'Carlos Morozoli'),
+('90990', '323432343343', 'jjjj', 'mmmm', 'Pulpo'),
+('951123112', '569239142134', 'crlos@corp.com', 'Panificados', 'Carlos_Corp');
 
 -- --------------------------------------------------------
 
@@ -143,15 +146,17 @@ CREATE TABLE `pedidodistribuidor` (
   `importeTotal` varchar(10) NOT NULL,
   `descripcion` text NOT NULL,
   `fecha` date NOT NULL,
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `iddist` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pedidodistribuidor`
 --
 
-INSERT INTO `pedidodistribuidor` (`importeTotal`, `descripcion`, `fecha`, `id`) VALUES
-('12', 'dadad', '2018-11-04', 1234);
+INSERT INTO `pedidodistribuidor` (`importeTotal`, `descripcion`, `fecha`, `id`, `iddist`) VALUES
+('12', 'Queso', '2018-11-04', 1234, '569239142134'),
+('420', 'Pan,Bizcochos,Pan Frances', '2018-11-06', 323211, '323432343343');
 
 -- --------------------------------------------------------
 
@@ -523,7 +528,7 @@ ALTER TABLE `reparto`
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tipoempleado`

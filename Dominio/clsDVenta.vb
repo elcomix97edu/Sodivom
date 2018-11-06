@@ -25,6 +25,10 @@ Public Class clsDVenta
     Public Function AltaReparto(idventa As Integer, descripcion As String) As Boolean
         Return unPV.AltaReparto(idventa, descripcion)
     End Function
+
+    Public Function existeID(id As Integer) As Boolean
+        Return unPV.existeID(id)
+    End Function
 End Class
 
 

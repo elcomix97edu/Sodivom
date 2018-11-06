@@ -15,7 +15,7 @@ Public Class clsPCliente
 
     Public Function existe(ci As String) As Boolean
         Dim consultaSQL As String
-        consultaSQL = "SELECT * FROM persona WHERE ci='" & ci & "'"
+        consultaSQL = "SELECT * FROM cliente WHERE ci='" & ci & "'"
         Dim datos = ejecutarYdevolver(consultaSQL)
         If datos.HasRows Then
             Return True

@@ -8,7 +8,7 @@ Public Class frmOfertaWeb
         Dim selectedValue As clsEProducto
         selectedValue = listaProd.Find(Function(p) p.nombre = nom And p.descripcion = desc)
         Return selectedValue.precio
-    End Function 'donde tenes la lista de errores forro se fue
+    End Function
     Private Sub frmOfertaWeb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listaProd = unacon.ListarProducto("", 1)
         For Each Prod In listaProd

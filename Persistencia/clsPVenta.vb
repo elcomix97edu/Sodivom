@@ -22,6 +22,17 @@ Public Class clsPVenta
         Return ejecutarSQL(consulta)
     End Function
 
+    Public Function existeID(id As Integer) As Boolean
+        Dim consultaSQL As String
+        consultaSQL = "SELECT * FROM ventadeproducto WHERE idventa=" & id & ""
+        Dim datos = ejecutarYdevolver(consultaSQL)
+        If datos.HasRows Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
     Public Function GetIdVenta(fecha As Date, ciEmpl As Integer) As Integer
         Dim consulta As String = " SELECT id FROM venta WHERE fecha='" & fecha.ToString("yyyy-MM-dd hh:mm:ss") & "' AND civendedor=" & ciEmpl & ";"
         Dim datos = ejecutarYdevolver(consulta)

@@ -229,7 +229,7 @@ Public Class frmDistribuidor
         End If
     End Sub
 
-    Private Sub txtId_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtId.MaskInputRejected
+    Private Sub txtId_MouseClick(sender As Object, e As MouseEventArgs) Handles txtId.MouseClick
         txtId.Select(0, 0)
     End Sub
 End Class

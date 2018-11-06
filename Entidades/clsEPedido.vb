@@ -3,6 +3,7 @@
     Private mdescripcion As String
     Private mfecha As Date
     Private mimporte As Integer
+    Private mDist As String
 
     Public Property id As Integer
         Get
@@ -40,4 +41,12 @@
         End Set
     End Property
 
+    Public Property Dist As String
+        Get
+            Return mDist
+        End Get
+        Set(value As String)
+            mDist = value
+        End Set
+    End Property
 End Class

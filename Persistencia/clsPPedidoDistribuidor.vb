@@ -6,7 +6,7 @@ Public Class clsPPedidoDistribuidor
 
     Public Function AltaPedido(unpedido As clsEPedido) As Boolean
         Dim consulta As String
-        consulta = "INSERT INTO pedidodistribuidor (id,descripcion,fecha,importeTotal) VALUES (" & unpedido.id & ",'" & unpedido.descripcion & "','" & unpedido.fecha.ToString("yyyy-MM-dd") & "','" & unpedido.importe & "')"
+        consulta = "INSERT INTO pedidodistribuidor (id,descripcion,fecha,importeTotal,iddist) VALUES (" & unpedido.id & ",'" & unpedido.descripcion & "','" & unpedido.fecha.ToString("yyyy-MM-dd") & "','" & unpedido.importe & "','" & unpedido.Dist & "')"
 
         Return ejecutarSQL(consulta)
     End Function
@@ -29,6 +29,7 @@ Public Class clsPPedidoDistribuidor
         unpedido.descripcion = datos.Item("descripcion").ToString
         unpedido.fecha = datos.Item("fecha").ToString
         unpedido.importe = datos.Item("importeTotal").ToString
+        unpedido.Dist = datos.Item("iddist").ToString
         Return unpedido
     End Function
 
@@ -40,6 +41,8 @@ Public Class clsPPedidoDistribuidor
             Dim fecha As Date
             fecha = CDate(parametro)
             consulta = "SELECT * FROM pedidodistribuidor WHERE fecha ='" & fecha.ToString("yyyy-MM-dd") & "';"
+        ElseIf busqueda = 3 Then 'Por Distribuidor
+            consulta = "SELECT * FROM pedidodistribuidor WHERE iddist = '" & parametro & "'"
         End If
 
         Dim datos As MySqlDataReader
@@ -62,7 +65,7 @@ Public Class clsPPedidoDistribuidor
 
     Public Function modificarpedido(unpedido As clsEPedido) As Boolean
         Dim consulta As String
-        consulta = "UPDATE pedidodistribuidor SET descripcion = '" & unpedido.descripcion & "' , fecha = '" & unpedido.fecha.ToString("yyyy-MM-dd") & "' , importeTotal = '" & unpedido.importe & "'  WHERE id =" & unpedido.id & "; "
+        consulta = "UPDATE pedidodistribuidor SET descripcion = '" & unpedido.descripcion & "' , fecha = '" & unpedido.fecha.ToString("yyyy-MM-dd") & "' , importeTotal = '" & unpedido.importe & "' , iddist = '" & unpedido.Dist & "'  WHERE id =" & unpedido.id & "; "
         Return ejecutarSQL(consulta)
     End Function
 

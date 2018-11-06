@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Dominio.dll" size="18944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Dominio.dll" size="19456">
       <assemblyIdentity name="Dominio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rBt5BM7X7k/kgdgBrwIw7LigYvDw4S/gqyUDQuo1aFE=</dsig:DigestValue>
+        <dsig:DigestValue>bwuNdBX9wMmuvxs1FxWCt+LRt7KMtEr+klJ0zDX+fSc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WHH8OBLYmXUHHClPZoF6IyDhLvXa5x+EtoXccquJR3Q=</dsig:DigestValue>
+        <dsig:DigestValue>gdnuDPGsr8/uMpKvJ7g2W29T+SbpNIRibTeFeoB3wAs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,26 +102,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Persistencia.dll" size="28672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Persistencia.dll" size="29184">
       <assemblyIdentity name="Persistencia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5AQQZ+XufxEioHvHSo/3vZAcpo2Pktr6uSecoqE8Nk0=</dsig:DigestValue>
+        <dsig:DigestValue>6QIkkecIBZQk91hLUY0P1WDCh2ot8F1h5MIcDVinzHo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sodivom.exe" size="3756512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sodivom.exe" size="3758560">
       <assemblyIdentity name="Sodivom" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9IhdZGxodPIbKRN9NtlLB/zYhjVzxcJvVQKWY6Akr2Y=</dsig:DigestValue>
+        <dsig:DigestValue>tMm8/RMaUig3X5auHtXwMFL0CT2TVGAz8mMSR6PQc2A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

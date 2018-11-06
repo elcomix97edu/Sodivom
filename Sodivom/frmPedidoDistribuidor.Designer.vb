@@ -28,10 +28,6 @@ Partial Class frmPedidodistribuidor
         Me.rdbTodo = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgvDatos = New System.Windows.Forms.DataGridView()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripción = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechapedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.importe = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnListar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -46,6 +42,14 @@ Partial Class frmPedidodistribuidor
         Me.TxtId = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbDist = New System.Windows.Forms.ComboBox()
+        Me.rdbDist = New System.Windows.Forms.RadioButton()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripción = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechapedido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.importe = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Distribuidor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -112,36 +116,12 @@ Partial Class frmPedidodistribuidor
         Me.dgvDatos.AllowUserToDeleteRows = False
         Me.dgvDatos.BackgroundColor = System.Drawing.SystemColors.WindowText
         Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Descripción, Me.fechapedido, Me.importe})
+        Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Descripción, Me.fechapedido, Me.importe, Me.Distribuidor})
         Me.dgvDatos.Location = New System.Drawing.Point(423, 90)
         Me.dgvDatos.Name = "dgvDatos"
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.Size = New System.Drawing.Size(441, 291)
         Me.dgvDatos.TabIndex = 12
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "Id"
-        Me.Id.Name = "Id"
-        Me.Id.ReadOnly = True
-        '
-        'Descripción
-        '
-        Me.Descripción.HeaderText = "Descripción"
-        Me.Descripción.Name = "Descripción"
-        Me.Descripción.ReadOnly = True
-        '
-        'fechapedido
-        '
-        Me.fechapedido.HeaderText = "Fecha de pedido"
-        Me.fechapedido.Name = "fechapedido"
-        Me.fechapedido.ReadOnly = True
-        '
-        'importe
-        '
-        Me.importe.HeaderText = "Importe total"
-        Me.importe.Name = "importe"
-        Me.importe.ReadOnly = True
         '
         'btnListar
         '
@@ -219,9 +199,10 @@ Partial Class frmPedidodistribuidor
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(204, 160)
+        Me.txtDescripcion.Location = New System.Drawing.Point(204, 130)
+        Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(127, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(127, 51)
         Me.txtDescripcion.TabIndex = 2
         '
         'lblFechaPedido
@@ -248,7 +229,7 @@ Partial Class frmPedidodistribuidor
         '
         Me.lblDescripción.AutoSize = True
         Me.lblDescripción.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescripción.Location = New System.Drawing.Point(39, 160)
+        Me.lblDescripción.Location = New System.Drawing.Point(39, 130)
         Me.lblDescripción.Name = "lblDescripción"
         Me.lblDescripción.Size = New System.Drawing.Size(92, 20)
         Me.lblDescripción.TabIndex = 80
@@ -258,7 +239,7 @@ Partial Class frmPedidodistribuidor
         '
         Me.lblId.AutoSize = True
         Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblId.Location = New System.Drawing.Point(39, 127)
+        Me.lblId.Location = New System.Drawing.Point(39, 104)
         Me.lblId.Name = "lblId"
         Me.lblId.Size = New System.Drawing.Size(23, 20)
         Me.lblId.TabIndex = 77
@@ -266,7 +247,7 @@ Partial Class frmPedidodistribuidor
         '
         'TxtId
         '
-        Me.TxtId.Location = New System.Drawing.Point(204, 127)
+        Me.TxtId.Location = New System.Drawing.Point(204, 104)
         Me.TxtId.Name = "TxtId"
         Me.TxtId.Size = New System.Drawing.Size(127, 20)
         Me.TxtId.TabIndex = 1
@@ -274,7 +255,7 @@ Partial Class frmPedidodistribuidor
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Location = New System.Drawing.Point(12, 297)
+        Me.Panel1.Location = New System.Drawing.Point(28, 297)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(356, 63)
         Me.Panel1.TabIndex = 95
@@ -287,12 +268,75 @@ Partial Class frmPedidodistribuidor
         Me.Panel2.Size = New System.Drawing.Size(872, 10)
         Me.Panel2.TabIndex = 96
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(39, 250)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 20)
+        Me.Label1.TabIndex = 78
+        Me.Label1.Text = "Distribuidor"
+        '
+        'cmbDist
+        '
+        Me.cmbDist.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbDist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbDist.FormattingEnabled = True
+        Me.cmbDist.Location = New System.Drawing.Point(204, 252)
+        Me.cmbDist.Name = "cmbDist"
+        Me.cmbDist.Size = New System.Drawing.Size(127, 21)
+        Me.cmbDist.TabIndex = 97
+        '
+        'rdbDist
+        '
+        Me.rdbDist.AutoSize = True
+        Me.rdbDist.Location = New System.Drawing.Point(149, 304)
+        Me.rdbDist.Name = "rdbDist"
+        Me.rdbDist.Size = New System.Drawing.Size(77, 17)
+        Me.rdbDist.TabIndex = 6
+        Me.rdbDist.TabStop = True
+        Me.rdbDist.Text = "Distribuidor"
+        Me.rdbDist.UseVisualStyleBackColor = True
+        '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        '
+        'Descripción
+        '
+        Me.Descripción.HeaderText = "Descripción"
+        Me.Descripción.Name = "Descripción"
+        Me.Descripción.ReadOnly = True
+        '
+        'fechapedido
+        '
+        Me.fechapedido.HeaderText = "Fecha de pedido"
+        Me.fechapedido.Name = "fechapedido"
+        Me.fechapedido.ReadOnly = True
+        '
+        'importe
+        '
+        Me.importe.HeaderText = "Importe total"
+        Me.importe.Name = "importe"
+        Me.importe.ReadOnly = True
+        '
+        'Distribuidor
+        '
+        Me.Distribuidor.HeaderText = "Distribuidor"
+        Me.Distribuidor.Name = "Distribuidor"
+        Me.Distribuidor.ReadOnly = True
+        '
         'frmPedidodistribuidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(896, 495)
+        Me.Controls.Add(Me.rdbDist)
+        Me.Controls.Add(Me.cmbDist)
         Me.Controls.Add(Me.TxtId)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.rdbFecha)
@@ -307,6 +351,7 @@ Partial Class frmPedidodistribuidor
         Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.lblFechaPedido)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblImporte)
         Me.Controls.Add(Me.lblDescripción)
         Me.Controls.Add(Me.lblId)
@@ -338,10 +383,14 @@ Partial Class frmPedidodistribuidor
     Friend WithEvents lblDescripción As Label
     Friend WithEvents lblId As Label
     Friend WithEvents TxtId As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents rdbDist As RadioButton
+    Friend WithEvents Label1 As Label
+    Friend WithEvents cmbDist As ComboBox
     Friend WithEvents Id As DataGridViewTextBoxColumn
     Friend WithEvents Descripción As DataGridViewTextBoxColumn
     Friend WithEvents fechapedido As DataGridViewTextBoxColumn
     Friend WithEvents importe As DataGridViewTextBoxColumn
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Distribuidor As DataGridViewTextBoxColumn
 End Class

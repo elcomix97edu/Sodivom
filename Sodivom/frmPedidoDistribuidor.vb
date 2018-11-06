@@ -3,10 +3,28 @@ Imports Entidades
 
 Public Class frmPedidodistribuidor
     Dim unaCon As New clsControladora
+    Dim listaDist As New List(Of clsEDistribuidor)
+
+    Private Function GetNomDist(id As String) As String
+        Dim selectedValue As clsEDistribuidor
+        selectedValue = listaDist.Find(Function(p) p.id = id)
+        Return selectedValue.nombre
+    End Function
+
+    Private Function Getiddistri(nom As String) As String
+        Dim selectedValue As clsEDistribuidor
+        selectedValue = listaDist.Find(Function(p) p.nombre = nom)
+        Return selectedValue.id
+    End Function
 
     Private Sub frmPedidodistribuidor_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         txtFecha.Text = Date.Now
+
+        listaDist = unaCon.ListarDistribuidor("", 1)
+        For Each dist In listaDist
+            cmbDist.Items.Add(dist.nombre)
+        Next
 
     End Sub
 
@@ -18,13 +36,14 @@ Public Class frmPedidodistribuidor
             txtDescripcion.Text = dgvDatos.CurrentRow.Cells(1).Value.ToString
             txtFecha.Text = dgvDatos.CurrentRow.Cells(2).Value.ToString
             txtImporte.Text = dgvDatos.CurrentRow.Cells(3).Value.ToString
+            cmbDist.Text = GetNomDist(dgvDatos.CurrentRow.Cells(4).Value.ToString)
             TxtId.Enabled = False
 
         End If
     End Sub
 
     Private Sub Listar()
-        If Not (rdbTodo.Checked Or rdbFecha.Checked) Then
+        If Not (rdbTodo.Checked Or rdbFecha.Checked Or rdbDist.Checked) Then
             MsgBox("Seleccione un Parámetro de Búsqueda")
         Else
 
@@ -45,6 +64,16 @@ Public Class frmPedidodistribuidor
                 Else
                     busqueda = 2
                     res = txtFecha.Text
+                    realiza = True
+                End If
+
+            ElseIf rdbDist.Checked Then
+
+                If cmbDist.Text = "" Then
+                    MsgBox("Seleccione un Distribuidor")
+                Else
+                    busqueda = 3
+                    res = Getiddistri(cmbDist.Text)
                     realiza = True
                 End If
 
@@ -75,6 +104,10 @@ Public Class frmPedidodistribuidor
 
                     Cell = New DataGridViewTextBoxCell
                     Cell.Value = unpedido.importe.ToString
+                    Row.Cells.Add(Cell)
+
+                    Cell = New DataGridViewTextBoxCell
+                    Cell.Value = unpedido.Dist.ToString
                     Row.Cells.Add(Cell)
 
 
@@ -112,6 +145,7 @@ Public Class frmPedidodistribuidor
             pedido.descripcion = txtDescripcion.Text
             pedido.fecha = txtFecha.Text
             pedido.importe = txtImporte.Text
+            pedido.Dist = Getiddistri(cmbDist.Text)
 
 
             If unaCon.ExistePedido(CInt(TxtId.Text)) = False Then
@@ -123,6 +157,7 @@ Public Class frmPedidodistribuidor
                 unpedido.descripcion = txtDescripcion.Text
                 unpedido.fecha = txtFecha.Text
                 unpedido.importe = txtImporte.Text
+                unpedido.Dist = Getiddistri(cmbDist.Text)
 
                 If unaCon.AgregarPedido(unpedido) Then
                     MsgBox("Pedido agregado Correctamente")
@@ -161,6 +196,7 @@ Public Class frmPedidodistribuidor
                     unpedido.descripcion = txtDescripcion.Text
                     unpedido.fecha = txtFecha.Text
                     unpedido.importe = txtImporte.Text
+                    unpedido.Dist = Getiddistri(cmbDist.Text)
 
                     Dim unaC As New clsControladora
                     If unaC.ModificarPedido(unpedido) Then
@@ -230,4 +266,5 @@ Public Class frmPedidodistribuidor
 
         End If
     End Sub
+
 End Class

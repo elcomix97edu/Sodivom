@@ -177,7 +177,7 @@ Public Class frmEmpleado
                         End If
 
                     Else
-                        MsgBox("Persona registrada como usuario")
+                        MsgBox("Persona registrada como Cliente")
                     End If
 
 
