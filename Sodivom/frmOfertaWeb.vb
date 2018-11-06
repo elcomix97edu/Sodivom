@@ -180,6 +180,76 @@ Public Class frmOfertaWeb
         limp.Limpiar(Me)
     End Sub
 
+    Private Sub txtPreIni1_TextChanged(sender As Object, e As EventArgs) Handles txtPreIni1.TextChanged
+        If Not IsNumeric(txtPreIni1.Text) And txtPreIni1.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreOfe1_TextChanged(sender As Object, e As EventArgs) Handles txtPreOfe1.TextChanged
+        If Not IsNumeric(txtPreOfe1.Text) And txtPreOfe1.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreIni2_TextChanged(sender As Object, e As EventArgs) Handles txtPreIni2.TextChanged
+        If Not IsNumeric(txtPreIni2.Text) And txtPreIni2.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreOfe2_TextChanged(sender As Object, e As EventArgs) Handles txtPreOfe2.TextChanged
+        If Not IsNumeric(txtPreOfe2.Text) And txtPreOfe2.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreIni3_TextChanged(sender As Object, e As EventArgs) Handles txtPreIni3.TextChanged
+        If Not IsNumeric(txtPreIni3.Text) And txtPreIni3.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreOfe3_TextChanged(sender As Object, e As EventArgs) Handles txtPreOfe3.TextChanged
+        If Not IsNumeric(txtPreOfe3.Text) And txtPreOfe3.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreIni4_TextChanged(sender As Object, e As EventArgs) Handles txtPreIni4.TextChanged
+        If Not IsNumeric(txtPreIni4.Text) And txtPreIni4.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreOfe4_TextChanged(sender As Object, e As EventArgs) Handles txtPreOfe4.TextChanged
+        If Not IsNumeric(txtPreOfe4.Text) And txtPreOfe4.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreIni5_TextChanged(sender As Object, e As EventArgs) Handles txtPreIni5.TextChanged
+        If Not IsNumeric(txtPreIni5.Text) And txtPreIni5.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
+    Private Sub txtPreOfe5_TextChanged(sender As Object, e As EventArgs) Handles txtPreOfe5.TextChanged
+        If Not IsNumeric(txtPreOfe5.Text) And txtPreOfe5.Text <> "" Then
+            MsgBox("Se ingresaron caracteres no esperados")
+
+        End If
+    End Sub
+
     ' Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
     'Select Case MsgBox("Desea actualizar el producto " & txtNombre.Text & " " & txtDescripcion.Text & "?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Autor")
     'Case MsgBoxResult.Yes

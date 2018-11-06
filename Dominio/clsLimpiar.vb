@@ -23,6 +23,10 @@ Public Class clsLimpiar
                 unControl.Text = ""
             End If
 
+            If TypeOf unControl Is DateTimePicker Then
+                unControl.Text = Date.Now
+            End If
+
             If TypeOf unControl Is DataGridView Then
                 unControl.Rows.Clear()
             End If

@@ -35,6 +35,12 @@ Public Class frmVenta
         Return selectedValue.nombre
     End Function
 
+    Private Function GetDirCli(ci As Integer) As String
+        Dim selectedValue As clsECliente
+        selectedValue = listaCli.Find(Function(p) p.ci = ci)
+        Return selectedValue.direccion
+    End Function
+
     Private Function GetNomCli(ci As String) As String
         Dim selectedValue As clsECliente
         selectedValue = listaCli.Find(Function(p) p.ci = ci)
@@ -231,8 +237,10 @@ Public Class frmVenta
                 '////////////////
 
                 If ok Then
-                    MsgBox("Venta Realizada Exisosamente")
-                Else
+                MsgBox("Venta Realizada Exisosamente")
+                Dim lim As New clsLimpiar
+                lim.Limpiar(Me)
+            Else
                     MsgBox("Hubo un error al realizar la Venta")
                 End If
 
@@ -347,6 +355,7 @@ Public Class frmVenta
         If txtIdVenta.Text <> "" Then
 
             If unacon.existeID(txtIdVenta.Text) Then
+                dgvProductos.Rows.Clear()
 
                 Dim unaventa As New clsEVenta
                 Dim Row As DataGridViewRow
@@ -428,6 +437,14 @@ Public Class frmVenta
         Else
             chkAnonimo.Checked = False
         End If
+
+        Dim conjunto As String = comboCliente.Text
+        Dim palabras As String() = conjunto.Split(New Char() {" "c})
+
+
+        'ok = unaCon.AltaVentaDeProducto(idventa, GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString))
+
+        txtDireccion.Text = GetDirCli(GetCiCliente(palabras.GetValue(0).ToString, palabras.GetValue(1).ToString))
     End Sub
 
 

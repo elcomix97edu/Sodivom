@@ -56,23 +56,34 @@ Public Class frmCliente
         If mskCi.Text = "" Then
             MsgBox("Por favor, complete CI para eliminar un cliente")
         Else
-            Dim ci As Integer
-            ci = CInt(mskCi.Text)
+            Dim val As New clsValidar
+
+            If val.VerificarCampos(Me) Then
+
+                Dim ci As Integer
+                ci = CInt(mskCi.Text)
 
 
 
-            Select Case MsgBox("Desea quitar el cliente " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Cliente")
-                Case MsgBoxResult.Yes
-                    Dim unaC As New clsControladora
-                    If unaC.EliminarCliente(ci) Then
-                        MsgBox("Cliente Eliminado Correctamente")
-                        Listar()
-                    Else
-                        MsgBox("Ocurrio un error al eliminar el Cliente")
-                    End If
-                    'Case MsgBoxResult.No
-                    '    MessageBox.Show("NO button")
-            End Select
+                Select Case MsgBox("Desea quitar el cliente " & txtNombre.Text & " " & txtApellido.Text & " del sistema?", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Baja Cliente")
+                    Case MsgBoxResult.Yes
+                        Dim unaC As New clsControladora
+                        If unaC.EliminarCliente(ci) Then
+                            MsgBox("Cliente Eliminado Correctamente")
+                            Listar()
+                        Else
+                            MsgBox("Ocurrio un error al eliminar el Cliente")
+                        End If
+                        'Case MsgBoxResult.No
+                        '    MessageBox.Show("NO button")
+                End Select
+
+            Else
+
+                MsgBox("Hay Campos Vacios")
+            End If
+
+
         End If
 
     End Sub
